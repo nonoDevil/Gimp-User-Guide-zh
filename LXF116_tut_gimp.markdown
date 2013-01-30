@@ -1,0 +1,317 @@
+Tutorial Gimp Open source image-editing
+Gimp
+software you can get your teeth into
+Gimp: A Bottle
+With a blur, a colourise and some guides, Michael J Hammel uses
+digital aging to add style and credits the the wine bottle project.
+The Lower Band layer is used for both the angled bottom
+and wide lower band components of the cap.
+T
+Our
+expert
+his second part of the realistic wine bottle tutorial will
+add the final details that make the wine bottle really
+come to life. This includes adding a bottle cap along
+with integrating some text, adding clip art and merging some
+creative photography with the labels. Before we dive into
+Michael J
+Hammel
+is a contributor to
+the Gimp project
+and the author of
+three books on the
+subject, including
+his latest, The
+Artist’s Guide to
+Gimp Effects.
+these though, let’s review what we learned last month in the
+first part of the tutorial.
+The most important lesson from last month’s tutorial
+focused on using Gimp’s guides and grid for precise
+measures and alignment. The outline of the bottle used
+guides to place anchors for curved paths. Highlights created
+with the Gradient tool in multiple layers were aligned by
+simply bounding mouse drags with guides. and guide
+intersections made it easy to position project layers. The
+guides were positioned to overlap Gimp’s grid so that the
+Snap To Grid option would make it easier to drop anchors and
+create selections by referencing the guide intersection points.
+Symmetry is your friend
+Drawing the a line across the
+bottom of the cap enhances
+the bottom edge of the cap.
+Another trick from the first part of this tutorial was to draw
+half a bottle, then duplicate and flip it to complete the whole.
+Also, colour in each project layer was kept consistent by using
+greyscale gradients and tinting these with exact values in the
+Colourise dialog. And finally, we set the Levels dialog using
+specific input values, rather than referencing inexact settings
+for the input sliders.
+Only a few tools were used to create the 3D bottle in the
+first part of this tutorial. This next part uses a few more Gimp
+features, but these steps won’t all be so precisely set with
+guides. Text layers and clip art will be aligned manually, using
+nothing more than your own eyes for positioning. Fortunately,
+the most complex component of the bottle – the bottle cap –
+can be created using the same guide-based methods from
+part one of the tutorial.
+Last month We drew the shape of the bottle, then gave it depth and a label.
+90 Linux Format March 2009
+LXF116.tut_gimp 90
+19/1/09 6:10:1 pm
+Gimp Tutorial
+of wine
+Many of the details in the cap will only be appreciated
+when viewed with the final image as a whole.
+This month the wine bottle will get a bottle cap, some
+floral glass etching, and label lettering and imagery. The
+techniques you take from this tutorial should help you
+become more adept at repeating processes that you can use
+in any project.
+Before we start, be sure to reset the foreground and
+background colours to black/white respectively. All text used
+in this part of the tutorial will be based on common fonts
+found in all current Linux distributions. Also, immediately
+after opening last month’s project file, save the project as a
+new name, so if you mess up you can always go back to the
+last tutorial’s image and try again.
+the image window in from the guide intersections at 380/70
+to 380/65.
+Choose the Rectangle Select tool from the Toolbox.
+Working in the same layer, drag a selection from the
+intersection of guides at 365/40 to 435/70. This will
+temporarily overlap the gradient from the last step. Hit Enter
+to accept this selection. Round the corners of the selection
+(Select > Rounded Rectangle) by 50%. In the Tool Options
+dialog, set the Mode to Subtract. Drag a selection from the
+guides intersecting at 365/65 to 435/70. Hit Enter to use this
+selection to cut off the bottom of the first selection.
+Choose the Gradient tool from the Toolbox. In the Tool
+Options dialog set the Shape to Bi-linear and click on the
+Reverse button. Drag from the guides interesting at 390/45 to
+435/45. Clear all selections (Ctrl+Shift+A or Select > None).
+Open the Colourise dialog (Colours > Colourise) and set the
+Hue to 50, the Saturation to 86 and the Lightness to 0.
+In the layers dialog, set the Lock Alpha Channel button.
+This will ensure that transparent pixels stay transparent as we
+complete this part of the tutorial. Choose the Paintbrush from
+the Toolbox. Click on the Reset button in the Tool Options
+dialog. Set the Mode to Overlay and choose the Circle (03)
+brush, then set the Use Colour from Gradient button and
+choose the FG to BG (RGB) gradient. Click on the Reverse
+button, set the Length to 50 pixels, and in the image window
+draw from Guide intersection at 365/65 to 435/65
+The wide lower band of the cap now gets a strip of writing.
+Choose the Text Tool from the Toolbox. Set the Font to Serif
+Bold Italic, the size to eight pixels and the colour to Black.
+The band was
+blurred to soften
+the ridges, giving
+them a rounded
+appearance.
+Wine bottle cap
+The bottle cap is made up of four distinct parts:
+An angled bottom.
+A wide lower band.
+Text in the lower band.
+A ridged upper band.
+The cap will require a new set of guides (you should still have
+the guides from part one in your project). Add three vertical
+guides (Image > Guides > New Guide) at 365, 380, and 435.
+Add four horizontal guides at 35, 45, 65 and 70. Zoom in
+(Shift +) so that the top of the bottle and all of the gold
+wrapper are visible.
+Add a layer to the project and call it Lower Band. Choose
+the Path tool from Gimp’s Toolbox. Click on the guide
+intersections at 370/70, 365/65, 435/65, and 430/70. In the
+Tool Options dialog, click on the Selection from Path button,
+then choose the Gradient tool from the Toolbox. Click on the
+Reset button at the bottom of the Tool Options dialog. Drag
+If you missed last issue Call 0870 837 4773 or +44 1858 438795.
+March 2009 Linux Format 91
+LXF116.tut_gimp 91
+19/1/09 6:10:1 pm
+Tutorial Gimp
+Set the Shape to Bi-linear and the Repeat to Triangular Wave.
+If the Dithering option is not set, click on it. Drag from the
+guides intersection at 400/45 to 390/45.
+Open the Colourise dialog and set the Hue to 50, the
+Saturation to 86 and the Lightness to 0, then apply this to the
+selection. Once again, enable the Lock Alpha Channel for this
+layer in the Layers dialog. Open the Motion Blur (Filters > Blur
+> Motion Blur) filter. Set the length to 2 and Angle to 6 and
+apply the blur. In the Layers dialog, move the Upper Band
+layer below the Lower Band layer. Remove the selection
+(Select > None).
+Floral/fruit etching
+The grapes
+used for the
+etching are in
+vector format.
+Look on
+iStockPhoto.com
+and search for
+6665569, the file
+number of the
+Grape Ornaments
+image.
+Click in the image window to open the text editor window and
+type the name of our vineyard – “Penguin Fields”
+.
+We’ll have to position the text by hand, so turn off the
+Snap To Guides option (View > Snap to Guides). Use the
+Move tool to drag the layer into the centre of the Lower Band.
+Once positioned, turned the Snap To Guides back on.
+Choose the Shear Tool from the Toolbox. Click in the
+image window to open the Shear dialog. Set the Shear
+Magnitude Y to -7 and click on the Shear button to apply the
+effect. Turn on the Layer Lock Alpha Channel. Set the
+Foreground colour to Red 171, Green 151 and
+Blue 57. Drag this colour from the FG box in
+the Toolbox to the image window to colour
+the text. Set the layer mode for the text
+layer to Multiply and the Opacity to 70%.
+The next thing we’re going to do is add a
+ridged upper band to the top of the cap.
+Add a layer to the image (Layer > New) and
+call it Upper Band. Choose the Rectangle
+Select tool from the Toolbox. Click on the
+Reset button in the Tool Options dialog.
+Choose the Rounded Corners option. Drag
+the selection from the guides intersecting at
+370/35 to 430/40. Use the Tool Options
+dialog to position the selection at 370/37.
+Hit Enter to accept the selection.
+Reset the foreground and background
+colours in the Toolbox. Choose the Gradient
+tool from the Toolbox. Hit Reset in the Tool
+Options, the set the Shape to bi-linear and
+click on the Reverse button. Drag in the image window from
+the guides intersecting at 390/45 to 430/45. Reset the Tool
+Options again. Set the Mode to Overlay and Opacity to 70%.
+Choose the Blinds gradient and click on the Reverse button.
+The next step involves the use of clip art. I’m using a
+vector image from iStockPhoto converted to JPEG,
+cropped and scaled to 200 wide by 70 pixels high.
+Add a horizontal guide at 300 and a vertical guide
+at 300 for this step. Copy the clip art image into the
+wine bottle image and name the clip art layer
+“Grapes” Move this layer just above the White Label
+.
+layer in the Layers dialog. Use the Move tool to drag
+the Grapes layer in the image window so the top of
+the layer aligns with the guides intersecting at
+300/300. This will place half of the grapes layer
+over the White Label and half over the glass bottle.
+Set the Mode for the layer to Multiply then duplicate this
+layer (Layer > Duplicate Layer). The duplicate layer name will
+be “Grapes Copy” Set the layer Mode for Grapes Copy to
+.
+Dodge. Invert the colours of the duplicate layer (Colours >
+Invert). Click on the original Grapes layer in the Layers dialog
+to make it the active layer and add a black layer mask (Layer
+> Mask > Add Layer Mask). Add a white layer mask to the
+Grapes Copy layer.
+Click on the White Label layer in the Layers dialog and
+then create a selection from its alpha channel (Layer >
+As with Photoshop and Illustrator, the key to doing
+anything advanced in Gimp is the Layers dialog.
+Never miss another issue Subscribe to the #1 source for Linux on page 6.
+92 Linux Format March 2009
+LXF116.tut_gimp 92
+19/1/09 6:10:2 pm
+Gimp Tutorial
+Choose the Text tool again and click on the
+image anywhere outside of the “2005 Merlot”
+layer boundary. The text editor dialog will open
+again. Type in “Red Aspen” and close the dialog.
+In the Tool Options set the Font to URW Palladio
+L Bold and the size to 23 pixels. Use the Move
+tool to manually align the text in the centre of
+the White Label.
+The country of origin is next, though I’ll use
+my US state instead. Choose the Text tool and
+click in the image again. In the Text Editor type
+“Colorado” and close the dialog. In the Tool
+Options set the Font to “Nimbus Roman No9 L
+Bold Italic” the size to 18 pixels and the colour
+,
+to black. Use the Move tool to centre this layer
+in the image window between the two gold
+stripes that separate the White Label from the
+Blue Stripe. Set the layer boundary to match
+the image size (Layer > Layer to Image Size).
+The next step is to Duplicate this layer and
+invert the colours so that the text is white.
+An extra step could be added here to apply colour to the Colorado
+Offset this layer (Layer > Transform > Offset)
+layer to match the gold trim, but the detail doesn’t show up well in print.
+by one pixel in both the X and Y directions.
+Apply a Gaussian Blur (Filters > Blur >
+Gaussian Blur) of one pixel to both layers.
+Transparency > Alpha to Selection). Click on the Grapes Copy
+layer mask in the Layers dialog. Fill the selection with black.
+Click on the Grapes layer mask and fill with white.
+Use the Rectangle Select tool to make a selection starting
+The last piece of this project is to integrate a graphic into the
+at the guides intersecting at 320/300 to 480/370. Invert this
+Blue Strip layer. I’ve used a photo of the mall area of
+selection. Fill the selection with black (this masks off the
+Queenstown, New Zealand here, but anything with trees in will
+white edges of the grapes layer that overhang the bottle).
+do just as well for your own design. The image is desaturated
+Click on the Grapes Copy layer mask and fill the selection
+first (Colours > Desaturate) and contrast adjusted (Colours >
+with black again. Clear the selection (Select > None).
+Brightness-Contrast). It is then scaled to fit the size of the
+blue stripe exactly: 160 pixels wide by 65 pixels tall. The image
+is copied into the wine bottle project and manually positioned
+Text is now added to the White Label layer. To make this easier, over the Blue Stripe. Finally, the layer mode for the graphic is
+set to Soft Light. LXF
+only fonts available on most modern Linux distributions have
+been used. To position the text, disabled the Snap to Grid and
+Snap to Guides options in the View menu.
+Click on the White Label layer in the layers dialog. Choose
+the Text tool from the toolbox and then click in the image to
+open the Text Editor. Type in “2005 Merlot” (or whatever year
+and variety your palate prefers) and close the editor dialog. In
+the Tool Options dialog set the Font to “URW Palladio L Bold
+Italic” and the size to 14 pixels. Use the Move tool to manually
+drag the text layer in the image window to the bottom-centre
+of the White Label.
+Blue stripe graphic
+Lettering
+Drawing tips
+Too many guides clutter
+the view. Use Image > New
+View to get a clear view of
+your work without guides
+by turning off the guides.
+2 The highlights come from
+blurs, and those may
+overlap the edges of the
+bottle. Add a mask to those
+layers and use the bottle
+layer to get a selection, then
+1
+invert it and fill the mask
+with black.
+3 Save selections if you
+need to create multiple
+masks with that shape.
+4 Image too small for
+print? Scale it up before
+adding text. Scaling the
+shape and colours will work
+fine but scaling the text will
+leave you with blurred text.
+If you use a photo on
+your wine label, be sure
+to avoid anything with
+factories, chimney stacks
+or technology!
+Next month We’ll integrate Gimp with multiple desktop applications.
+March 2009 Linux Format 93
+LXF116.tut_gimp 93
+19/1/09 6:10:2 pm
+
