@@ -1,317 +1,276 @@
-Tutorial Gimp Open source image-editing
-Gimp
+Gimp Open source image-editing
 software you can get your teeth into
-Gimp: Know your
-Everyone knows selections, right? But how well do you really know them?
-This month, Michael J Hammel gets tricky with some awkward images.
-You can drag the hotspots to edit the selection while the
-bounding box is displayed.
-
-If masks are the heart of image compositing, selections are the
-blood that gives them life. Compositing, for those who don’t
-know, is simply the process of merging two images. Without
-masks, compositing would be nothing more than a child’s photo
-collage, created just as you might cut photos from magazines or a
-newspaper. But masks let you do more than lay one image on top
-of another. Masks, and their companion, Layers, let you blend the
-edges of each image with the one below into a seamless collection
-that is more than the sum of its parts.
-There are many ways to create masks, and nearly all of them
-start with a good selection. The trick to making selections into
-useful masks is a fine art of combining selections. By working with
-multiple selections we can outline nearly any shape we require,
-from boxes to fur.
-In this tutorial I’ll start with a review of selection basics and
-then move on to finer-grain techniques for more difficult
-productions. I’ll also cover methods of improving the selection so
-that a mask or layer can more seamlessly blend into another layer.
-The basic selection tools were given an overhaul in Gimp 2.4 and
-now offer more user-friendly interfaces. Both the Rectangle and
-Ellipse selection tools outline a selection with a bounding box that
-includes hotspots for interactive editing of the selection. Move the
-mouse around the bounding box – left, right, top, bottom and the
-corners – to view the hotspots. At the same time, note the
-changes to the cursor that display which direction you can drag to
-modify the selection.
-The selection is active while the bounding box is in place. You
-can, for example, drag and drop the colour boxes from the Toolbox
-into the selection to fill it even while the selection bounding box is
-displayed. However, you may also want to complete the selection
-edits by clicking inside the selection’s dotted outline or hitting the
-Enter key. Completing the selection prevents further editing of the
-selection by removing the bounding box. Editing of the rectangular
-and elliptical selections is limited to height and width when using
-the bounding box hot spots.
-Boxes on the corner
-Fortunately, more editing is possible with the latest version of
-Gimp. Added to the 2.4 release is the ability to transform your
-selection after it is completed. The transform tools in the Toolbox
-(Rotate, Scale, Shear, Perspective and Flip) all support transforms
-on either the current layer, the active selection boundary or paths.
-This means you can create a selection with the Free Select (lasso)
-tool and add perspective to the selection using the Perspective
-tool. But be careful here. The transform tools must be configured
-to operate on the selection by clicking the selection button in the
-Tool Options dialog.
-The transform buttons, which appear in the Tool Options dialog
-for all the transform tools, apply the transform against the image
-(first button), the current selection (second button) or the
-currently active path (third button). Be sure to set this option
-before applying a transform.
-Last month We made words and pictures go together like a horse and carriage.
-88 Linux Format November 2008
-LXF111.tut_gimp Sec2:88
-29/8/08 17:21:24
+Gimp: Creative
+Gimp can do more with text than you might think, as our graphics guru
+Michael J Hammel demonstrates with his two beautiful assistants.
+G
+Our
+expert
+Michael J
+Hammel is a
+contributor to the
+Gimp project and
+the author of three
+books on the
+subject, including
+his latest, The
+Artist’s Guide to
+Gimp Effects.
+imp is first and foremost a tool for working with raster
+images. Most desktop users will prefer to work with Gimp
+when dealing with their digital photographs but might
+choose other tools like Inkscape or Scribus when working with
+text. But don’t be fooled: Gimp does a great job with text effects,
+and in ways that most people might think can only be done with
+vector applications.
+This month I’m going to walk you through a little trick with text
+that my wife found in a design magazine. In that tutorial the
+process was handled using InDesign. InDesign, for those who don’t
+use it, is a vector layout tool. It does clever things with text using
+boxes to align and block objects within the layout. This particular
+effect, which you can see in the cover image for this tutorial, turns
+out to be even easier in Gimp than described in the original
+InDesign tutorial.
+Projects like this have important periphery components
+beyond just the text. This design requires a source image that has
+sufficient colour and contrast. Without colour and contrast the
+shapes within the image won’t be recognisable through the text.
+The project also requires a suitable font. The font needs to be
+thick and should not use any serifs. Serif fonts will make the final
+image appear cluttered, and in most cases won’t allow as much
+detail from the source image to show through, even when bold
+versions of the serif font are used. It can also make it difficult to
+recognise the text from the image.
+The goal of this project is to map an image on to text but keep
+the original image recognisable. Gimp’s text features make the
+actual design something that can be done in a few minutes and
+with a limited set of steps. So before we dive into that, let’s take a
+look at some of these periphery issues involved when working on
+similar designs.
+Select a stock image
+To start the project, visit one of the many low-cost stock image
+sites and search for a human portrait. The picture we want needs
+to include two important features. The first is a solid coloured
+background. A cluttered background will make it harder to identify
+the subject of the image when we apply our text effect.
+The second important feature is a fair amount of colour
+contrast. An all-black image would work just fine, but would end
+up being nothing more than shadow-filled text. For this project I
+selected a woman in a black dress with enough skin tones to
+provide some colour contrast. We’ll add to that contrast with a soft
+vignette a little later.
+When selecting stock images you should be aware of licensing
+issues. If the image is of inanimate objects, you’re generally safe. If
+the image shows a recognisable face, then you’ll need to make
+sure the publisher of the photo (whoever uploaded it) has
+obtained a model release from the subject of the image. Without
+the model release, you can’t use the image in published work.
+Last month In last month’s column, author Michael J. Hammel talked about using
+90 Linux Format October 2008
+LXF110.tut_gimp 90
+31/7/08 1:35:4 pm
 Gimp Tutorial
-selections
-sky. Now invert the selection (Select > Invert) to select the flowers.
-Because of the differences in hue the selection is extremely
-accurate with this particular image.
-Sometimes the edge between the subject and the background
-is obvious. In cases like this the Scissors tool can be used to
-outline the subject with a series of anchors just as you would
-create a path. This process takes a little more work but can outline
-an object in great detail and, more importantly, allows you to
-moving the anchors and edit the outline before converting the
-path into a selection.
-Clever scissors
-Combining a colour-based selection with a free hand
-selection doesn’t require any precision work to create.
-In this example above (the sunflowers) I want to select the
-flowers alone. Normally I might use Select By Colour to select the
-sky and then invert the selection. But the sky is filled with faint
-clouds that blend with the flowers in the bottom-right of the
-image. Fortunately, I can start with the flowers instead.
-With the Select By Colour tool chosen from the Toolbox, I set
-the ‘Select By’ menu entry to ‘Hue’ and click on just about any
-yellow part of the flowers (no dragging required – just a click). This
-selects the outline of the flowers but leaves some of the seeds
-unselected. Since the outline of the flower provides a bounding
-area for selection, all that’s required to add a Free Select to it.
-Leaving the current selection intact, I choose the Free Select
-tool from the Toolbox. I make sure the Add Mode is active in the
-Tool Options dialog (second from left in the Mode row) and I then
-draw a freehand selection around the seeds of the flower, dragging
-the mouse outside of the canvas where necessary.
-The Scissors tool works by searching for an edge near where you
-click. The anchor is placed on that edge and a curve drawn
-between the new anchor and the previous anchor. Once you’ve
-outlined the subject you click inside the path you’ve created to
-convert it to a selection. Alternatively, you can use paths to create
-a similar selection. The advantage to a path is that it lives in its
-own dialog (like the Layers dialog) so you can edit the path later to
-modify your selection.
-Although it’s displayed there, a path doesn’t exist in the canvas
-– the path lives only in the Paths dialog. In order to have it show up
-in the canvas you need to either stroke it (to draw in the current
-layer of the image) or convert it to a selection. Both options are
-available as buttons in the Tool Options dialog for the Paths tool.
-The newest addition to Gimp’s selection collection is the
-Foreground Select tool. This tool has built-in intelligence, like the
-Scissors, but is easier to use. When chosen from the Toolbox, the
-Foreground Select tool turns the cursor into a lasso. Use this to
-draw a rough outline around the subject. In the example above-
-right I drew a line around the building, dragging outside the
-Subject isolation
-The whole point of a selection is to pull an object from an image.
-How you do this depends a great deal on the original image.
-Cluttered backgrounds make the process more difficult, but not
-impossible. The trick with this type of image is to use more
-sophisticated tools and methods. The Fuzzy Select tool,
-sometimes referred to as the magic wand, works much like the
-Select By Colour tool, but is even better with images with solid or
-nearly solid coloured backdrops. In fact, as easy as it was to select
-the flowers with Select By Colour, Fuzzy Select can select the
-flowers with one single drag.
-Choose the Fuzzy Select tool from the Toolbox, then click and
-drag slowly through the sky in the image (the sky, not the
-flowers!). As you drag, the selection grows until it selects the entire
-Setting the Select By menu to Hue for Fuzzy Select enables the tool to detect the
-differences in hues of the sky and flowers.
+design
+All three text
+samples are set
+to 18 pixels with
+-5 pixel line
+spacing and -2
+pixel tracking.
+The seated woman has a low contrast between background,
+skin and dress; the dancing woman is a much better image.
+Fortunately, most stock image sites will either require the
+photographer to submit the model release or let you know if no
+model release is available.
+Working with comps
+So you’ve scanned a few hundred images and found a few that
+might work. How can you tell how well they’ll work? The answer
+comes from working with comps. A comp is a small version of a
+stock image that typically contains a watermark. Most of the stock
+image sites will allow you to download a comp or, if they don’t
+explicitly offer them, will have large enough sample versions for
+viewing that you can download without paying for them.
+Comps are for experimenting. They’re often too small to use in
+final projects and would be inappropriate considering the
+watermark. But they’re useful for testing an idea. The testing for
+this project requires only that we use a smaller font size that what
+we’ll use in the final project. I used comps of several images before
+selecting the final image of the woman in the black dress. If the
+comps are too small you can double the image size for the
+experiment even if that pixellates the image.
+This effect works best with thick, straight-edged fonts. Script
+fonts don’t show the image very well, even when a bold face is
+used. In this tutorial I’m using the bold version of the Tahoma font
+but any sans font, probably using the bold face, will suffice.
+The first Gimp-specific tip for this tutorial is related to the Text
+tool options. Select the Text tool and then open the Tool Options
+dialog (Dialogs > Tool Options). Just above the button labelled ‘Text
+Along Path’ there are three options. These options are for, top to
+bottom, Indent, Line Spacing and Tracking. We won’t be using the
+indent option but we do want to use the other two. We want the
+value in Line Spacing made smaller (to negative values) so that the
+lines of text will be as close as possible without overlapping.
+Tracking sets the space between letters. This is similar to
+kerning but is not exactly identical. Again, the technical
+explanation is not important here. We just want to reduce this
+setting (also to negative numbers) to reduce the space between
+letters – the closer the better.
+Quick
+tip
+Scan multiple
+stock photo archives,
+such as
+BigStockPhoto.com,
+iStockPhoto.com
+and Stock.xchng
+(www.sxc.hu).
+Adding a vignette
+The first thing we want is to add a soft vignette. This will make the
+final image a little more colourful while keeping the woman’s
+shape recognisable. To do this, we add a transparent layer above
+the main layer (Layer > New) and name this new layer Vignette.
+Select the Elliptical selection tool from the Toolbox and in the
+image window draw an oval selection around the girl. Feather the
+selection (Select > Feather) by 100 pixels. Choose a warm colour
+for the foreground colour by clicking on the foreground colour box
+in the Toolbox. I’m using RGB values of 231/127/35 for this tutorial.
+We now need to add a radial gradient inside the circle.
+Choose the Gradient tool from the Toolbox. In the Tool Options
+dialog (Dialogs > Tool Options) set the Gradient to ‘FG To
+Transparent’ and the Shape to ‘Radial’ In the image, click and drag
+.
+from the middle of the selection to just past the top of the
+selection. Set the vignette layer’s mode to Multiply.
+At this point I add a little noise to the gradient for an artistic
+effect, but this step is optional. To add the noise, select Filters >
+Noise > HSV Noise and set the Holdness to 2, the Saturations to
+255 and the Value to 255. The default setting for Hue (which
 If you missed last issue Call 0870 837 4773 or +44 1858 438795.
-November 2008 Linux Format 89
-LXF111.tut_gimp Sec2:89
-29/8/08 17:21:29
+October 2008 Linux Format 91
+LXF110.tut_gimp 91
+31/7/08 1:35:13 pm
 Tutorial Gimp
-canvas on the left and re-entering on the right. The outline is
-roughly oval and includes some of the background.
-Once the lasso selection is completed, Foreground Select tints
-the non-selected background blue. After the lasso operation is
-complete the cursor turns into a paintbrush with a circular tip. You
-can increase the size of the tip in the Tool Options (a necessary
-step if you’re working on a very large image, since the default size
-of the brush is best suited to web-sized images as opposed to
-print-sized images). Now click over the foreground subject and
-drag the mouse to draw a line through the foreground object. The
-line should cover a set of pixels that make a good representation of
-the colours in the foreground object. Once you release the mouse
-button, the Foreground Select tool begins to compute the outline
-of the foreground object. To complete the selection, hit the Enter
-key and you’ll see the line of marching ants around the selection.
-The usefulness of Foreground Select is in the ease with which
-the user can make the selection – a rough outline and a brush
-stroke are about all you need. The drawback with Foreground
-Select is that the responsiveness of the brush during the stroke is
-slow when the brush tip is large. Despite this, Foreground Select
-can create extremely accurate selections with little user effort.
-Alternative methods
-The curve
-between anchors
-is jagged when you
-use the scissors
-tool, so it’s better
-to use a path with
-this selection
-Complex selections nearly always involve hair, fur or any other
-sort of very thin lines. Even the most advanced selection tools by
-themselves cannot make these selections. What you need is to
-combine tools or use specialised masking techniques that don’t
-involve the selection tools at all.
-Let’s try Foreground Select on a more complex image – a set
-of tennis balls sitting on the strings of a tennis racket (below right).
-The image is more complex because the tennis balls are not
-touching – their pixels cannot be selected contiguously as was
-done in the previous example. Worse, the edge of the racket is also
-yellow. Fortunately, we can use multiple tools to isolate the tennis
-balls. First, I outline the tennis balls using the Foreground Select
-lasso operation, doing my best to include as little of the racket as
-possible. Then I draw my foreground selection line through all
-three tennis balls. This does a good job of selecting the tennis balls
-only, but it also picks up some of the racket strings while leaving
-out some of the text stamped on the nearest ball.
-Now I turn off the Contiguous button in the Tool Options. Then
-I draw a few more foreground selection lines in various parts of the
-balls, like the dark text. This refines the Foreground Selection a bit
-but there is plenty of work left to do.
-The lasso selection just provides an initial selection that the
-remaining steps of Foreground Select will improve upon.
-Next I switch to Select Background and draw along the edges
-of the balls over the racket strings. I zoom in on this area first to
-get a better look at the area. Zooming in will not alter the size of
-the brush tip so a small brush tip works well for detailed work like
-this. I zoom out and hit Enter to covert this into a selection. Here I
-can see how poor the selection really is. The only choice I have is
-to clean it up with the Quick Mask.
-The Quick Mask works very much like Foreground Select.
-When you enable it (the Quick Mask button is the square button in
-the lower-left of the image window) everything outside of the
-selection is tinted red. Red is the default colour – right click on the
-Quick Mask button to change to a different colour, though the Red
-tint shows up well while working with the yellow tennis balls.
-Next you select a paint tool from the Toolbox. The Paintbrush is
-ideal for this along with using a soft-edged brush such as one of
-the Circle Fuzzy brushes that are part of the default Gimp
-installation. Soft-edged brushes in the Quick Mask work like
-feathering of a selection, though if you choose to use a hard edged
-brush you can always feather the resulting selection later (using
-Select > Feather).
-Now we simply paint over the balls with white to add them to
-the selection. When using Quick Mask, white paint will cause the
-mask to be removed (you don’t actually see the white paint) while
-black paint will add to the mask (you see the mask tint added to
-where you paint). I paint out the basic ball outlines with white paint
-and then switch to black paint to remove areas I don’t want
-Quick Mask lets you paint the areas to be selected (or not
-selected). Soft edged brushes will make the selection feathered.
-90 Linux Format November 2008
-LXF111.tut_gimp Sec2:90
-29/8/08 17:21:30
+Choose a warn colour for the vignette, to add some extra contrast to the final
+image – this really helps in the white areas of the source photograph.
+Quick
+tip
+Vignettes are an
+easy way to add
+colour to high-
+contrast, low-
+colour photos.
+should be 3) should not be changed. Then apply this to the
+Vignette by clicking on the OK button. The noise will only be applied
+within the selection and only to coloured pixels – not transparent
+ones. You can clear the selection now (Select > None) and merge
+the Vignette and background layers (Image > Flatten Image).
+Adding a text layer
+The crux of this tutorial is to use text as a mask over the image. To
+do this, start by resetting the default colours in the Toolbox (the
+small black and white boxes below and to the left of the larger
+black and white boxes). Then create a text layer filled with random
+words. Choose the Text tool from the Toolbox and click in the
+image. This will open up the Text Editor window. In this window,
+paste a large amount of text.
+So what text should you use? I first copied 1,500 words from
+the Lorum Ipsum generator into a 100-character-wide text
+terminal. I then used the Vi editor to remove all line breaks (Shift+J
+on each line, making one long line) and mapped the text to fit the
+window with line breaks (In Vi: G+Q+J). If this isn’t long enough,
+join all the lines again, copy and past below it to extend the text.
+The select and copy this text into the Text Editor window. Using a
+100-character-wide terminal allowed me to create text that would
+Any noise you add to the vignette might not be visible in the
+finished image (this depends on the font thickness).
+be wide enough to cover the image but still include line breaks
+which Gimp needs to block the text.
+Pasting the text will update the image window immediately. You
+can now close the Text Editor window. In the Tool Options dialog
+you’re ready to set the font, size, line spacing and tracking as
+mentioned previously. Choose the font and size before changing
+the spacing and tracking. Remember I used Tahoma Bold, which
+you can find in the Corefonts project on SourceForge. You’ll also
+want the text in black so you can see it in the image window.
+Set the line spacing to -5 and the tracking to -3. This is
+sufficient to push the letters up against each other horizontally
+and vertically without overlapping, at least for this specific font
+and size.
+Getting the source images
+The source images from this tutorial
+were purchased from BigStockPhoto
+for $2 each. The image IDs are
+Pretty Dancing Woman (black
+dress): 1716725 (size: 1066 x 1600)
+Sunflower Girl: 2861058
+(size: 900 x 900)
+Pixel amounts specified in the
+tutorial are based on these source
+image sizes.
+Cows do not require a model release.
+Initially the text will not be aligned with the rest of the image,
+but we’ll fix that with the Align Tool.
+Never miss another issue Subscribe to the #1 source for Linux on p102.
+92 Linux Format October 2008
+LXF110.tut_gimp 92
+31/7/08 1:35:15 pm
 Gimp Tutorial
-The green channel was selected for this image, though in this
-case the red channel might work just as well.
-included in the selection. With Quick Mask it’s possible to zoom in
-on the image, use a very small brush, and manually select the fine
-fur or hair in an image. This is a very labour-intensive process,
-however, and except for high-end image productions you probably
-won’t need to do it – it’s just nice to know you can. Once I’ve
-finished painting in the Quick Mask I click on the Quick Mask
-button again to switch back to a real selection.
-Corner cases
-Finally, we have to consider those images that simply don’t
-cooperate with the basic selection tools. In these cases, the image
-needs to be manipulated manually. Take, for example, the
-scholarly-looking canine above. A few passes with Foreground
-Select shows that this tool simply won’t work without heavy
-editing. Because of the computational time required with each
-new drag to add to the foreground object the process becomes
-overly time consuming with extensive tweaking.
-An easier solution is to find a channel that provides the
-greatest contrast and use it as the starting point for creating a
-mask. Open the channels dialog and turn off all the channels by
-clicking on their visibility icon, then turn them back on to find the
-one that has the greatest contrast. For this image, that would be
-the green channel. Right-click on that channel and select
-Duplicate Channel. A duplicate of this channel is added to the
-bottom of the list. Click on the visibility icon (the eyeball to the left
-of the thumbnail) to turn the duplicate channel visibility on.
-We’re going to use this duplicate channel to create a layer
-mask to isolate our friendly mutt. In the layers dialog, turn off the
-visibility of the background (and only) layer. Now you can see the
-channel itself, which looks a lot like a desaturated version of the
-dog layer. Make sure the channel is active by clicking on it in the
-Channels dialog then open the Levels dialog. Adjust the sliders
-until you’ve gotten the best outline of the dog – don’t worry about
-the inside of the dog, as we’ll add that later.
-We don’t want the extra cruft around the edges, so we can
-paint those white directly in the channel. But we don’t have an
-exact outline of the dog yet, so we can’t fill the inside with black
-yet. The way to handle this is to copy the channel (Select > All, Edit
-> Copy), return to the Layers dialog and click on the background
-layer to make it active, then paste into the image window (Edit >
-Paste). Anchor this selection in the Layers dialog (Layer > New).
-Now we can edit this new layer by reducing its opacity (move
-the Opacity slider to 25.0 in the Layers dialog) and carefully draw
-a black line along the edges of the dog where no black in the new
-layer currently exists. I zoomed in here to see the edge more
-cleanly and use a very small brush with a hard edge and the Pencil
-tool. Once the outline is closed, we can select most of the white
-area with the Fuzzy Select tool, grow the selection a few pixels and
-fill it with black. Then we clean up the rest of the image manually
-with the paintbrush.
-With the outline of the dog filled with black in the new layer we
-can copy it into a layer mask of the original layer. Click on the dog
-layer to make it active and then add a layer mask to it (Layer >
-Mask > Add Layer Mask). Click on the new layer with the black
-outline of the dog in the Layers dialog to make it the active layer.
-Copy it (Edit > Copy), then click on the dog layer’s mask – make
-sure to click on the mask itself in the Layers dialog! Paste the copy
-into the mask (Layer > Paste) and anchor it (Layer > Anchor).
-Black represents transparent in a mask, so invert the colours
-(Colours > Invert) in the mask. A light blur should be applied to the
-mask at this point as well (Filters > Blur > Gaussian Blur, about five
-pixels). Now you should have a good outline of the dog. I’ve added
-a green background just so I can see the results. To create a
-selection from this, just convert the mask to a selection (Layer >
-Mask > Mask to Selection).
-It’s all about choice
-Which tools and techniques you use depends a lot of the source
-image. High-contrast images work well with the basic tools. Large
-differences in hue between the background and foreground object
-work well with Fuzzy Select, Select By Colour and Foreground
-Select. Objects that blend into the background, have lots of fine
-lines along the edges and/or sit in front of busy, multicoloured
-backgrounds require much more work using multiple tools,
-adjustments to the Levels and Brightness/Contrast tweaks to
-create a suitable mask.
-In the end, what works best is a lot of trial and error. If there
-were a magic bullet for all selections, Gimp would have it.
-Fortunately, we have a plethora of tools in the Gimp toolchest to
-make our selection experiments quick and painless. LXF
-It takes more
-effort to get this
-selection, but the
-results are worth it.
-Brush tips
-The stock brushes in Gimp are fairly static
-in size. You can duplicate them to edit the
-size and shapes, but I find it easiest to
-create a new brush that I edit manually
-repeatedly for whatever process I’m
-working on. See the New Brush button
-in the Brushes dialog button bar to create
-a new brush.
-Next month We’ll see how to get your work out of Gimp and on to paper.
-November 2008 Linux Format 91
-LXF111.tut_gimp Sec2:91
-29/8/08 17:21:33
+The text layer is much larger than the canvas window (which Keeping multiple versions of the text layer and masks lets you compare the masks
+has been zoomed out to show the text layer boundaries). and return to the version that looks best without having to recreate it later.
+Now align the text layer with the Align tool (it looks like a box other set is for distribution, which we aren’t concerned with here).
+with arrows pointing away from all four sides). Click on the image Click on the horizontal and vertical alignment buttons, which each
+window over the visible text. This adds the text layer to the set of look like two arrows pointing to a central line, which is either
+layers to be aligned. Hold the Shift key down and click on the horizontal or vertical. Now the text is aligned over the image.
+background layer (the woman in the dress) in the image window Resize the canvas to fit the text layer, zoom out and shrink-wrap
+to add it to the layers to be aligned. Now the text layer and the the window (Ctrl+E) around the canvas.
+background layer are included in the set of layers to be aligned. 
+You can tell this is the case by looking for small black boxes at the 
+corners of each layer that will be included in the alignment. 
+In Layers dialog make sure the background layer is the active 
+layer, and in the Tool Options dialog, set the ‘Relative To:’ menu to 
+    Active Layer. In the Tool Options dialog there are two sets of six 
+    buttons that look identical. The first set are for alignment (the 
+This is the final image, except that you may want to adjust
+the position of the mask over the background image.
+Create a mask layer
+Quick
+tip
+Generate lots of
+random text using
+the free Lorum
+Ipsum generator:
+www.lipsum.com
+Now we’re ready to create our mask. We start this process by
+adding a White layer to the image (Layer > New, set Fill Type to
+White). Drag this layer into the Layers dialog below the
+background layer. At this point you should drag the text layer
+below the background layer too.
+Click on the Text layer in the Layers dialog to make it the active
+layer, then create a selection of the text (Layer > Text to Selection
+> Text to Selection) and invert the selection (Select > Invert). This
+provides a selection of everything except the text. Click on the
+White layer you just added to make it active. Create a copy from
+the selection (Edit > Copy) and then paste the copy (Edit > Paste).
+This creates a Floating Selection layer in the Layers dialog that
+must be converted to a new layer manually (Layer > New).
+What you’ve done here is to paste a white layer with the text
+stamped out of it over the source image. Where the text was
+stamped out, the source image shows. Turn off the visibility of the
+Text layer by clicking on the Eye icon to the left of the layer
+thumbnail in the Layers dialog.
+Click on the background layer in the Layers dialog to make it
+the active layer. Choose the Move tool from the Toolbox. Hold
+down the Shift key and click and drag in the image window to
+move the woman and vignette around under the mask. Moving the
+source image around under the mask may not be enough to get a
+good result – you may need to adjust the text layer font size,
+tracking or line spacing. You may even need to try a different font.
+If any of this becomes necessary, turn off the visibility of the mask
+layer first and then duplicate the Text layer. Duplication is
+necessary so you keep a copy of the last settings. Adjust the font
+settings in the text layer duplicate. Then repeat the selection,
+invert, copy and paste process to create a new mask. LXF
+Next month Gimp has tons of selection tools – we’ll look at the most useful.
+October 2008 Linux Format 93
+LXF110.tut_gimp 93
+31/7/08 1:35:21 pm
 
