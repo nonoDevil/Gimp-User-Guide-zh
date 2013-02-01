@@ -1,0 +1,521 @@
+Tutorial Gimp Open source image-editing
+Gimp
+software you can get your teeth into
+Gimp: Create a
+f
+Michael J Hammel continues his journey on the fickle wings of inspiration 
+this month. He invites you to fire up Gimp and join him on his travels.
+Take stock
+ Our basis
+Woman with hair blowing upward: 
+bigstockphoto.com/photo/view/1921777
+ Ornate frames
+Golden picture frame: istockphoto.com/stock-photo-
+1710947-golden-picture-frame.php
+  Vintage gold frame: istockphoto.com/stock-photo-
+4930364-vintage-gold-frame.php
+ Flames
+We used the fire pictures at: 
+sxc.hu/browse.phtml?f=view&id=1093986 
+sxc.hu/browse.phtml?f=view&id=1099709
+sxc.hu/browse.phtml?f=view&id=1104673 
+sxc.hu/browse.phtml?f=view&id=1143736
+
+After nearly 30 years of developing and using software,
+I sometimes find it hard to find motivation for my
+next project. The same holds true for my artwork, so
+when I come across something that reinvigorates my
+enthusiasm I tend to hold on to it like a CEO on to bailout
+funding. Enthusiasm is currency – and it must be spent
+quickly or the value declines.
+So I must ask your forgiveness, dear reader, as I indulge
+my enthusiasm with another expert-level project based
+around inspiration. As with last month, this tutorial is more
+about trying to inspire budding Gimp users to dig around and
+combine ideas than revealing how to perform a specific
+process, although I’ll cover the process as well.
+is also reproducible in Gimp, but the lack of a warpable
+Transform tool makes the process more difficult – though not
+impossible – to complete.
+The concepts behind the two tutorials are complementary
+and encourage experimentation. If you want to follow this
+amalgam project exactly, it requires a number of stock
+images that are either available for free or a low cost from
+stock image repositories (see Take Stock, above). It doesn’t
+require the Gimp Paint Shop package I’ve described over the
+past few months, but having it will offer you more options.
+I’ve created the project at 2350x2033, but if you need to
+to reduce memory and CPU requirements, scale the stock
+images down by 50% before starting.
+Revitalise your burnt out creativity
+This project, which I call Fire Goddess, is based on two online
+tutorials that I’ve merged together. The first of my
+inspirations, Mystic (http://psdtuts.com/designing-
+tutorials/the-making-of-mystic), produces in Photoshop
+what I can only describe as a Mayan god. This project is
+completely reproducible under Gimp, but I was unable to find
+suitable ornamental pieces to use here.
+My second inspiration comes from a Photoshop tutorial
+that shows you how to create an image of a woman on fire
+http://psd.tutsplus.com/tutorials/tutorials-effects/
+how-to-create-a-flaming-photo-manipulation. This project
+This flaming hot beauty is the result of all your hard work.
+Last month We destroyed a city with Gimp and a graphics tablet.
+82     LXF121 August 2009
+LXF121.tut_gimp 82
+www.linuxformat.com
+8/6/09 11:27:36 am
+Gimp Tutorial
+fire goddess
+Step by step: Set the world alight!
+1
+A simple process
+Let’s start by looking at the original image and the 
+final image. As you can see, plenty has changed, 
+but there are two notable alterations: firstly, I’ve 
+removed the hair of the girl and, secondly, the 
+image is flame coloured.
+The reason our goddess is hairless is that I’d 
+originally intended this project to closely follow 
+the tutorial for creating a flaming girl. With that in 
+mind, I chose a base image with hair that should 
+be easy to convert to flames using Gimp. However, 
+because that process used a feature of Photoshop 
+that isn’t easily duplicated in Gimp (specifically, the 
+warpable Transform tool), I changed this project, 
+making the hair in the source image irrelevant.
+Throughout the project you’ll also notice that 
+flames are not just components of the image, but 
+also used for colouring. The easy way of using a 
+flame to colour a layer is to desaturate the layer to 
+be coloured, add a flame layer above it and set the 
+flame’s Layer Mode appropriately. However, if you 
+place anything below that layer, the black region 
+around the flame may block it from being visible. 
+2
+Isolate the girl
+The first step in this project is to isolate the girl 
+from her background. We’ll do this primarily 
+because the background in the source image for 
+the girl isn’t required and its colour may cause 
+problems when mixed with other layers. Removing 
+it will also enable me to add background elements 
+behind the girl’s head.
+To isolate the girl, first Desaturate (Colours > 
+Desaturate) the source image with the Luminosity 
+setting selected. The reason for using this setting 
+is that the source image has a yellowish tint when 
+converted from its original colour space (provided 
+in the image when downloaded from the stock 
+image website) to the colour-managed display in 
+Gimp. I say colour-managed, because I configured 
+the monitor profile for my Acer X203W monitors 
+3
+Cutting her hair
+In the original layer (which is titled Background by 
+default), I use Ctrl+A to select the entire layer and 
+then drag the black foreground colour into the 
+canvas to fill that layer with black. 
+Now it’s time to get rid of the girl’s hair. Just like 
+most operations that involve components of an 
+image, I don’t really want to remove these from the 
+layer itself, but rather leave them in place and mask 
+them with a layer mask. The reason for leaving 
+these elements in place is so that I can decide 
+later to reincorporate the component (in this case 
+hair) into the project. This kind of flexibility is a real 
+To avoid this, we’ll use layer masks on flame layers 
+or simply copy and paste flames (without the black 
+backgrounds) from their source image.
+The final process for creating the Fire Goddess 
+can be reduced to these basic steps:
+1  Isolate the girl from the background.
+2    etect the edges of her head and create multiple 
+D
+corresponding layers to get a perfect selection.
+3  Blend in ornamental elements.
+4  Do some fine blending to remove excess details.
+5  Colour the image with flames.
+6  Create the flaming hat.
+7  Add the background emblem.
+Note that even if you follow this tutorial exactly, 
+you won’t produce the same image as me. The 
+steps I’ll present allow for too many variations, 
+especially when creating the flaming hat. Don’t be 
+discouraged if your first attempt is less than ideal, 
+though. I went through seven different designs 
+before settling on this process and the first four 
+or five of those are – to be kind to myself – not 
+something I’d ever show in public. 
+in Gimp’s Preferences. Thankfully, the yellow tint 
+converts to a bright white when the Luminosity 
+option is selected in the Desaturate window.
+Now I can use Select By Colour from the Gimp 
+toolbox and click on the white background. With 
+the Tool Options Threshold set to 50, this will 
+select all of the background, a little of the hair and 
+some of the face and neck. To avoid selecting any 
+skin, switch to Quick Mask mode and paint out the 
+white areas on the girl with a large black brush. 
+Now switch off Quick Mask mode and Invert the 
+selection. This selection is then copied and pasted 
+to a new layer, which I name Girl. I then fit the new 
+layer to the canvas using Layer > Layer To Image 
+Size so that any modifications I make won’t be 
+restricted by the size of the layer.
+assets of editing images digitally, so I encourage 
+you to make use of it. 
+In this case, I add a white layer mask to the 
+image. Starting with a large brush and switching 
+to smaller brushes as I proceed, I paint with black 
+on top of the girl’s hair in the layer mask until most 
+of the hair is removed. I leave a small amount of 
+hair because I will be using edge-detect filters later 
+and I know the lines in the hair will provide another 
+visual feature using those filters. Afterwards, 
+I switch off the Girl layer’s visibility so it won’t 
+interfere with the next steps.
+If you missed last issue Call 0870 837 4773 or +44 1858 438795.
+www.tuxradar.com
+LXF121.tut_gimp 83
+August 2009 LXF121     83
+8/6/09 11:27:38 am
+Tutorial Gimp
+4
+Edge detection
+The next step in this project is to
+create detailed outlines of the girl
+using two edge-detection filters:
+Edge (Filters > Edge Detect > Edge)
+and Neon (found by going to Filters
+> Edge Detect > Neon). These
+produce similar results that I’ll
+combine later with Layer Modes.
+To begin with, I duplicate the
+Girl layer and name the duplicate
+layer Edge Detect. After that, I
+then open up the Edge Detect filter
+and select the Prewitt Compass
+algorithm. I choose an algorithm  
+6
+5
+based on the preview and here I
+selected the one that showed the
+most detail. Apply this filter to the
+layer and then set the Layer Mode
+to Screen.
+The Girl layer is duplicated
+again, this time naming the new
+layer Neon Detect. This layer
+is moved to the top of the layer
+stack and the colours are inverted
+in this (Colours > Invert) before
+applying the Neon edge detection
+filter. The Layer Mode is set to
+Screen and, finally, this layer is
+duplicated once, resulting in three
+layers dedicated to edge detection
+stacked above the Girl layer.
+Zoom in now and you may find
+some strands of hair that weren’t
+masked in the last step. These can
+be left, or you can remove them
+with the Eraser. If you do this, the
+Eraser will probably need to be
+applied to the same area on each
+of the three edge detection layers.
+These would be too difficult to see
+in print, so I’m not showing them
+here. In my project, however, I
+erased the extra strands of hair –
+I’m obnoxiously detail-oriented.
+Continue decorating the goddess
+The ornament around the neck is
+created in exactly the same way,
+albeit with a new copy of the frame.
+A new copy is required because the
+angle of rotation, size and position
+will be different to the Forehead
+version, not to mention being
+masked differently. In this layer, the
+bottom edge of the frame is kept
+while the rest is masked out.
+Similarly, the collar is decorated
+with the oval frame. This time the
+frame is flipped vertically before
+rotation, sizing and positioning.
+Finally, a mask is added to keep just
+the lower section of the frame.
+Note that the frame images
+were significantly smaller than the
+main image window and the girl.
+This required increasing the size
+of the frames. Scaling an image
+up is problematic because the
+scaled image quickly becomes
+pixellated. However, in this case
+the pixellation is hardly noticeable
+because of the weakly identifiable
+shapes (the ornate structure has
+no discernible pattern). Using
+blending layer modes also hides
+some of the pixellation and our
+colouring technique hides it even
+more. Large prints, however,
+would likely show the pixellation.
+Therefore, if you intend to make
+any prints of this image, they
+should to be no larger than the
+size of a magazine page. (Pretty
+convenient, eh?)
+Blend in the ornamental elements
+Now it’s time to get our goddess
+looking ornamental. The best place
+to find suitable designs to use for
+this are picture frames and building
+architecture. This project has stuck
+with picture frames only because I
+couldn’t find any really good
+photos of Victorian architecture.  
+There are three ornamental
+pieces I’m adding to this design:
+one on the forehead, one at the
+junction of head and neck, and one
+to form a collar. The first two come
+from a rectangular frame while the
+latter comes from an oval frame.
+I start with a rectangular frame
+and Desaturate it. Because the
+frame is fully enclosed in the solid-
+coloured background and also
+encloses a solid-coloured area,
+selecting the frame is easiest
+using the Fuzzy Select tool set
+with a Threshold of 50. Clicking
+once outside the frame and again
+inside it creates a selection of
+the background. Grow this by
+one pixel (something I nearly
+always do to avoid leaving light-
+coloured pixels along the edge
+of the selected object) and then
+Invert the selection. Copy and
+7
+Paste the frame into the working
+canvas as a new layer at the top
+of the layer stack. Name this layer
+Ornamental:Forehead and ensure
+the Layer Mode is set to Normal.
+Once that’s done, Scale, Rotate
+and position the Forehead layer
+over the girl’s face. Use a layer
+mask to remove the left and right
+sides and bottom edge of the
+frame. Duplicate the layer and set
+the duplicated layer’s Mode to
+Dodge. Dodging the copy over a
+desaturated Normal Mode original
+enhances contrast (which makes it
+look shinier).
+Blending to remove excess details
+The ornaments didn’t cover as
+much of the girl’s hair as I’d
+originally thought it would, so to
+get rid of these unsightly blemishes
+on our goddess, it’s time to turn
+our attention to the Eraser and
+Smudge tools.
+Smudging in the edge detect
+layers is possible (white and black
+smudged together produce shades
+of gray), but I’d rather leave some
+of the line details in the face. To
+accomplish that, I’ll use the Eraser
+with a Grunge brush and set
+the Brush Dynamics to increase
+Opacity, Hardness and Size when
+pressure is applied using my
+Wacom pad. It’s worth mentioning
+here that throughout this project
+I haven’t needed to break out the
+pad, but this is one place where it
+comes in handy. If you don’t have
+a graphics tablet to hand, you can
+just use a smaller brush and vary
+the Opacity manually.
+Now I apply the Eraser to each
+edge-detect layer in turn, starting
+with the upper layers. I do only a
+small amount on each layer before
+moving to the next, then rotate
+back to the top and repeat. My
+goal is to try and keep as much of
+the detail as possible while losing
+the obvious hair lines.
+Never miss another issue Subscribe to the #1 source for Linux on p102.
+84     LXF121 August 2009
+LXF121.tut_gimp 84
+www.linuxformat.com
+8/6/09 11:27:39 am
+Gimp Tutorial
+8
+Smudging out excess hair
+Removing the hair also means Girl
+layer comes back into view. Now
+switch off the visibility of the three
+edge detection-related layers and
+turn on the visibility of the Girl
+layer. Enable the Layer Lock for the
+Girl layer and then use the Smudge
+tool with any appropriate brush to
+blend the hair out of this layer. Try
+to keep the lighting smooth across
+the cheek by clicking in lighter
+areas first (the cheek) and
+dragging into darker areas (the
+10
+9
+hair). Smudge the neck and
+clothing as well.
+With the Layer Lock enabled,
+you don’t have to avoid smudging
+outside the girl’s outline. While this
+is something I desired for this
+project, you could express your
+creativity by disabling the Lock
+and smudging all over the place.
+Just be sure to colour the smudged
+areas with some fire later. When
+you’re done, make the edge
+detection layers visible again.
+Add flame colouring
+Colouring is the next step. The girl
+is coloured first, simply by using
+Colourise with Hue, Saturation and
+Lightness set to 30, 90 and -30,
+respectively. Next, a roaring fire
+image (flame and black
+background) is copied in as a new
+layer to the top of the layer stack.
+It’s scaled so that the flame fits
+completely over the girl, then the
+layer is cropped to fit the image
+(Layer > Layer to Image Size). Set
+the Layer Mode to Hard Light.
+When Layer To Image Size is used,
+the layer may not span the width of
+the image and you’ll see a white
+band. If this happens, click the
+white band with the Fuzzy Select
+tool, Grow by it one pixel and fill the
+selection with black.
+At this point, the flames obscure
+the girl’s face and you have two
+options: leave them or use the
+Smudge tool on the flame layer to
+let the face and ornaments show
+through. I chose the latter option.
+Create the flaming hat
+Finally, we’re at the really fun and
+creative part. The process for
+creating the fire hat is remarkably
+simple, but it will more than likely
+take you a couple of attempts to
+get it just right. Start with a flame
+image like the one shown below – a
+flame, not a roaring fire. Copy just
+the flame (without the black
+background) into the project’s
+window. Name the new layer Flame
+Hat. Scale this layer to fit from the
+girl’s forehead and stretch it to the
+top of the image.
+Duplicate this layer, flip it
+horizontally and position it close
+to the original flame layer. Use a
+mask to merge the flames together
+if necessary. Then merge the two
+layers by selecting the top layer
+of the two and selecting Layer >
+Merge Down. Move the merged
+layer to the middle of the image
+window and size the layer to the
+image (again using Layer > Layer
+to Image Size). Now you have the
+basic flame hat frame in place with
+some space around it to create the
+flame swirls.
+Use the iWarp filter to create the
+flame swirls. Now, here’s the tricky
+part. The left side of the hat will be
+swirled using the Swirl CW mode
+and the right side of the hat will be
+swirled using the Swirl CCW mode.
+For this particular flame, I found
+two spots on each side which
+would make good swirls. Clicking
+(never dragging) at various points
+in the preview, I was able to create
+two swirls with a nearly uniform
+appearance. Clicking and holding
+also works, but you’ll need to hold
+for a very short amount of time or
+the swirl gets too big.
+You should experiment with
+the Deform Radius and Deform
+Amount while you do this, as well
+as where to click in the preview. If
+the preview gets messed up, just
+hit Reset and try again. It may take
+patience, but if you experiment
+enough, you’ll get it in the end.
+After applying the iWarp
+settings to the Flame Hat layer,
+position and Rotate the hat in place
+over the girl’s head. Set the Layer
+Mode to Screen, then add another
+copy of the roaring fire above this
+layer, scaled so the whole flame
+fits inside the hat. Set the Layer
+Mode for the roaring fire layer to
+screen and use a layer mask to
+blend it into the hat.
+11
+Add Background Emblem
+The last step is extremely simple.
+To add a sort of Mayan feel to this
+project, I selected the Mandala
+brush from the Gimp Paint Shop
+collection. With the Paintbrush tool
+selected, I increased the scale of
+the brush until a single brush click
+was roughly three quarters of the
+size of the image window. Then I
+added a transparent layer above
+the background, made the
+foreground colour white and
+clicked once in this new layer.
+Above the Mandala imprint, I
+once again added the roaring fire
+image in a new layer. Scale the fire
+to cover most of the imprint and
+then set the Layer Mode to
+Multiply. And that’s it.
+Summary
+Earlier I mentioned that I toyed
+with the idea of removing the girl
+from the image. This didn’t look
+right until I added the Mandala
+imprint layer and coloured it with
+flame. Now when I remove the girl
+layer, the imprint shows through,
+which looks pretty good. Why not
+take this basis and experiment
+some more? Soon you’ll have a
+great variation on this theme.   LXF
+Next month Fire up the dilithium crystals and add a touch of warp speed!
+www.tuxradar.com
+LXF121.tut_gimp 85
+August 2009 LXF121     85
+8/6/09 11:27:42 am
+

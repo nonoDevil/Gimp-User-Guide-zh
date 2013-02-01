@@ -1,0 +1,247 @@
+Tutorial Gimp Open source image-editing
+Gimp
+software you can get your teeth into
+Gimp: Product
+Geek is Chic! Gimp author Michael J Hammel shows how a little penguin
+(and a little bit of Wilber) makes for fine fashionable wear.
+The finished product: take some vector art, tart it up with
+Gimp, then get it ready for printing.
+
+After nearly two years it is time to draw this latest
+incarnation of the Gimp tutorial series to a close. Over
+the years, Gimp has evolved from a college project to
+a hacker’s toy to a full-fledged production graphics tool for
+the masses. Along the way we’ve celebrated the addition of
+plugins, the plethora of filters, the magic of layers and the
+power of the Toolbox. And even now, as I bring you one last
+dance with Wilber, Gimp continues to evolve. Soon we’ll be
+able to frolic in the long promised advances of Gegl, the next
+generation soul of Gimp. But as Gimp has evolved so to has
+the rest of the world. What was once the purvey of mystical
+artisans with brick-oven kilns is now nothing more than a
+website with design templates. Yes, you too can print on just
+about anything. All it takes is a mouse click and a credit card.
+Recently my daughter set off for college in the upper
+north-west of the United States. She got there with a lot of
+Vector art on the web
+Tux: http://vector4free.com/vectors/id/360
+Equations: www.vectorjungle.com/2008/11/vector-
+art-equations-and-graphs
+Dialog Bubble: www.bazaardesigns.com/5415-
+dialog-bubbles
+Wilber: See the Gimp sources, under the docs directory.
+hard work on the tennis court and a fortunate scholarship
+opening – a little luck never hurts. As a gift for her taking a
+financial load off dear old Dad I made a poster of her team
+and a coffee mug with photos of the other incoming
+freshmen. They were quite the hit (or my daughter was just
+being nice, not that it matters either way to me).
+So for this last installment of my Gimp tutorials I thought
+I’d walk readers through the process of creating a T-shirt
+design suitable for any lovable geek in the family. I’ll show you
+how loading free vector art doesn’t require you to keep it in
+vector format. I’ll also show you how a parametric brush can
+be used to simulate a stitching job that only a nerd could love.
+What’s in store
+This project will use three different vector images from free
+vector sites on the internet. It will also use brushes found in
+the Gimp Paint Studio (GPS) collection. I’ll show how a really
+big brush doesn’t have to stroked to be useful while
+illustrating just how much geeks love math. Along the way
+you’ll find your favourite big-eyed mascot pulled right from
+the source. And in the end, you’ll have a perfectly sized image
+ready for printing on to a T-shirt.
+As with most of my tutorials you won’t need much more
+than basic Gimp knowledge to complete this tutorial; a
+familiarity with layers is essential though, as is knowing your
+way around the Toolbox and the Tool Options dialog.
+Last month We made a face dissolve into hundreds of little squares.
+80 LXF128 February 2010
+LXF128.tut_gimp 80
+www.linuxformat.com
+11/12/09 11:07:1 am
+Gimp Tutorial
+design for geeks
+Step by step: Create a T-shirt design
+1
+Designing for print
+Many print-to-order sites, such as Zazzle and
+CafePress, offer both US and European sites to
+reduce shipping costs. Clothing is the most
+common type of product, but look for
+alternatives such as mugs, bottles and boxes.
+Choose a site that offers the type of product
+you want to print on and provides templates to
+assist in sizing your images. Zazzle and
+CafePress can be pricey, so look for discount
+cost sites like Printfection.com and speciality
+printers like DeckPeck.com.
+4
+Background box layer
+Create a new layer 500p wide by 500p tall.
+Click the Foreground Colour box in the Toolbox
+and create a light grey colour. Drag the
+Foreground Box into the image window to fill
+the new layer with the grey. Click the Align tool
+in the toolbox, click the white background in
+the image window, then hold down Shift and
+click on the new layer. Click the Align Centre
+and Align Middle buttons in the Tool Options to
+centre the new layer in the image window.
+2
+Vector art sources
+Print designs don’t have to be made
+completely from scratch. Use stock photos or
+integrate some of the free vector art available
+from sites like Vecteezy, Bazaar Designs and
+VectorJungle. Be certain to check licences of
+downloaded artwork if you plan to sell your
+products. Gimp will import SVG, EPS and AI
+formats without problem. More important:
+setting the resolution on import will generate
+an appropriate sized version of that artwork,
+perfectly suited to your design project.
+5
+Add a ripple to the box
+Increase the Layer Boundary (Layer > Layer
+Boundary Size) to 540 pixels square and
+centre the layer within the new bounds. Open
+the Ripple filter (Filters > Distorts > Ripple). Set
+the Period to 200 and the Amplitude to 15,
+then apply the filter horizontally. Repeat the
+ripple using the same settings vertically. Scale
+the layer (Layer > Scale) to 1980x1980. Set the
+Lock Transparency box in the Layers dialog for
+this layer.
+3
+Open a template
+Open a product template from the print-to-
+order site. This project uses the 10x10 T-shirt
+template from CafePress. Most templates will
+be JPEG images or PDF files sized at the
+correct resolution (usually 200dpi but this can
+vary) and dimensions. With a 200dpi JPEG, the
+10x10 template is 2,000 pixels wide by 2,000
+pixels tall. Fit the project to the template
+boundaries. Note that the mug template shows
+which part of the image will display on various
+parts of the mug.
+6
+Stamp the background
+Reset the Foreground colour to black by typing
+D in the image window. In the Brushes window
+(Windows > Dockable Dialogs > Brushes)
+choose the Circle Circuit 2 brush from the GPS
+package. Choose the Paintbrush from the
+Toolbox. In the Tool Options dialog set the
+Mode to Normal, Opacity to 10%, and the
+Scale to 8.00. Click once in the centre of the
+image window. This effect is intended to be
+very subtle against the background.
+If you missed last issue Call 0870 837 4773 or +44 1858 438795.
+www.tuxradar.com
+LXF128.tut_gimp 81
+February 2010 LXF128 81
+11/12/09 11:07:3 am
+Tutorial Gimp
+7
+Prepare to stitch
+8
+The Paintbrush at such a large scale will become annoying, so type R
+in the image window to switch tools. Duplicate the Background Box
+layer (Layer > Duplicate). Name the duplicate layer Stitches and turn
+off the Transparency Lock for this layer. Select the entire layer (Ctrl+A)
+and cut the selection (Ctrl+X). Clear the selection (Select > None).
+9
+Apply stitches
+10
+Choose the Rake Small brush from the Brushes window. This is a
+parametric brush, which means the layout of the dots will depend on
+the motion of the brush. Set the Spacing to 100 at the bottom of the
+Brushes window. Stroke the selection (Edit > Stroke Selection) using
+the Paintbrush but do not emulate brush dynamics. Clear the selection.
+11
+Multiple Wilbers
+Add Wilber
+Retrieve the Gimp source code and open Wilber.svg. When prompted,
+set the resolution to 25. Drag the layer for this window into the project
+image window to copy Wilber into the project. Set the layer mode to
+Overlay and the Opacity to 50%. Drag a guide from the left ruler out to
+1530 pixels. Move Wilber to align with this guide.
+12
+Desaturate the Wilber layer (Colours > Desaturate) using the Lightness
+setting, then duplicate this layer twice. Drag the first copy down along
+the guide line to just above the stitches along the bottom edge of the
+image window. Drag the second so it sits directly in the middle of the
+other two, also on the same guide line, and adjust the opacity to taste.
+Outline the stitches
+Click on the Background Box layer in the Layers dialog to make it the
+active layer. Select the opaque area of this layer (Layer > Transparency
+> Alpha To Selection). Shrink the selection by 50 pixels (Select >
+Shrink). Click on the Stitches layer in the Layers dialog to make it the
+active layer. The outline of the stitches is ready to be traced.
+Bring in the penguin
+Retrieve the Vector Tux files. The package contains both EPS and
+Adobe Illustrator formats. Choose the EPS format. In the import dialog,
+set the resolution to 150 and the colouring to Colour. No antialiasing is
+required for this image. Make the tux.eps image the active window and
+drag its only layer into the project image window. 2
+Never miss another issue Subscribe to the #1 source for Linux on p66.
+82 LXF128 February 2010
+LXF128.tut_gimp 82
+www.linuxformat.com
+11/12/09 11:07:5 am
+Gimp Tutorial
+13
+Tux clean up
+14
+Move the Tux layer to the left and down, roughly so the right foot and
+left hand nearly touch the stitches boundary. Add transparency to this
+layer (Layer > Transparency > Add Alpha Channel). Choose the Fuzzy
+Select tool from the Toolbox. Click on the white background of this
+layer to select it. Type Ctrl+X to cut this layer’s background out of the
+layer. Clear the selection.
+15
+Adjust equations to fit
+16
+Use the Move tool to centre the equations over the sign the penguin is
+holding. Use the Rotate and Perspective tools to stretch the right side to
+better fit the sign. Add a white layer mask (Layer > Mask > Add Layer
+Mask) to the Equations layer. Set the Foreground to black by typing D in
+the image window. With the layer mask active in the Layers dialog, use
+the Paintbrush to paint out the equations over the penguin’s beak.
+17
+Add text to the balloon
+Add a speech bubble
+Open an appropriate speech bubble from the last of our free vector
+packages. Make a selection around the bubble, then Copy the selection
+and paste it into the project image window. Convert the floating layer
+this creates into a new layer (Layer > New). Name the new layer Dialog
+Bubble. Select the white background in this layer and cut it out.
+Desaturate the layer. Flip, Rotate and Scale it to fit.
+18
+Choose the Text tool, click in the image window and type some clever
+phrase in the Text Editor window. Use the Move tool to position the text
+inside the balloon, with the left-hand side of the text aligned with the left
+of the balloon. Choose the Perspective tool from the Toolbox, then click
+on the image window to allow editing of the text layer. Drag the control
+points so the text stretches to match the perspective of the dialog box.
+Insert equations
+Open the EPS file from the vector equations package, this time setting
+the resolution to 250. Make a selection around the set of equations in
+the image. Copy the selection and then paste it into the project image
+window. Convert the floating layer this creates into a new layer (Layer >
+New). Name the new layer Equations. Set the layer mode to Multiple so
+that only the equations show in the image window.
+Ready for print
+The original template layer should have its visibility turned off so it
+doesn’t end up in the printed product. Save the image in the right
+format for the print site, making sure that you use PNG, TIFF or
+another format that supports transparency for this image, as formats
+such as JPEG don’t support transparency. Finally, upload the image to
+the print site. Now just wait for the box to arrive in the post! LXF
+www.tuxradar.com
+LXF128.tut_gimp 83
+February 2010 LXF128 83
+11/12/09 11:07:6 am
+

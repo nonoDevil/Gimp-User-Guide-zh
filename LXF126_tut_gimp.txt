@@ -1,0 +1,248 @@
+Tutorial Gimp Open source image-editing
+Gimp
+software you can get your teeth into
+Gimp: Leopard
+A Leopard-based desktop starts with professionally styled icons. This month 
+Michael J Hammel shows how Gimp makes icon design a breeze.
+Here’s what we’re aiming for: a series of icons created
+in Gimp, displayed on my desktop in SimDock.
+
+Over the past year of tutorials we’ve worked on rather
+large-scale projects (by large I mean in the sense of
+canvas size). If you’ve been following along, you’ll
+have learned how to create a universe, destroy a city and
+create your own iPod advert. Each of these projects was
+suited to small prints, with processes that could easily scale
+up. By this time, it should be clear that Gimp is an excellent
+graphic design tool for print projects.
+But print projects are only a small sample of what Gimp
+can do. This multipurpose toolbox is suited to many design
+projects – working with digital photographs, for example. I’ve
+not touched often on photography simply because I’m not
+much of a photographer – I don’t even own a digital camera –
+but despite my shortcomings, Gimp is heavily used in image
+processing fields and supports multiple RAW file formats
+(through the ufraw plugin). This is useful to photographers
+because RAW image files are of a significantly better quality
+Project resources
+This tutorial is based on Richard Carpenter’s excellent ‘Carbon Style Icon’ tutorial 
+for Photoshop from HV-Designs. 
+ http://hv-designs.co.uk/2009/02/10/carbon-style-icon.
+SimDock: http://simdock.sourceforge.net.
+ Avant Window Navigator: https://launchpad.net/awn.
+than the JPEGs your digital camera typically produces. Being
+able to work with RAW, then, means a better end product.
+At the other end of the image spectrum are desktop
+graphics – specifically icons. An icon is a small image used to
+represent a program, file, device or data accessible by a user.
+Icons can clutter the desktop, but utilities such as the Avant
+Window Navigator and SimDock enable you to organise your
+program icons in a Mac-like dock. These docks are like KDE
+or Gnome panels but with a 3D appearance. SimDock, in
+particular, is designed to look just like the dock in Mac OS X.
+Docks are essentially icon managers that handle resizing
+automatically. SimDock, for example, initially displays icons
+scaled to a very small size and then zooms them to a larger
+size as you mouse over them. Users can specify the zoom
+amount in the settings, and by using a large zoom factor,
+larger icons can be used.
+Which is where Gimp comes in. The use of large icons
+makes it much easier to create the images they’re based on,
+because the Gimp project can work with a larger canvas. It’s
+very different to, and easier than, working with Gnome panel
+launchers, for example, where all displayed icons are the
+same size and usually no larger than about 32 pixels wide by
+32 pixels tall. SimDock enables the icon to be created at a
+much larger size, and will handle scaling automatically.
+This month we’ll visit the icon world as I walk you through
+the design of icons suitable for use with SimDock and other
+desktop docks. The tutorial is intended for use with Gimp 2.6
+and can be performed even by beginner users of Gimp – only
+basic knowledge of the software is required, such as using
+layers and understanding the default layout of the toolbox. No
+outside stock images are required. Advanced users can
+complete this tutorial in less than an hour, but beginners will
+take a little longer.
+Last month We helped you create your own Frank Miller-inspired designs.
+80     LXF126 Christmas 2009
+LXF126.tut_gimp 80
+www.linuxformat.com
+26/10/09 4:53:31 pm
+Gimp Tutorial
+style icons
+Step by step: Create an icon
+1
+Set the colours
+Open a new, 640x480 image window (File >
+ew). Reset the Foreground and Background
+colours by typing D in the image window. Click
+on the Background Colour Swatch in the
+Toolbox to open the Change Background
+Colour dialog. Next, set the R, G and B values
+to 121, 121, and 121 respectively. Close the
+colour dialog. The black and grey colours will
+then be used as the background gradient for
+the finished icon.
+4
+Create check pattern
+Open a new image window scaled to 16x16
+pixels. In the window that opens, hit the + key
+10 times to zoom in. Add vertical guides (Image
+> Guides > New Guide) at 4, 8 and 12 pixels and
+horizontal guides at 4, 8 and 12 pixels. This
+divides the window into 12 blocks. Set the
+Foreground colour R, G, B to 103, 103, and 103
+respectively. Use the Rectangle selection tool
+to outline blocks, and then fill alternating blocks
+with the foreground colour.
+2
+Rectangular selection
+Add a transparent layer (Layer > New) and
+name it ‘Icon Background’. Choose the
+Rectangle selection tool from the Toolbox. In
+the Tool Options dialog, click on the Rounded
+Rectangle and set its Radius to 25. Draw an
+initial selection in the image window. In the Tool
+Options dialog set the Size to 274x240 and the
+Position to 183x120. This is the size of the icon,
+plus some transparent padding.
+5
+Finish the check pattern
+Change the Foreground RGB to 67, 67, and 67
+respectively, then select and fill blocks 1/2, 1/4,
+2/3, 3/2, 3/4, and 4/1. Change the Foreground
+RGB to 141, 141, and 141 respectively and fill in
+blocks 2/1 and 4/3. Save this file as DockIcon.
+pat in your $HOME/.gimp-2.6/patterns
+directory, then open the Patterns dialog
+(Windows > Dockable Dialogs > Patterns) and
+then click on the Refresh button to add the new
+pattern to the list of patterns. When you’ve
+finished, close the DockIcon.pat window.
+3
+Gradient fill
+Drag a guide from the left to the middle of the
+image. Choose the Blend Fill tool and set the
+Mode to Normal, Opacity to 100%, Gradient to
+‘FG to BG’ with Reverse checked, and the
+Shape to Linear. Drag from the top of the
+selection to the bottom, along the guide. Now
+clear the selection (Select > None) and add a
+Drop Shadow (Filters > Light and Shadow >
+Drop Shadow) offset by 3 pixels and blurred by
+5 pixels.
+6
+Add the pattern
+Add a transparent layer to the icon image
+window and name it Pattern. Click on the Icon
+Background layer in the Layers dialog and
+create a selection of the icon (Layer >
+Transparency > Alpha to Selection). Click on
+the Pattern layer to make it active. In the
+Patterns dialog (Windows > Dockable Dialogs
+> Patterns), drag the ‘Dock Icon BG’ pattern
+into the image window to fill the selection with
+the new pattern. Your icon should now have a
+checkered background.
+If you missed last issue Call 0870 837 4773 or +44 1858 438795.
+www.tuxradar.com
+LXF126.tut_gimp 81
+Christmas 2009 LXF126     81
+26/10/09 4:53:33 pm
+Tutorial Gimp
+7
+Mask the pattern
+8
+Add a White Layer Mask to the Pattern layer. Type D in the image
+window, choose the Blend tool, then set the Opacity to 75% and the
+Shape to Radial. Drag from the top of the icon to the middle. Switch the
+Shape to Linear and the Mode to Multiply, then drag from the middle of
+the icon to the bottom and again from the top to the middle of the icon.
+9
+Front shelf
+10
+Add a transparent layer at the top of the Layer stack called Front Shelf.
+Add vertical guides at 173, 183, 458 and 468, and horizontal guides at
+290, 300 and 340, then draw a rectangular selection from the guides
+intersecting at 173/300 to the intersection of 468/340. Set the
+Foreground colour to a medium grey.
+11
+Right shelf
+Left shelf
+Zoom in to the left of the shelf. Choose the Paths tool and set Edit
+mode to Design. Select the guides at 173/300, 183/290 and 183/300
+and click Selection From Path in Tool Options. Set the foreground
+colour to a lighter grey, with R, G and B values of 203. Drag the
+foreground colour into the selection.
+12
+Slide the image window to the right to view the right edge of the front
+shelf. Use the Paths tool and click on the guides intersecting at
+458/290, 468/300 and 458/300. Click on the Selection from Path
+button in the Tool Options dialog. Set the foreground colour to a dark
+grey, drag the colour into the selection, then clear the selection.
+Another mask
+Apply the layer mask, clear the selection, then add another White
+Layer Mask to the Pattern layer. Use the Paths tool from the Toolbox
+and place anchors to make a rectangle around the upper half of the
+icon, then move the anchor handles to create a wave effect along the
+bottom edge of the path. Now invert the selection and fill it with black.
+Application colours
+Reset the foreground and background colours, then click on the
+foreground colour swatch and set the RGB values to 74, 164, and 75
+respectively. Now change the background colour to RGB values of 28,
+130 and 29 respectively. Close the colour dialog. The green shades will
+be used as the gradient for the application icon.
+Never miss another issue Subscribe to the #1 source for Linux on p102.
+82     LXF126 Christmas 2009
+LXF126.tut_gimp 82
+www.linuxformat.com
+26/10/09 4:53:34 pm
+Gimp Tutorial
+13
+Application sphere
+14
+Add a transparent layer at the top of the layer stack and name it Sphere.
+Choose the Ellipse selection tool and create a circular selection in the
+image window, centered on the icon and above the shelf. Choose the
+Blend tool and set a Radial shape and an FG to BG gradient in the Tool
+Options. Drag from the centre to the edge of the selection.
+15
+Lower highlight mask
+16
+Add a White Layer Mask to the Lower Highlight layer. Reset the
+Foreground and Background. Choose the Blend tool and set a Linear
+shape and FG to Transparent gradient. Drag in the image window from
+the top of the icon to the bottom. Add a transparent layer at the top of
+the layer stack and name it Upper Highlight.
+17
+Application ID
+Upper highlight
+Choose the Scale tool and set the Transform to Selection. Drag in the
+image window to scale the selection to 1/2 its size and about 3/5 the
+width. Reset and invert the swatches in the Toolbox, then use the Blend
+tool with a Linear shape and FG to Transparent gradient and drag from
+the top of the selection to the middle.
+18
+Choose the Text tool. Select a Font and set the Font size to 160 and the
+colour to White. Type an upper-case G (for Gimp) and centre it over the
+sphere with the Move tool. Change the Lower Highlight layer’s mode to
+Overlay. In a smaller font and in white, type the word “Gimp” and
+position it over the shelf, then add a drop shadow.
+Lower highlight
+Add a transparent layer at the top of the Layer stack and name it Lower
+Highlight. Shrink the selection by 2 pixels, then reset and invert the
+foreground and background colours. Use the Blend tool with a Radial
+shape and FG to Transparent gradient with Reverse button set and
+drag from the centre to the edge of the selection.
+Application name
+Save this image as your source file for other icons. To save the icon
+itself, delete the white background layer and use the Crop tool to crop
+the image leaving just a small amount of transparent space around the
+icon. Save the image as GimpIcon.png. Use this file as the icon file
+when adding a Launcher to the SimDock. LXF
+Next month In a fest of retro-futurism we’re blending cubism with pixellation.
+www.tuxradar.com
+LXF126.tut_gimp 83
+Christmas 2009 LXF126     83
+26/10/09 4:53:35 pm
+

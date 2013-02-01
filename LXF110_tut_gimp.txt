@@ -1,0 +1,264 @@
+Gimp Open source image-editing
+software you can get your teeth into
+Gimp: Creative
+Gimp can do more with text than you might think, as our graphics guru
+Michael J Hammel demonstrates with his two beautiful assistants.
+
+Gimp is first and foremost a tool for working with raster
+images. Most desktop users will prefer to work with Gimp
+when dealing with their digital photographs but might
+choose other tools like Inkscape or Scribus when working with
+text. But don’t be fooled: Gimp does a great job with text effects,
+and in ways that most people might think can only be done with
+vector applications.
+This month I’m going to walk you through a little trick with text
+that my wife found in a design magazine. In that tutorial the
+process was handled using InDesign. InDesign, for those who don’t
+use it, is a vector layout tool. It does clever things with text using
+boxes to align and block objects within the layout. This particular
+effect, which you can see in the cover image for this tutorial, turns
+out to be even easier in Gimp than described in the original
+InDesign tutorial.
+Projects like this have important periphery components
+beyond just the text. This design requires a source image that has
+sufficient colour and contrast. Without colour and contrast the
+shapes within the image won’t be recognisable through the text.
+The project also requires a suitable font. The font needs to be
+thick and should not use any serifs. Serif fonts will make the final
+image appear cluttered, and in most cases won’t allow as much
+detail from the source image to show through, even when bold
+versions of the serif font are used. It can also make it difficult to
+recognise the text from the image.
+The goal of this project is to map an image on to text but keep
+the original image recognisable. Gimp’s text features make the
+actual design something that can be done in a few minutes and
+with a limited set of steps. So before we dive into that, let’s take a
+look at some of these periphery issues involved when working on
+similar designs.
+Select a stock image
+To start the project, visit one of the many low-cost stock image
+sites and search for a human portrait. The picture we want needs
+to include two important features. The first is a solid coloured
+background. A cluttered background will make it harder to identify
+the subject of the image when we apply our text effect.
+The second important feature is a fair amount of colour
+contrast. An all-black image would work just fine, but would end
+up being nothing more than shadow-filled text. For this project I
+selected a woman in a black dress with enough skin tones to
+provide some colour contrast. We’ll add to that contrast with a soft
+vignette a little later.
+When selecting stock images you should be aware of licensing
+issues. If the image is of inanimate objects, you’re generally safe. If
+the image shows a recognisable face, then you’ll need to make
+sure the publisher of the photo (whoever uploaded it) has
+obtained a model release from the subject of the image. Without
+the model release, you can’t use the image in published work.
+Last month In last month’s column, author Michael J. Hammel talked about using
+90 Linux Format October 2008
+LXF110.tut_gimp 90
+31/7/08 1:35:4 pm
+Gimp Tutorial
+design
+All three text
+samples are set
+to 18 pixels with
+-5 pixel line
+spacing and -2
+pixel tracking.
+The seated woman has a low contrast between background,
+skin and dress; the dancing woman is a much better image.
+Fortunately, most stock image sites will either require the
+photographer to submit the model release or let you know if no
+model release is available.
+Working with comps
+So you’ve scanned a few hundred images and found a few that
+might work. How can you tell how well they’ll work? The answer
+comes from working with comps. A comp is a small version of a
+stock image that typically contains a watermark. Most of the stock
+image sites will allow you to download a comp or, if they don’t
+explicitly offer them, will have large enough sample versions for
+viewing that you can download without paying for them.
+Comps are for experimenting. They’re often too small to use in
+final projects and would be inappropriate considering the
+watermark. But they’re useful for testing an idea. The testing for
+this project requires only that we use a smaller font size that what
+we’ll use in the final project. I used comps of several images before
+selecting the final image of the woman in the black dress. If the
+comps are too small you can double the image size for the
+experiment even if that pixellates the image.
+This effect works best with thick, straight-edged fonts. Script
+fonts don’t show the image very well, even when a bold face is
+used. In this tutorial I’m using the bold version of the Tahoma font
+but any sans font, probably using the bold face, will suffice.
+The first Gimp-specific tip for this tutorial is related to the Text
+tool options. Select the Text tool and then open the Tool Options
+dialog (Dialogs > Tool Options). Just above the button labelled ‘Text
+Along Path’ there are three options. These options are for, top to
+bottom, Indent, Line Spacing and Tracking. We won’t be using the
+indent option but we do want to use the other two. We want the
+value in Line Spacing made smaller (to negative values) so that the
+lines of text will be as close as possible without overlapping.
+Tracking sets the space between letters. This is similar to
+kerning but is not exactly identical. Again, the technical
+explanation is not important here. We just want to reduce this
+setting (also to negative numbers) to reduce the space between
+letters – the closer the better.
+Quick
+tip
+Scan multiple
+stock photo archives,
+such as
+BigStockPhoto.com,
+iStockPhoto.com
+and Stock.xchng
+(www.sxc.hu).
+Adding a vignette
+The first thing we want is to add a soft vignette. This will make the
+final image a little more colourful while keeping the woman’s
+shape recognisable. To do this, we add a transparent layer above
+the main layer (Layer > New) and name this new layer Vignette.
+Select the Elliptical selection tool from the Toolbox and in the
+image window draw an oval selection around the girl. Feather the
+selection (Select > Feather) by 100 pixels. Choose a warm colour
+for the foreground colour by clicking on the foreground colour box
+in the Toolbox. I’m using RGB values of 231/127/35 for this tutorial.
+We now need to add a radial gradient inside the circle.
+Choose the Gradient tool from the Toolbox. In the Tool Options
+dialog (Dialogs > Tool Options) set the Gradient to ‘FG To
+Transparent’ and the Shape to ‘Radial’ In the image, click and drag
+.
+from the middle of the selection to just past the top of the
+selection. Set the vignette layer’s mode to Multiply.
+At this point I add a little noise to the gradient for an artistic
+effect, but this step is optional. To add the noise, select Filters >
+Noise > HSV Noise and set the Holdness to 2, the Saturations to
+255 and the Value to 255. The default setting for Hue (which
+If you missed last issue Call 0870 837 4773 or +44 1858 438795.
+October 2008 Linux Format 91
+LXF110.tut_gimp 91
+31/7/08 1:35:13 pm
+Tutorial Gimp
+Choose a warn colour for the vignette, to add some extra contrast to the final
+image – this really helps in the white areas of the source photograph.
+Quick
+tip
+Vignettes are an
+easy way to add
+colour to high-
+contrast, low-
+colour photos.
+should be 3) should not be changed. Then apply this to the
+Vignette by clicking on the OK button. The noise will only be applied
+within the selection and only to coloured pixels – not transparent
+ones. You can clear the selection now (Select > None) and merge
+the Vignette and background layers (Image > Flatten Image).
+Adding a text layer
+The crux of this tutorial is to use text as a mask over the image. To
+do this, start by resetting the default colours in the Toolbox (the
+small black and white boxes below and to the left of the larger
+black and white boxes). Then create a text layer filled with random
+words. Choose the Text tool from the Toolbox and click in the
+image. This will open up the Text Editor window. In this window,
+paste a large amount of text.
+So what text should you use? I first copied 1,500 words from
+the Lorum Ipsum generator into a 100-character-wide text
+terminal. I then used the Vi editor to remove all line breaks (Shift+J
+on each line, making one long line) and mapped the text to fit the
+window with line breaks (In Vi: G+Q+J). If this isn’t long enough,
+join all the lines again, copy and past below it to extend the text.
+The select and copy this text into the Text Editor window. Using a
+100-character-wide terminal allowed me to create text that would
+Any noise you add to the vignette might not be visible in the
+finished image (this depends on the font thickness).
+be wide enough to cover the image but still include line breaks
+which Gimp needs to block the text.
+Pasting the text will update the image window immediately. You
+can now close the Text Editor window. In the Tool Options dialog
+you’re ready to set the font, size, line spacing and tracking as
+mentioned previously. Choose the font and size before changing
+the spacing and tracking. Remember I used Tahoma Bold, which
+you can find in the Corefonts project on SourceForge. You’ll also
+want the text in black so you can see it in the image window.
+Set the line spacing to -5 and the tracking to -3. This is
+sufficient to push the letters up against each other horizontally
+and vertically without overlapping, at least for this specific font
+and size.
+Getting the source images
+The source images from this tutorial
+were purchased from BigStockPhoto
+for $2 each. The image IDs are
+Pretty Dancing Woman (black
+dress): 1716725 (size: 1066 x 1600)
+Sunflower Girl: 2861058
+(size: 900 x 900)
+Pixel amounts specified in the
+tutorial are based on these source
+image sizes.
+Cows do not require a model release.
+Initially the text will not be aligned with the rest of the image,
+but we’ll fix that with the Align Tool.
+Never miss another issue Subscribe to the #1 source for Linux on p102.
+92 Linux Format October 2008
+LXF110.tut_gimp 92
+31/7/08 1:35:15 pm
+Gimp Tutorial
+The text layer is much larger than the canvas window (which Keeping multiple versions of the text layer and masks lets you compare the masks
+has been zoomed out to show the text layer boundaries). and return to the version that looks best without having to recreate it later.
+Now align the text layer with the Align tool (it looks like a box other set is for distribution, which we aren’t concerned with here).
+with arrows pointing away from all four sides). Click on the image Click on the horizontal and vertical alignment buttons, which each
+window over the visible text. This adds the text layer to the set of look like two arrows pointing to a central line, which is either
+layers to be aligned. Hold the Shift key down and click on the horizontal or vertical. Now the text is aligned over the image.
+background layer (the woman in the dress) in the image window Resize the canvas to fit the text layer, zoom out and shrink-wrap
+to add it to the layers to be aligned. Now the text layer and the the window (Ctrl+E) around the canvas.
+background layer are included in the set of layers to be aligned. 
+You can tell this is the case by looking for small black boxes at the 
+corners of each layer that will be included in the alignment. 
+In Layers dialog make sure the background layer is the active 
+layer, and in the Tool Options dialog, set the ‘Relative To:’ menu to 
+    Active Layer. In the Tool Options dialog there are two sets of six 
+    buttons that look identical. The first set are for alignment (the 
+This is the final image, except that you may want to adjust
+the position of the mask over the background image.
+Create a mask layer
+Quick
+tip
+Generate lots of
+random text using
+the free Lorum
+Ipsum generator:
+www.lipsum.com
+Now we’re ready to create our mask. We start this process by
+adding a White layer to the image (Layer > New, set Fill Type to
+White). Drag this layer into the Layers dialog below the
+background layer. At this point you should drag the text layer
+below the background layer too.
+Click on the Text layer in the Layers dialog to make it the active
+layer, then create a selection of the text (Layer > Text to Selection
+> Text to Selection) and invert the selection (Select > Invert). This
+provides a selection of everything except the text. Click on the
+White layer you just added to make it active. Create a copy from
+the selection (Edit > Copy) and then paste the copy (Edit > Paste).
+This creates a Floating Selection layer in the Layers dialog that
+must be converted to a new layer manually (Layer > New).
+What you’ve done here is to paste a white layer with the text
+stamped out of it over the source image. Where the text was
+stamped out, the source image shows. Turn off the visibility of the
+Text layer by clicking on the Eye icon to the left of the layer
+thumbnail in the Layers dialog.
+Click on the background layer in the Layers dialog to make it
+the active layer. Choose the Move tool from the Toolbox. Hold
+down the Shift key and click and drag in the image window to
+move the woman and vignette around under the mask. Moving the
+source image around under the mask may not be enough to get a
+good result – you may need to adjust the text layer font size,
+tracking or line spacing. You may even need to try a different font.
+If any of this becomes necessary, turn off the visibility of the mask
+layer first and then duplicate the Text layer. Duplication is
+necessary so you keep a copy of the last settings. Adjust the font
+settings in the text layer duplicate. Then repeat the selection,
+invert, copy and paste process to create a new mask. LXF
+Next month Gimp has tons of selection tools – we’ll look at the most useful.
+October 2008 Linux Format 93
+LXF110.tut_gimp 93
+31/7/08 1:35:21 pm
+

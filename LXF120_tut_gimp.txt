@@ -1,0 +1,468 @@
+Tutorial Gimp Open source image-editing
+Gimp
+software you can get your teeth into
+Gimp: Decay in t
+Even experts can learn something new. Michael J Hammel shares his 
+experiences using a Wacom tablet with Gimp Paint Shop.
+of Urban’ by Pierre Fabre of France (www.cgarena.com/
+freestuff/tutorials/photoshop/urban/index.html). The
+idea is to take a city landscape and add urban decay to the
+extreme by integrating elements of water, fire and earth.
+In this month’s column I’ll show you how I learned to use
+the Wacom Bamboo tablet with Gimp Paint Shop to produce
+my own Gimped-up version of the Making of Urban design,
+which I call Decay.
+The project required five stock images: the city landscape,
+two photos of water, one photo of a woman, and one photo of
+vines. The final version consists of 73 layers, 51 with layer
+masks, and three paths. The total time to produce the final
+image was a little over 12 hours.
+Most of the work centred on doing hand-drawn blackouts
+for windows in the buildings. While I was working on these I
+learned that the Detail Brush preset for the Paintbrush and
+the Digital Airbrush preset for the Airbrush were the two most
+useful configurations provided by Gimp Paint Shop for a
+project of this type.
+The Wacom Bamboo, Linux and Gimp
+
+Last month we explored a little-known but powerful
+feature of Gimp known as Tool Presets. This feature
+enables users to configure Gimp for specific purposes
+such as simulating pen drawings or working with oils. The
+introduction of Gimp Paint Shop, a collection of presets and
+associated brushes, is opening up this powerful feature to
+more users.
+Beginning users usually see Gimp Paint Shop as a tool
+used to create drawings from scratch. Advanced users know
+this is just the tip of the iceberg. Presets enable you to do
+digitally what matte paint artists have done in Hollywood for
+years – change the mundane into the extraordinary. Being
+the ever inquisitive guy I am, I wanted to see what more I
+could do with Gimp Paint Shop. Using the specialised
+configurations with a mouse seemed a little hokey. So after
+many years of avoiding it, I finally dropped the cash on a
+Wacom tablet, a Bamboo model (www.wacom.com/
+BambooTablet/bamboo.php). This is the low-end model
+from Wacom so I didn’t have high hopes for its quality, but by
+the end of this project I was more than pleasantly surprised.
+The Wacom Bamboo tablet comes with a small black tablet
+with a USB connector and a stylus pen with a holder. The
+tablet has four buttons and a circular pad between them at
+the top and a 5.8x3.7-inch drawing area below it. Though it
+seems small, I found the drawing area completely sufficient
+for this project.
+The Wacom is recognised out of the box as soon as it is
+plugged in with most modern Linux distributions, however it
+is not fully functional. Only the stylus side of the pen and the
+pen buttons function. To get the other side of the pen (the
+eraser side) working, along with the buttons and circular pad,
+the xorg.conf file must be updated (details of my specific
+Urban dystopia
+This project started with two goals in mind:
+1 Find out what I can do with the Bamboo tablet.
+2 Try to emulate another high-end tutorial.
+In this case the tutorial I used for inspiration is called ‘Making
+The original city landscape image comes from the stock
+photo collection at iStockPhoto.com.
+Last month We exposed the hidden treasures of the Gimp Paint Shop.
+82     LXF119 July 2009
+LXF120.tut_gimp 82
+www.linuxformat.com
+8/5/09 5:44:26 pm
+Gimp Tutorial
+the city
+xorg.conf settings
+xorg.conf tweaks can be found on the LXFDVD). Once
+updated, the X server must be restarted. If you don’t know
+how to do this manually, just reboot the machine.
+The xorg.conf settings will enable the features of the
+Bamboo (or other Wacom tablets) but those features must
+then be mapped to keystrokes to be of any use in Gimp.
+This is done using the wacomcpl tool. Some distributions
+include this in the linuxwacom package (also available at
+http://linuxwacom.sourceforge.net), though Fedora 10
+does not have a package that includes it. In this case, and
+since I’m a Fedora user, the linuxwacom package must be
+downloaded and compiled from source.
+It’s small, but
+as it turns out
+you don’t need a
+big tablet to do
+even very fine
+detail work.
+Step by step: Unleash hell!
+1
+Unclutter the skyline
+Now it’s time to get down to business. The first 
+problem with the source photograph is the lack 
+of background sky: the buildings are too tall and 
+there are too many cluttered walkways and partial 
+buildings in the centre of the image. 
+The height of the buildings is easily fixed by 
+making a selection of the buildings up through the 
+top of the sky, copying it and pasting to a new layer. 
+The new layer is then dragged down to shorten 
+the perceived height of the buildings. This process 
+was easy with this photo because the bottom edge 
+of the selected buildings closely matched their 
+respective counterparts of the original image so 
+that there was no apparent seam.
+Additional patches of sky were selected and 
+placed over buildings and walkways in the centre 
+2
+Colour-correct buildings
+The next step is to colour-correct the image. 
+Overall, the original photo was too bright with a 
+high contrast level. To adjust this I duplicated the 
+layer in the new cityscape image and desaturated 
+it. I then used the Levels, Curves, and Brightness-
+Contrast dialogs to adjust the desaturated layer. 
+Then the desaturated layer was moved below the 
+cityscape layer and that layer’s mode was set to 
+3
+Evil sky
+The nearly solid-coloured sky was easy to select 
+using the Fuzzy Select tool. I added a white layer 
+mask to the cityscape layer and filled the selection 
+with black in the mask. I then added several layers 
+of stock cloud images and arranged them so that 
+they were below the cityscape layer. Originally I had 
+painted a sky background using various presets 
+provided by Gimp Paint Shop, but the result was 
+of the image. This allows the sky to shine through 
+the centre area without the buildings cluttering 
+the view. The whole process required five layers to 
+shorten the buildings and provide more area for 
+the sky, and using the original sky for patching will 
+allow easier selection of the sky later for a mask.
+This collection of layers was then flattened to 
+produce a new cityscape image with no layers. I 
+should note here that I later added a few more, 
+small patches specifically to remove flat white 
+walls on the right of the image.
+The bottom edge of the selected buildings 
+lined up perfectly at their new locations. A series 
+of patches, including the tall building on the left by 
+itself, were required to produce the final patched 
+version (shown here in the bottom-right).
+Colour. The results are shown here. The results of 
+this may not be as obvious in print as they are on 
+the screen, but reducing the contrast brought out 
+more details in the image.
+Note the missing and misplaced lamp post 
+lights on the right. This is a result of the shortening 
+of the buildings that I missed and would not fix 
+until much later in the project. 
+too tame. I opted instead for stock images of 
+clouds that I then flipped (Flip Tool) and whirled 
+(Whirl and Pinch filter). Colour was added as an 
+afterthought before the end of the project.
+The original painted sky (left) was fun to do and 
+helped me get a better feel for using the Wacom 
+tablet, but it just wasn’t menacing enough for what 
+I had in mind. 
+If you missed last issue Call 0870 837 4773 or +44 1858 438795.
+www.tuxradar.com
+LXF120.tut_gimp 83
+July 2009 LXF119     83
+8/5/09 5:44:29 pm
+Tutorial Gimp
+4
+Add building decay
+The most-time consuming part
+of this project came next: adding
+vegetation to the buildings and
+breaking out windows and walls.
+I started by adding to the mask
+of the sky on the cityscape layer,
+simulating damage to the tops of
+distant buildings. I used Gimp’s
+Airbrush tool for this, using the
+Digital Airbrush preset from Gimp
+Paint Shop, and applied varying
+pressure with the Wacom stylus.
+The damage to the top of  
+the buildings was just a proof of
+concept at this stage. Adding to
+this damage actually occurred
+later, but it makes sense to talk
+about it now. I made rough
+selections of each building, copied
+and pasted the selection as a new
+layer, then deleted the layer’s
+contents. This gave me a layer with
+bounds at the edges of the building,
+in which I used the Paintbrush
+(Detail Brush preset) and Airbrush
+5
+(Digital Airbrush preset) to draw
+blackouts of various windows.
+Again, this was all experimentation
+on my part, so I started this
+process on the distant buildings
+doing small blackouts, and it
+worked well enough to try the
+closer buildings. In some sections,
+as shown here, I completely
+blacked out a block of windows and
+then drew in hanging wires, metal
+fragments and broken frames
+using the Detail Brush preset and a
+white foreground colour. I then
+went back over those lines with the
+same brush but with different
+colours with the Paintbrush tool’s
+Mode set to Overlay.
+These rough blackouts look
+better behind the vines I’ll add in
+the next section. Later, I revisited
+these with the Detail Brush preset
+to draw thin lines to simulate
+cracks to go with completely
+broken out windows.
+7
+6
+Lamp-post fixes
+The next step was to patch the
+lamp-posts. To get this just right
+I made a detailed selection of the
+closest lamp-post on the right-
+hand side of the original image
+using only the Quick Mask tool.
+This was very time-consuming
+and I had to zoom in close to make
+sure I got a good selection. Four
+lamp-posts had to be fixed, and
+one partial post left over from
+shortening the buildings had to
+be removed. The removal was
+handled by making a selection of
+the area to be removed, moving
+the selection up slightly in the
+original image, then copying and
+pasting this as a patch layer. The
+patch layer was them moved down
+over the offending lamp-post. The
+patch is coloured from the original
+image while the area that the
+patch was applied to is coloured
+after I’d colour-corrected the
+buildings. This was addressed by
+covering the area later with vines
+and some building destruction.
+With that patch in place, the
+copy of the lamp-post from the
+original image was pasted into the
+image and moved to line up with
+the first lamp post on the right. A
+layer mask helped blend the patch
+into the image, though the colours
+are still off.
+The lamp-post patch layer
+was duplicated and resized
+three more times, once each for
+the remaining lamp-posts that
+required a patch. Each new layer
+was moved into position and
+blended with a layer mask.
+Earth elements
+Next came experiments with
+vegetation growing on the
+buildings. I made a selection from
+a stock image of vines and pasted
+it into the image as a new layer,
+then added a layer mask and used
+the Airbrush to mask out random
+sections. This layer was duplicated
+numerous times with the layer
+mask modified, with each layer
+higher up on the building getting a
+larger area masked out to reduce
+the visible plant growth.
+A different selection from the
+vine source image (upper-middle)
+was used for the concrete covering
+Flowing water
+There were several steps involved
+in creating the water effect. First I
+made a selection from a stock
+image of water, pasted a copy of
+the selection into the project
+window and moved it just above
+the cityscape layer. I then motion-
+blurred it vertically, which
+essentially removed the foam but
+left a nice colour wash in its place.
+This was a very large layer, which
+enabled me to use the Perspective
+tool to closely align the motion-
+blurred colour wash with the
+street. A layer mask cleaned up
+the layer so it visually fit snug
+against the edges of the street.
+Finally, the Ripple filter added
+some distortion to the water.
+This water looked glassy, like
+it was frozen. There are good
+reflections (a lucky result of the
+motion blur that has nothing to do
+with the cityscape) but the road
+beneath it is not distorted.
+The same process was repeated
+a number of times to darken
+the water and add more waves
+over the sidewalk and for the
+various other buildings. The
+pasted selection was also scaled
+down so that the vines appear
+further away when applied to
+distant buildings. In some cases,
+an Unsharp Mask was applied to
+the pasted selection.
+Vegetation was added to only
+three buildings, plus the cement
+coverings over the sidewalk on
+both sides of the image. I could
+have added more, but I imagine
+that some buildings don’t provide
+a good medium for growing
+clinging vines.
+and ripples, and I realised that
+duplicating the road itself and
+applying a ripple to it would
+remove some of that glassy
+appearance of the water.
+In order to simulate the
+appearance of flowing water I
+needed to add water splashing
+on the sides of the road. I made
+additional copies from the stock
+images of water then copied,
+resize and positioned them in
+the project image. This changed
+the water’s appearance, but not
+enough to look right.
+So I added additional streaks of
+white splashes in random places
+around the street, made from yet
+more copied selections from the
+stock water images. Masking
+helped blend these splashes into
+the water and completely
+removed the glassy appearance
+of the water. A few splashes on
+the sides of the road and some
+white streaks in the middle
+changed the water from a frozen
+pond to a running river.
+Never miss another issue Subscribe to the #1 source for Linux on p102.
+84     LXF119 July 2009
+LXF120.tut_gimp 84
+www.linuxformat.com
+8/5/09 5:44:33 pm
+Gimp Tutorial
+8
+Mood
+The image up to this point was a
+little dark but otherwise provided
+no coloured mood – think of the
+green tints of The Matrix or the
+blue tints of X-Men. The first
+change I made was to brighten
+the sky and water but not the
+buildings. A radial gradient from
+white to transparent was used
+for this, along with a mask of the
+buildings. Above this I added a
+transparent layer and drew in white
+highlights on parts of the buildings.
+9
+Above this, another radial
+gradient added the yellow glow
+that permeates the image. I’m
+very fond of autumn colours and
+you’ll find them in many of the
+images I create.
+The highlights in the water
+(upper-left) become more evident
+with the two layers of white
+highlights (lower-middle). But the
+mood is set by the yellow glow
+(upper-right) that gives the feeling
+that the sun is just about to set.
+Humanity
+Making of Urban has a man
+walking with a dog, but the stock
+archives I use didn’t provide me
+with a decent image of a person
+walking away from the camera.
+I found an image of a girl but
+the image was very bright and
+hardly seemed appropriate. I
+made an accurate selection, again
+using Quick Mask, and copied,
+scaled and positioned the girl
+in the middle of the street. I had
+to play with the Hue-Saturation,
+Brightness-Contrast, Levels and
+Curves dialogs to darken her up
+without losing too much detail
+such as the colour of her legs.
+I duplicated this layer and
+blurred it, placing the duplicate
+above the original layer. I duplicate
+the layer again but this time
+removed the contents of the layer
+and replaced it with hand-drawn
+highlights, mostly along the left-
+hand side of the girl.
+The last piece of the human
+puzzle comes from two layers
+in the water. The first is a bit of
+coloured water that gives a very
+soft shadow of the girl. This layer
+went below the layers of the girl.
+Above this shadow layer I copied
+in a copy of a splash from a rock
+thrown in a pond.  
+Summary
+The end result of this experiment was a
+good understanding of how to use my
+new Wacom Bamboo tablet (along with
+a genuine fondness for how it feels to
+use) and a much better under
+understanding of how to make use of
+the many presets available in Gimp
+Paint Shop. Even though I used only a
+small portion of those presets, I have a
+better appreciation for their potential.
+The final image was well received by
+those I showed it to, but I can see many
+places for improvement. For one, I
+realise now that patches need to be
+made from the best possible source. In
+most cases I made them from the
+original image when instead I should
+have made them from a copy of the
+colour-corrected buildings. Fortunately,
+these colour problems hid themselves
+beneath vines and mood colouring.
+Another issue is purely aesthetic.
+The composition of the image is not
+nearly as good as the inspirational
+source. The picture lacks some of the
+depth that Making of Urban gets from
+the use of a road angled from left to
+right. And of course the blown-out
+windows are not as realistic.
+Still, as an experiment I’m quite
+pleased with the result. My wife thinks I
+should sell prints of images like this. I
+think anything that lets me play with the
+Bamboo and Gimp is a good idea. LXF
+Next month After the apocalypse, the phoenix-like rebirth from the flames!
+www.tuxradar.com
+LXF120.tut_gimp 85
+July 2009 LXF119     85
+8/5/09 5:44:35 pm
+
