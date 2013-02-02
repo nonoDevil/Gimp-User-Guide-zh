@@ -47,6 +47,10 @@ KDE can harness – all tied together through the magic of CUPS.
 
 
 Drivers, spoolers, filters and printers
+
+驱动、后台打印程序、滤镜和打印机
+
+
 Before we dive into how to use all of this with Gimp, it’s important
 to have a basic understanding of how printing works under Linux.
 Printers come in two forms: PostScript and non-PostScript.
@@ -58,6 +62,7 @@ PostScript in the first place is a multi-step process that involves a
 series of software packages.
 
 
+在我们一头钻进去研究如何利用Gimp使用这些东西的时候，对打印在Linux下的工作原理有个基本了解还是很有必要的。打印机有两种形式：PostScript 打印机和non-PonstScript打印机。PostScript是为以相对设备独立的方式描述影像提供一种方便的语言。支持PostScript的打印机就能直接理解这种语言，反之，不兼容此语言的打印机就必须将数据转化成一种特别制定的打印机语言。将文件用PostScript语言封装是一个需要一系列软件的多布式封装过程。
 
 The Linux printing environment is made up of four levels of
 software: drivers, spoolers, filters and applications. Printer drivers
