@@ -106,7 +106,7 @@ users. It’s important to note that you’ll be working with CUPS to
 set up your printers.
 
 
-驱动在打印工作所需的四层顺序的软件里时位于最下层的。相对而言，应用程序是位于最高位置的，后台打印程序位于中间。当一个应用程序被指使要打印一个文件时，它将文件传送给后台打印程序，后台打印程序将这个任务入队列准备打印（如果此时后台打印程序没有其他打印任务）。可用于Linux的后台打印程序有很多，包括LPR（译者注：Line Printer Remote，行式打印机远程控制），LPRng
+驱动在打印工作所需的四层顺序的软件里时位于最下层的。相对而言，应用程序是位于最高位置的，后台打印程序位于中间。当一个应用程序被指使要打印一个文件时，它将文件传送给后台打印程序，后台打印程序将这个任务入队列准备打印（如果此时后台打印程序没有其他打印任务）。可用于Linux的后台打印程序有很多，包括LPR（译者注：Line Printer Remote，行式打印机远程控制），LPRng和CUPS（通用Unix打印管理系统）。由于各种各样的原因，CUPS成为了不同Linux发行版中后台打印程序的标准，虽然对终端用户来说这些Linux发行版没有什么区别，但意识到你使用的是CUPS来设置你的打印机是很重要的。
 
 Once a spooler has a file queued for printing, it runs the file
 through one or more filters that convert it into various formats.
@@ -118,10 +118,17 @@ PostScript format, or may not need to be converted to another
 form before being sent to the printer driver.
 
 
+一旦一个后台打印程序的打印队列里有一个任务时，计算机还会运行一个或更多的滤镜来将文件转化成各种各样的格式。这个过滤的过程应该被称为RIP（译者注：Raster Image
+Processing，光栅图像处理）。在某些情况下，文件需要先被转化为PostScript格式的，然后，在被传送给打印机驱动前，还要转化为一种打印机指定的格式。在其他情况下，文件可能是PostScript格式的，并且在传送给打印机驱动前不许要被转化为其他格式。
+
+
 Filters can come from a number of software packages. The
 most widely used set of filters come from the Foomatic package,
 but you won’t need to worry about them much because you’ll get
 the ones you need when you install CUPS.
+
+
+滤镜可以从很多软件包中获得。用得最多的一种滤镜是Foomatic，但是你完全没必要为如何获得一个滤镜操心太多，因为当你安装CUPS时你就获得了滤镜。
 
 
 With all that software ready and under the hood, it’s time to
@@ -135,13 +142,22 @@ on your network. There’s a web-based config tool available, along
 with desktop-specific tools for both Gnome and KDE.
 
 
+在所有软件都在后台准备就绪时，是时候来配置你的打印机了。并且，你还需要检查一下OpenPrinting（译者注：一个Linux基金会）网站（www.linuxfoundation.org/openprinting）来看看你的打印机是否被此基金会的项目所支持。你应该还会想安装一下CUPS。CUPS是一个后台打印程序也是一个配置工具，它能帮你来检查你的打印机是否直接被连接到你的系统上，是否连接到你当前局域网内，或是否连接到你当前局域网内的其他系统。有一个基于网页的设置工具可以用，另外还有Gnome和KDE这两种桌面都能用的桌面版工具。
+
+
 Last month We saw how selection mixes can pull complex subjects from images.
 
+
+上个月我们体会到了选择混合器怎么在图片上进行复杂的工作。
+
+
+（以下为页脚文字，不翻译，第一页完：
 
 94 Linux Format Christmas 2008
 LXF113.tut_gimp 94
 27/10/08 7:31:46 pm
 Gimp Tutorial
+）
 
 
 CUPS uses one or more filters to rip data into a format that can
