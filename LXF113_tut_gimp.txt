@@ -14,7 +14,7 @@ Gimp:打印 & 色彩
 Gimp, CUPS and Gutenprint are a fellowship that can lead you on your quest for
 high quality prints – Michael J Hammel continues his graphics tutorial series.
 
-Gimp、CUPS（译者注：Common Unix Printing System，通用Unix打印管理系统）和打印机驱动在帮您完成高质量相片的过程中是合作关系。——Michael J Hamel 在他的制图系列教程中继续说道。
+Gimp、CUPS（译者注：Common Unix Printing System，通用Unix打印管理系统）和Gutenprint在帮您完成高质量相片的过程中是合作关系。——Michael J Hamel 在他的制图系列教程中继续说道。
 
 
 
@@ -80,6 +80,8 @@ Linux的打印环境有四个不同等级的软件组成：驱动程序、后台
 CUPS and Gutenprint
 
 
+CUPS和Gutenprint
+
 Printer drivers for Linux come primarily from the Gutenprint
 and/or Ghostscript projects, although HP have their own set of
 drivers (known as the HPIJS) that they actively support. Other
@@ -87,6 +89,8 @@ vendors, including Epson, offer drivers for their printers as well. All
 of the drivers are intended to be fed data to print via the various
 Linux print spoolers.
 
+
+Linux的打印机驱动主要是来自Gutenprint和Ghostscript项目，虽然惠普有他们为自己提供的驱动（像HPIJS），其他厂商，包括爱普生，也为他们自己的打印机提供驱动。所有的这些驱动都是为了将数据输入Linux的后台打印程序来完成打印。
 
 
 Drivers are at the bottom of this four-layer software stack for
