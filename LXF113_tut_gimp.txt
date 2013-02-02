@@ -74,6 +74,9 @@ language when the driver receives it, however; the drivers are not
 responsible for doing any data conversions.
 
 
+Linux的打印环境有四个不同等级的软件组成：驱动程序、后台打印程序、滤镜和应用。驱动程序是打印的脊柱，它们用一种打印机能理解的语言将数据输送给打印机。比如说，有些爱普生（译者注：Epson，一种日本打印机品牌）打印机用一种叫ESC/P的语言，而其他制造商用一种叫PCL的语言。当驱动程序接受数据时，数据必须以那种指定语言的形式存在，否则驱动就不能做出任何回应以进行待打印数据的转换。
+
+
 CUPS and Gutenprint
 
 
