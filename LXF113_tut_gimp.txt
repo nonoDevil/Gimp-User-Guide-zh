@@ -14,7 +14,7 @@ Gimp:打印 & 色彩
 Gimp, CUPS and Gutenprint are a fellowship that can lead you on your quest for
 high quality prints – Michael J Hammel continues his graphics tutorial series.
 
-Gimp、CUP和打印机驱动在帮您完成高质量相片的过程中是合作关系。——Michael J Hamel 在他的制图系列教程中继续说道。
+Gimp、CUPS（译者注：Common Unix Printing System，通用Unix打印管理系统）和打印机驱动在帮您完成高质量相片的过程中是合作关系。——Michael J Hamel 在他的制图系列教程中继续说道。
 
 
 
@@ -42,6 +42,8 @@ both open source and commercial providers. As a result, the
 under-the-hood printing system has evolved into a system of
 libraries and utilities that desktop systems such as Gnome and
 KDE can harness – all tied together through the magic of CUPS.
+
+幸运的是，这样的窘境开始以一种了不起的方式改变了。Linux打印场景（？）看到了从开源提供商和商业提供商中有关打印机驱动支持的大量资源。结果就是，底层的打印系统发展出了一种由函数库和公用程式组成的系统，这种系统能被像Gnome和KDE这样的桌面系统轻松驾驭——与CUPS的魔法结合起来后。
 
 
 Drivers, spoolers, filters and printers
