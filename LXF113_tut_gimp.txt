@@ -106,7 +106,7 @@ users. It’s important to note that you’ll be working with CUPS to
 set up your printers.
 
 
-驱动在打印工作所需的四层顺序的软件里时位于最下层的。相对而言，应用程序是位于最高位置的，后台打印程序位于中间。当一个应用程序被指使要打印一个文件时，它将文件传送给后台打印程序，后台打印程序将这个任务入队列准备打印（如果此时后台打印程序没有其他打印任务）。可用于Linux的后台打印程序有很多，包括LPR（译者注：Line Printer Remote，行式打印机远程控制），LPRng
+驱动在打印工作所需的四层顺序的软件里时位于最下层的。相对而言，应用程序是位于最高位置的，后台打印程序位于中间。当一个应用程序被指使要打印一个文件时，它将文件传送给后台打印程序，后台打印程序将这个任务入队列准备打印（如果此时后台打印程序没有其他打印任务）。可用于Linux的后台打印程序有很多，包括LPR（译者注：Line Printer Remote，行式打印机远程控制），LPRng和CUPS（通用Unix打印管理系统）。由于各种各样的原因，CUPS成为了不同Linux发行版中后台打印程序的标准，虽然对终端用户来说这些Linux发行版没有什么区别，但意识到你使用的是CUPS来设置你的打印机是很重要的。
 
 Once a spooler has a file queued for printing, it runs the file
 through one or more filters that convert it into various formats.
