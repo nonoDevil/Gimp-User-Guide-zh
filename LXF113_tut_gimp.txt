@@ -14,6 +14,8 @@ Gimp:打印 & 色彩
 Gimp, CUPS and Gutenprint are a fellowship that can lead you on your quest for
 high quality prints – Michael J Hammel continues his graphics tutorial series.
 
+Gimp、CUPS（译者注：Common Unix Printing System，通用Unix打印管理系统）和Gutenprint在帮您完成高质量相片的过程中是合作关系。——Michael J Hamel 在他的制图系列教程中继续说道。
+
 
 
 
@@ -32,6 +34,8 @@ acquire good quality printer drivers and the necessary tools to use
 them on the desktop, colour management in Linux applications
 has been essentially non-existent.
 
+自Gnome和KDE诞生以来，打印支持就成了使用Linux桌面版办公的用户的痛苦根源。由于好莱坞对特效工业的需求，2D和3D制图学的进展十分迅猛。然而，哪怕我们家中就摆放着高质量的、充满未来感的显示设备，我们还是只满足于石器时代的照片。直到最近，对统一打印系统的缺少意味着桌面应用要么得实现他们自己的打印特性，要么得依赖于最低端普遍的共同特性，这样常常导致了制作出低质量的照片，或者更差的是，根本没有适用于他们打印系统的设备。虽然我们开始寻求高质量的打印驱动和必要的工具来用于桌面，但色彩管理在Linux应用里基本上不存在。
+
 Fortunately, that’s started to change in a big way. The Linux
 printing scene has seen a wealth of printer driver support from
 both open source and commercial providers. As a result, the
@@ -39,8 +43,14 @@ under-the-hood printing system has evolved into a system of
 libraries and utilities that desktop systems such as Gnome and
 KDE can harness – all tied together through the magic of CUPS.
 
+幸运的是，这样的窘境开始以一种了不起的方式改变了。Linux打印场景（？）看到了从开源提供商和商业提供商中有关打印机驱动支持的大量资源。结果就是，底层的打印系统发展出了一种由函数库和公用程式组成的系统，这种系统能被像Gnome和KDE这样的桌面系统轻松驾驭——与CUPS的魔法结合起来后。
+
 
 Drivers, spoolers, filters and printers
+
+驱动、后台打印程序、滤镜和打印机
+
+
 Before we dive into how to use all of this with Gimp, it’s important
 to have a basic understanding of how printing works under Linux.
 Printers come in two forms: PostScript and non-PostScript.
@@ -52,6 +62,7 @@ PostScript in the first place is a multi-step process that involves a
 series of software packages.
 
 
+在我们一头钻进去研究如何利用Gimp使用这些东西的时候，对打印在Linux下的工作原理有个基本了解还是很有必要的。打印机有两种形式：PostScript 打印机和non-PonstScript打印机。PostScript是为以相对设备独立的方式描述影像提供一种方便的语言。支持PostScript的打印机就能直接理解这种语言，反之，不兼容此语言的打印机就必须将数据转化成一种特别制定的打印机语言。将文件用PostScript语言封装是一个需要一系列软件的多布式封装过程。
 
 The Linux printing environment is made up of four levels of
 software: drivers, spoolers, filters and applications. Printer drivers
@@ -63,8 +74,13 @@ language when the driver receives it, however; the drivers are not
 responsible for doing any data conversions.
 
 
+Linux的打印环境有四个不同等级的软件组成：驱动程序、后台打印程序、滤镜和应用。驱动程序是打印的脊柱，它们用一种打印机能理解的语言将数据输送给打印机。比如说，有些爱普生（译者注：Epson，一种日本打印机品牌）打印机用一种叫ESC/P的语言，而其他制造商用一种叫PCL的语言。当驱动程序接受数据时，数据必须以那种指定语言的形式存在，否则驱动就不能做出任何回应以进行待打印数据的转换。
+
+
 CUPS and Gutenprint
 
+
+CUPS和Gutenprint
 
 Printer drivers for Linux come primarily from the Gutenprint
 and/or Ghostscript projects, although HP have their own set of
@@ -73,6 +89,8 @@ vendors, including Epson, offer drivers for their printers as well. All
 of the drivers are intended to be fed data to print via the various
 Linux print spoolers.
 
+
+Linux的打印机驱动主要是来自Gutenprint和Ghostscript项目，虽然惠普有他们为自己提供的驱动（像HPIJS），其他厂商，包括爱普生，也为他们自己的打印机提供驱动。所有的这些驱动都是为了将数据输入Linux的后台打印程序来完成打印。
 
 
 Drivers are at the bottom of this four-layer software stack for
@@ -87,6 +105,8 @@ reasons, although none of these make much difference to end
 users. It’s important to note that you’ll be working with CUPS to
 set up your printers.
 
+
+驱动在打印工作所需的四层顺序的软件里时位于最下层的。相对而言，应用程序是位于最高位置的，后台打印程序位于中间。当一个应用程序被指使要打印一个文件时，它将文件传送给后台打印程序，后台打印程序将这个任务入队列准备打印（如果此时后台打印程序没有其他打印任务）。可用于Linux的后台打印程序有很多，包括LPR（译者注：Line Printer Remote，行式打印机远程控制），LPRng
 
 Once a spooler has a file queued for printing, it runs the file
 through one or more filters that convert it into various formats.
