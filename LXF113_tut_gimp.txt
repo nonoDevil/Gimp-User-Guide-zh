@@ -148,10 +148,16 @@ with desktop-specific tools for both Gnome and KDE.
 Last month We saw how selection mixes can pull complex subjects from images.
 
 
+上个月我们体会到了选择混合器怎么在图片上进行复杂的工作。
+
+
+（以下为页脚文字，不翻译，第一页完：
+
 94 Linux Format Christmas 2008
 LXF113.tut_gimp 94
 27/10/08 7:31:46 pm
 Gimp Tutorial
+）
 
 
 CUPS uses one or more filters to rip data into a format that can
