@@ -142,6 +142,9 @@ on your network. There’s a web-based config tool available, along
 with desktop-specific tools for both Gnome and KDE.
 
 
+在所有软件都在后台准备就绪时，是时候来配置你的打印机了。并且，你还需要检查一下OpenPrinting（译者注：一个Linux基金会）网站（www.linuxfoundation.org/openprinting）来看看你的打印机是否被此基金会的项目所支持。你应该还会想安装一下CUPS。CUPS是一个后台打印程序也是一个配置工具，它能帮你来检查你的打印机是否直接被连接到你的系统上，是否连接到你当前局域网内，或是否连接到你当前局域网内的其他系统。有一个基于网页的设置工具可以用，另外还有Gnome和KDE这两种桌面都能用的桌面版工具。
+
+
 Last month We saw how selection mixes can pull complex subjects from images.
 
 
