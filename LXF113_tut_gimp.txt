@@ -14,6 +14,8 @@ Gimp:打印 & 色彩
 Gimp, CUPS and Gutenprint are a fellowship that can lead you on your quest for
 high quality prints – Michael J Hammel continues his graphics tutorial series.
 
+Gimp、CUP和打印机驱动在帮您完成高质量相片的过程中是合作关系。——Michael J Hamel 在他的制图系列教程中继续说道。
+
 
 
 
@@ -31,6 +33,8 @@ worse, no facility for printing at all. Even when we started to
 acquire good quality printer drivers and the necessary tools to use
 them on the desktop, colour management in Linux applications
 has been essentially non-existent.
+
+自Gnome和KDE诞生以来，打印支持就成了使用Linux桌面版办公的用户的痛苦根源。由于好莱坞对特效工业的需求，2D和3D制图学的进展十分迅猛。然而，哪怕我们家中就摆放着高质量的、充满未来感的显示设备，我们还是只满足于石器时代的照片。直到最近，对统一打印系统的缺少意味着桌面应用要么得实现他们自己的打印特性，要么得依赖于最低端普遍的共同特性，这样常常导致了制作出低质量的照片，或者更差的是，根本没有适用于他们打印系统的设备。虽然我们开始寻求高质量的打印驱动和必要的工具来用于桌面，但色彩管理在Linux应用里基本上不存在。
 
 Fortunately, that’s started to change in a big way. The Linux
 printing scene has seen a wealth of printer driver support from
