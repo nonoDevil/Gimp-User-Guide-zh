@@ -118,6 +118,10 @@ PostScript format, or may not need to be converted to another
 form before being sent to the printer driver.
 
 
+一旦一个后台打印程序的打印队列里有一个任务时，计算机还会运行一个或更多的滤镜来将文件转化成各种各样的格式。这个过滤的过程应该被称为RIP（译者注：Raster Image
+Processing，光栅图像处理）。在某些情况下，文件需要先被转化为PostScript格式的，然后，在被传送给打印机驱动前，还要转化为一种打印机指定的格式。在其他情况下，文件可能是PostScript格式的，并且在传送给打印机驱动前不许要被转化为其他格式。
+
+
 Filters can come from a number of software packages. The
 most widely used set of filters come from the Foomatic package,
 but you won’t need to worry about them much because you’ll get
