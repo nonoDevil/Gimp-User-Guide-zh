@@ -128,6 +128,9 @@ but you won’t need to worry about them much because you’ll get
 the ones you need when you install CUPS.
 
 
+滤镜可以从很多软件包中获得。用得最多的一种滤镜是Foomatic，但是你完全没必要为如何获得一个滤镜操心太多，因为当你安装CUPS时你就获得了滤镜。
+
+
 With all that software ready and under the hood, it’s time to
 configure your printer. As well as checking the OpenPrinting
 website (www.linuxfoundation.org/openprinting) to see if the
