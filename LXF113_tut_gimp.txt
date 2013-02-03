@@ -242,12 +242,9 @@ file to a directory and running:
 cabextract filename.CAB
 
 
-I ran the file command on all files extracted from the archive
-and found that the ICM files were ICC colour profiles. I copied
-these to a directory where I can keep them safe (with my
-backups). I found multiple profiles and had to open them in Gimp
-to identify their purpose, which turned out to be one profile for
-each type of paper the printer supported.
+对于Linux下的打印机，你可能会在从硬件安装盘中寻找ICC配置文件时遇到问题。就我的情况来说，当我要配置我新买的Epson Stylus Photo R280打印机时，我发现ICC配置文件藏在安装盘的一个CAB归档文件里。你需要安装Cabextract（译者注：是个自由软件，用于解包微软的 .cab 压缩文件。它可以运行在UNIX、Linux、Mac OS X、minix 等等系统上。）来解压这些文件。然后，让我们将CAB文件复制到一个目录，并运行命令：
+cabextract filename.CAB
+
 
 
 
@@ -262,6 +259,18 @@ unpacked one CAB
 file and saved only
 the ICM files.
 ）
+
+
+I ran the file command on all files extracted from the archive
+and found that the ICM files were ICC colour profiles. I copied
+these to a directory where I can keep them safe (with my
+backups). I found multiple profiles and had to open them in Gimp
+to identify their purpose, which turned out to be one profile for
+each type of paper the printer supported.
+
+
+
+
 
 
 Install LPROF
