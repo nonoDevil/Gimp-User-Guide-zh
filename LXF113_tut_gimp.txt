@@ -192,6 +192,9 @@ version of Gutenprint doesn’t have it, simply replace it with the
 new version from the OpenPrinting site.
 
 
+Gutenprint包含很多种打印机的驱动。然而，由于该软件一直处在不断开发中，你的Linux发行版里的Gutenprint也许不一定是最新版的。幸运的是，如果你的打印机被OpenPrinting数据库表明为支持、但你的Gutenprint版本又不是最新的话，你就可以登录OpenPrinting网站来更新到最新的版本。
+
+
 Colour management
 
 
