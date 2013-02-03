@@ -282,6 +282,12 @@ each type of paper the printer supported.
 Install LPROF
 
 
+安装LPROF（译者注：LPROF 是一个用于创建设备兼容，如相机、扫描仪、显示器的ICC兼容型材的颜色分析器。这些配置提供跨设备的色彩一致性。他们可以用在颜色配置文件识别软件，如GIMP与Scribus。）
+
+
+
+
+
 Once you have your printer configured, have the printer ICC profile
 files to hand and prepare to use colour management under Linux.
 We’re not quite ready to do that yet because we don’t have an ICC
@@ -292,6 +298,9 @@ doesn’t support. This section is for those who have problems
 compiling LPROF on their systems. For those users with a
 distribution that already has LPROF, such as Ubuntu, skip to the
 next section to see how to use it.
+
+
+一旦你完成了打印机的配置，你一定准备着手处理ICC配置文件以用于Linux下的色彩管理。但是我们还差几个步骤，因为我们还没有一个ICC显示器配置文件，所以我们首先要创造一个。我们可以用LPROF简单地做到，但LPROF不是支持所有的Linux发行版，而且，对于那些它不支持的发行版还需要很麻烦地编译。接下来这个小节是为那些在他们系统中编译LPROF遇到困难的用户写的。如果你的Linux发行版已经有了LPROF（比如Ubuntu），那就跳过这段直接看下一段如何使用。
 
 
 First, download a copy of the latest version of LPROF from
