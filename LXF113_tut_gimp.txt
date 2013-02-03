@@ -198,6 +198,9 @@ Gutenprint包含很多种打印机的驱动。然而，由于该软件一直处�
 Colour management
 
 
+色彩管理
+
+
 Colour management is the process of matching colours between
 input devices (such as scanners and cameras), editing tools (such
 as Gimp) and output devices (such as your monitor or printer).
@@ -207,6 +210,9 @@ The goal of colour management software is to map colours from
 the input and editing phases to the range of colours that can be
 displayed on the output device in order to help assure the result is
 visually identical to the source.
+
+
+色彩管理是一个在输入设备（比如扫描仪和照相机）、编辑工具（比如Gimp）和输出设备（比如你的显示器或打印机）之间匹配颜色的过程。每个输入和输出设备都有一套它自己工作的颜色，但你通常也可以利用你的应用程序在更多颜色上编辑。色彩管理软件的工作就是在你将源文件输入和编辑后，用它的那一系列颜色着色好，最后能保证输出的样子跟源文件在视觉上基本符合。
 
 
 Under Linux, colour management in applications is primarily
