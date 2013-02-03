@@ -312,8 +312,18 @@ Vigra
 LittleCMS v1.16
 
 
+首先，从http://lprof.sourceforge.net下载一份最新版本的LPROF。我现在用的版本是1.11.4 。这个版本的使用有一些必要条件，其中最重要的是：
+Qt3
+Vigra
+LittleCMS v1.16
+
+
+（以下为红灰提示框里的字：
+
 Specialised hardware
 
+
+专门的硬件
 
 If the nature of your work means you need
 that extra degree of precision in your
@@ -327,10 +337,24 @@ be used for calibrating monitors and
 other devices.
 
 
+如果你工作的性质决定了你在配置文件上需要很高的精确度，你就需要用ArgyllCMS（它的参考文档在www.argyllcms.com/doc/ArgyllDoc.html），一种跟LittleCMS类似的Linux下的色彩管理系统。ArgyllCMS的参考文档列出了可用于校正显示器和其他设备的许多种特殊的硬件。
+
+）
+
+
 If you missed last issue Call 0870 837 4773 or +44 1858 438795.
+
+
+如果你错过了上一期，打电话到0870 837 4773 或 +44 1858 438795。
+
+
+（以下为页脚文字，第二页完。 ：
+
 Christmas 2008 Linux Format     95
 LXF113.tut_gimp 95
 27/10/08 7:31:47 pm
+
+）
 
 
 Tutorial Gimp
