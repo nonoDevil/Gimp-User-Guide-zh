@@ -258,6 +258,9 @@ binary ICM files. I
 unpacked one CAB
 file and saved only
 the ICM files.
+
+
+就我的Epson R280打印机来说，有两个CAB压缩包里包含了相同的二进制ICM文件，所以我就解压了一个CAB包并把那些ICM文件保存了下来。
 ）
 
 
