@@ -179,6 +179,9 @@ you won’t need to acquire these files if CUPS and Gutenprint
 support the printer.
 
 
+CUPS也会使用PPD文件（译者注：PostScript Printer Description files，Postscript打印机描述文件。它为一台特定的Postscript打印机描述标准字型，纸张大小，分辨率和其他的能力的文件。一个打印机驱动器程序使用一个PPD文件以了解指定的打印机的能力。）虽然名字叫PostScript打印机描述文件，但这些文件既能用于描述PostScript打印机也能用于描述non-PostScript打印机。再说一遍，在大多数情况下，一旦CUPS和Gutenprint支持你的打印机，你就不需要操心后台打印程序的工作。
+
+
 Gutenprint includes drivers for a huge number of printers.
 However, because the package is under constant development,
 the version of Gutenprint on your Linux distribution may not be up
