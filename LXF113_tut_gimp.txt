@@ -168,6 +168,9 @@ to know is what printer model you have and how it’ll be connected
 to your system.
 
 
+CUPS用一或多种滤镜来把数据过滤成一种能被打印机驱动使用的文字。后台打印程序就是被设计成将过滤过程隐藏起来，所以用户没必要知道某个文件在打印之前正在被转换格式。你所需要了解的就只有你的打印机型号，还有怎么将打印机跟你的系统连接起来。
+
+
 CUPS also uses PPD (PostScript Printer Description) files,
 which describe the features of printers to applications that need to
 use them. Despite the name, these files are used for describing
