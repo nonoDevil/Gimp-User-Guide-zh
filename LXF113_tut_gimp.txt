@@ -168,12 +168,18 @@ to know is what printer model you have and how it’ll be connected
 to your system.
 
 
+CUPS用一或多种滤镜来把数据过滤成一种能被打印机驱动使用的文字。后台打印程序就是被设计成将过滤过程隐藏起来，所以用户没必要知道某个文件在打印之前正在被转换格式。你所需要了解的就只有你的打印机型号，还有怎么将打印机跟你的系统连接起来。
+
+
 CUPS also uses PPD (PostScript Printer Description) files,
 which describe the features of printers to applications that need to
 use them. Despite the name, these files are used for describing
 both PostScript and non-PostScript printers. Again, in most cases
 you won’t need to acquire these files if CUPS and Gutenprint
 support the printer.
+
+
+CUPS也会使用PPD文件（译者注：PostScript Printer Description files，Postscript打印机描述文件。它为一台特定的Postscript打印机描述标准字型，纸张大小，分辨率和其他的能力的文件。一个打印机驱动器程序使用一个PPD文件以了解指定的打印机的能力。）虽然名字叫PostScript打印机描述文件，但这些文件既能用于描述PostScript打印机也能用于描述non-PostScript打印机。再说一遍，在大多数情况下，一旦CUPS和Gutenprint支持你的打印机，你就不需要操心后台打印程序的工作。
 
 
 Gutenprint includes drivers for a huge number of printers.
@@ -186,7 +192,13 @@ version of Gutenprint doesn’t have it, simply replace it with the
 new version from the OpenPrinting site.
 
 
+Gutenprint包含很多种打印机的驱动。然而，由于该软件一直处在不断开发中，你的Linux发行版里的Gutenprint也许不一定是最新版的。幸运的是，如果你的打印机被OpenPrinting数据库表明为支持、但你的Gutenprint版本又不是最新的话，你就可以登录OpenPrinting网站来更新到最新的版本。
+
+
 Colour management
+
+
+色彩管理
 
 
 Colour management is the process of matching colours between
@@ -198,6 +210,9 @@ The goal of colour management software is to map colours from
 the input and editing phases to the range of colours that can be
 displayed on the output device in order to help assure the result is
 visually identical to the source.
+
+
+色彩管理是一个在输入设备（比如扫描仪和照相机）、编辑工具（比如Gimp）和输出设备（比如你的显示器或打印机）之间匹配颜色的过程。每个输入和输出设备都有一套它自己工作的颜色，但你通常也可以利用你的应用程序在更多颜色上编辑。色彩管理软件的工作就是在你将源文件输入和编辑后，用它的那一系列颜色着色好，最后能保证输出的样子跟源文件在视觉上基本符合。
 
 
 Under Linux, colour management in applications is primarily
@@ -215,6 +230,9 @@ setup disks and usually provide one profile for each of the different
 types of paper they can print on to.
 
 
+在Linux下，应用商店里的色彩管理软件一般就是LittleCMS（译者注：一个小型的，精确高效的色彩管理引擎）。这又是一个你不需要操心太多的软件，因为你的应用程序在需要的时候会自动安装上这个引擎。应用程序将LittleCMS和ICC颜色配置文件结合起来用，ICC颜色配置文件就是在某些特殊情况下用于描述指定设备的色彩性能的文件。例如，大多数相机在摄像时都会在照片数据里内嵌ICC颜色配置文件。这就是为什么有时候你用Gimp要编辑一张照片时，它会弹出提示告诉你该照片处于某种特定的色彩空间，你要不要把它转换成另外一种色彩空间。另一方面，打印机也会自己通过安装盘传递配置文件，并且通常给它能在上面打印的每一张、不同类型的纸都提供统一的配置文件。
+
+
 For printers under Linux, you may run into problems trying to
 find the ICC profile files on the hardware’s setup disc. In my case, I
 was able to find the profiles for my new Epson Stylus Photo R280
@@ -224,12 +242,9 @@ file to a directory and running:
 cabextract filename.CAB
 
 
-I ran the file command on all files extracted from the archive
-and found that the ICM files were ICC colour profiles. I copied
-these to a directory where I can keep them safe (with my
-backups). I found multiple profiles and had to open them in Gimp
-to identify their purpose, which turned out to be one profile for
-each type of paper the printer supported.
+对于Linux下的打印机，你可能会在从硬件安装盘中寻找ICC配置文件时遇到问题。就我的情况来说，当我要配置我新买的Epson Stylus Photo R280打印机时，我发现ICC配置文件藏在安装盘的一个CAB归档文件里。你需要安装Cabextract（译者注：是个自由软件，用于解包微软的 .cab 压缩文件。它可以运行在UNIX、Linux、Mac OS X、minix 等等系统上。）来解压这些文件。然后，让我们将CAB文件复制到一个目录，并运行命令：
+cabextract filename.CAB
+
 
 
 
@@ -243,10 +258,34 @@ binary ICM files. I
 unpacked one CAB
 file and saved only
 the ICM files.
+
+
+就我的Epson R280打印机来说，有两个CAB压缩包里包含了相同的二进制ICM文件，所以我就解压了一个CAB包并把那些ICM文件保存了下来。
 ）
 
 
+I ran the file command on all files extracted from the archive
+and found that the ICM files were ICC colour profiles. I copied
+these to a directory where I can keep them safe (with my
+backups). I found multiple profiles and had to open them in Gimp
+to identify their purpose, which turned out to be one profile for
+each type of paper the printer supported.
+
+
+我将那些从压缩包解压出来的文件都打开运行了一遍，最后发现那些ICM文件就是我要找的ICC颜色配置文件。我把它们都复制到一个稳定安全的目录中（和我的备份们一起）。我发现这些配置文件有很多，所以我就都在Gimp中打开了它们以确认它们各自的用途，最后发现它们分别是此台打印机支持的每一种纸张的配置文件。
+
+
+
+
+
+
 Install LPROF
+
+
+安装LPROF（译者注：LPROF 是一个用于创建设备兼容，如相机、扫描仪、显示器的ICC兼容型材的颜色分析器。这些配置提供跨设备的色彩一致性。他们可以用在颜色配置文件识别软件，如GIMP与Scribus。）
+
+
+
 
 
 Once you have your printer configured, have the printer ICC profile
@@ -261,6 +300,9 @@ distribution that already has LPROF, such as Ubuntu, skip to the
 next section to see how to use it.
 
 
+一旦你完成了打印机的配置，你一定准备着手处理ICC配置文件以用于Linux下的色彩管理。但是我们还差几个步骤，因为我们还没有一个ICC显示器配置文件，所以我们首先要创造一个。我们可以用LPROF简单地做到，但LPROF不是支持所有的Linux发行版，而且，对于那些它不支持的发行版还需要很麻烦地编译。接下来这个小节是为那些在他们系统中编译LPROF遇到困难的用户写的。如果你的Linux发行版已经有了LPROF（比如Ubuntu），那就跳过这段直接看下一段如何使用。
+
+
 First, download a copy of the latest version of LPROF from
 http://lprof.sourceforge.net. I’m working with version 1.11.4.
 This version has multiple requirements, the most important of
@@ -270,8 +312,18 @@ Vigra
 LittleCMS v1.16
 
 
+首先，从http://lprof.sourceforge.net下载一份最新版本的LPROF。我现在用的版本是1.11.4 。这个版本的使用有一些必要条件，其中最重要的是：
+Qt3
+Vigra
+LittleCMS v1.16
+
+
+（以下为红灰提示框里的字：
+
 Specialised hardware
 
+
+专门的硬件
 
 If the nature of your work means you need
 that extra degree of precision in your
@@ -285,10 +337,24 @@ be used for calibrating monitors and
 other devices.
 
 
+如果你工作的性质决定了你在配置文件上需要很高的精确度，你就需要用ArgyllCMS（它的参考文档在www.argyllcms.com/doc/ArgyllDoc.html），一种跟LittleCMS类似的Linux下的色彩管理系统。ArgyllCMS的参考文档列出了可用于校正显示器和其他设备的许多种特殊的硬件。
+
+）
+
+
 If you missed last issue Call 0870 837 4773 or +44 1858 438795.
+
+
+如果你错过了上一期，打电话到0870 837 4773 或 +44 1858 438795。
+
+
+（以下为页脚文字，第二页完。 ：
+
 Christmas 2008 Linux Format     95
 LXF113.tut_gimp 95
 27/10/08 7:31:47 pm
+
+）
 
 
 Tutorial Gimp
