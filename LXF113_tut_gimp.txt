@@ -272,6 +272,9 @@ to identify their purpose, which turned out to be one profile for
 each type of paper the printer supported.
 
 
+我将那些从压缩包解压出来的文件都打开运行了一遍，最后发现那些ICM文件就是我要找的ICC颜色配置文件。我把它们都复制到一个稳定安全的目录中（和我的备份们一起）。我发现这些配置文件有很多，所以我就都在Gimp中打开了它们以确认它们各自的用途，最后发现它们分别是此台打印机支持的每一种纸张的配置文件。
+
+
 
 
 
