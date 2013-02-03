@@ -230,6 +230,9 @@ setup disks and usually provide one profile for each of the different
 types of paper they can print on to.
 
 
+在Linux下，应用商店里的色彩管理软件一般就是LittleCMS（译者注：一个小型的，精确高效的色彩管理引擎）。这又是一个你不需要操心太多的软件，因为你的应用程序在需要的时候会自动安装上这个引擎。应用程序将LittleCMS和ICC颜色配置文件结合起来用，ICC颜色配置文件就是在某些特殊情况下用于描述指定设备的色彩性能的文件。例如，大多数相机在摄像时都会在照片数据里内嵌ICC颜色配置文件。这就是为什么有时候你用Gimp要编辑一张照片时，它会弹出提示告诉你该照片处于某种特定的色彩空间，你要不要把它转换成另外一种色彩空间。另一方面，打印机也会自己通过安装盘传递配置文件，并且通常给它能在上面打印的每一张、不同类型的纸都提供统一的配置文件。
+
+
 For printers under Linux, you may run into problems trying to
 find the ICC profile files on the hardware’s setup disc. In my case, I
 was able to find the profiles for my new Epson Stylus Photo R280
