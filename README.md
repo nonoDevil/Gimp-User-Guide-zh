@@ -6,7 +6,7 @@ Gimp-User-Guide-zh
 #### 注意事项：
 
 - 原版PDF下载地址[http://pan.baidu.com/share/link?shareid=223152&uk=1343714529](http://pan.baidu.com/share/link?shareid=223152&uk=1343714529)
-- 翻译前现在[wiki页面](https://github.com/nonoDevil/Gimp-User-Guide-zh/wiki)认领文章。
+- 翻译前先在[wiki页面](https://github.com/nonoDevil/Gimp-User-Guide-zh/wiki)认领文章。
 - 请大家在文章首注明自己的职责和ID 。(雷锋做好事还记在日记本呢)
 - 对于内容很长的部分，“翻译”处可填写多人名字，参与翻译该章节的协作者协调具体分工。
 - 为了提高翻译质量，请大家对照 PDF 进行翻译。
