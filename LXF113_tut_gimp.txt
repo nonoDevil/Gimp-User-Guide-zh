@@ -478,23 +478,32 @@ the monitor (especially a CRT monitor) for very long because it
 may overheat.
 
 
+你可以简单目测一下就为显示器配置文件做一个粗略的估计。想要开始的话，你需要在一个尽可能黑暗的房间，并将显示器的对比度要调到最高。如果你没办法让房间完全黑暗，那么你可以找一块暗色的布将显示器和你的脑袋围起来。这样做也许看起来有点傻，但相信我你会得到一个理想的结果。注意不要让布围在显示器（尤其是CRT显示器）上太长时间，因为这样显示器会过热。
 
 
 
 
 
+
+
+（以下为红灰提示框里的文字：
 
 The printing ecosystem
-
 
 Find out if your printer is supported, get the latest news
 and learn more about printing under Linux by visiting the
 OpenPrinting section at the Linux Foundation’s website:
 www.linuxfoundation.org/en/OpenPrinting.
 
+一个关于打印的社区
 
+在Linux基金会网站上的OpenPrinting部分可以查看你的打印机是不是被支持的，获取关于Linux下打印的最新新闻和知识：www.linuxfoundation.org/en/OpenPrinting.
+
+）
 
 Coarse approximations
+
+粗略的估计
 
 
 The process of creating a coarse approximation profile is
@@ -512,6 +521,9 @@ window to the right that’s labelled ‘Gamma And Black Level’ You’ll
 see a slider at the the bottom, along with some other buttons.
 
 
+生成一个粗精确度配置文件的过程在LPROF的某文档中有详尽说明(http://lprof.sourceforge.net/help/monitor.html)，但这个文档上的步骤有点麻烦，所以让我来教你这个过程吧。当你一大开LPROF的窗口，右边就有一系列的标签。在Monitor Profile这个标签你会看到在Profile Method文本框中的第一个选项就是生成一个粗略的配置文件。点击Enter Monitor Values按钮来打开Monitor Values的对话框。在Gamma文本框下点击Set Gamma And Black Point按钮,打开的窗口中有一个小方框，标签着‘Gamma = 2.2’，右边还有一个大方框标签着 ‘Gamma And Black Level’，你还会在底部看到一个滑动条和其他一些按钮。
+
+
 Adjust the slider so that the Gamma = 2.2 window shows the
 horizontal lines and the box around them as close to a solid grey
 as you can make them. The lines probably won’t go away when
@@ -520,6 +532,9 @@ slightly out of focus and make sure that the grey gradient you see
 is as smooth as possible. This adjustment sets the gamma level
 for your monitor. Your monitor profile tells software to adjust
 images so they display as if your monitor were at 2.2.
+
+
+调整滑动条让‘Gamma = 2.2’小方框中出现水平线条并且使围绕在它周围的小盒子颜色接近灰色。当你这么做的时候那些线条不会消失，有一个技巧就是你盯着那个小盒子让你眼前的灰色梯度尽可能平滑。这个调整滑动条的过程就是设置你显示器的Gamma（伽马）等级。你的显示器配置文件告诉软件来调整图片，以你的显示器在Gamma等级为2.2的前提下显示。
 
 
 After setting the gamma level, you need to adjust the
@@ -533,6 +548,9 @@ Gamma slider again. Repeat this process a few times until you’re
 satisfied with the result.
 
 
+在设置完伽马等级后，你需要调节你显示器的亮度，这也可以通过‘Black Point’（黑点）标签来调节。调整下面的滑动条让右边的Black Level框里的内容在Gamma=1.9时是完全消失而在Gamma=2.2时完全能看得见。在设置完你显示器亮度或黑点后，你可能需要再调整一次Gamma滑动条。重复几次这个步骤知道你对结果比较满意为止。
+
+
 You may need to click the Link Channels button to adjust the
 Red, Green and Blue channels separately. With each channel, try
 to adjust the gamma first, then adjust the Brightness on the
@@ -540,8 +558,13 @@ monitor. Close the window by clicking on the OK button and then
 close the Rough Monitor Values window.
 
 
+你可能还需要点击Link Channels按钮以分别调节红绿蓝三个通道。在调节每个通道时，先调节Gamma值，然后再调整显示器亮度。点击OK按钮关闭当前窗口，然后再关闭标着Rough Monitor Values的窗口。
+
+
 Create a new profile
 
+
+创建一个新的配置文件
 
 
 Back in the LPROF main window, you’ll see the Profile
@@ -549,6 +572,8 @@ Identification button in the top-left. Click on this to fill in the
 monitor make and model information, which is often found on a
 label on the back of the monitor.
 
+
+回到LPROF的主窗口，你会在左上角找到Profile Identification 按钮。点开这个按钮，填写显示器的一些制造信息，这些信息通常在你显示器的背面会有一个标签记录着。
 
 At the bottom-right of the LPROF window, just above the
 Create Profile button is the Output Profile field. Type in the path
@@ -558,20 +583,34 @@ on how to use this is found on the Profile Checker page of the
 LPROF documentation.
 
 
-Never miss another issue Subscribe to the #1 source for Linux on page 102.
+在LPROF主窗口的右下方，就在Create Profile按钮的上面有一个Output Profile file文本框，输入ICC输出文件的路径和名称，然后点击Create Profile。你可以点击Profile Checker按钮来检查生成的配置文件。至于这个Profile Checker具体使用，你可以查阅LPROF的文档，它会记录在Profile Checker的相关页。
 
+
+Never miss another issue。 Subscribe to the #1 source for Linux on page 102.
+
+永远不要错过此系列的任何一期。你可以在第102页寻找到从第一期开始订阅此系列的Linux版的信息。
+
+
+
+（以下为页脚文字，不翻译，第三页完。：
 
 96     Linux Format Christmas 2008
 LXF113.tut_gimp 96
 27/10/08 7:31:47 pm
 
+）
 
-Gimp Tutorial
+
+
+
 
 (以下为图片旁带>的注释小字：
 
 Use the Gamma/Black Point window to visually configure
 your monitor profile without specialised hardware.
+
+
+用Gamma/Black Point窗口，不用专门的硬件也可以直观地设置你显示器的配置文件
 ）
 
 
@@ -581,6 +620,12 @@ experimentation. Gimp 2.4 introduced support for ICC profiles in
 the Colour Management page of the Preferences dialog. This is
 where you select the profiles for your printer and the monitor
 profile that we just created with LPROF.
+
+
+使用配置文件非常简单，但是相应地，将结果“翻译”出来并调节一张照片就比较花精力。Gimp 2.4在首选项中的色彩管理页有对ICC配置文件的设置。在这个页面中你就可以为你的打印机选择配置文件以及为你的显示器选择我们刚刚用LPROF生成的配置文件。
+
+
+
 
 
 The Mode of Operation controls how you will view your images
@@ -596,7 +641,15 @@ clear from Gimp documentation, but for now you can leave these
 set to None.
 
 
+操作模式（Mode of Operation）控制了你将在画布（Canvas）窗口上怎么浏览你的照片。将它设置为颜色管理的显示（Colour Managed Display）会让Gimp利用你的显示器配置文件来显示照片，而将它设置为打印模拟（Print Simulation）会让Gimp利用打印机配置文件来显示照片。怎么选择就由当你遇到超出色域范围的颜色时想怎么预览你的照片来决定。所谓超出色域范围的颜色指的就是当你的打印机用上打印机配置文件时还不能重现的颜色。关于RGB和CMYK的设置，目前在Gimp有关文档里至今还不明确，但是现在你可以将它们设置为无（None）。
+
+
+
+
 Interpreting profiles
+
+
+翻译配置文件
 
 
 Use the Monitor Profile setting to select the profile you created
@@ -606,6 +659,12 @@ Gimp dialog for selecting the profile provides information about
 the profile. For my Epson printer, I have profiles set up for different
 papers, most of which were created using a White Point setting of
 5000K (which is shown here as D50).
+
+
+设置显示器配置文件（Monitor Profile）来选择你刚用LPROF创建的配置文件。打印模拟配置文件（Print Simulation profile）是用来给你的打印机选择配置文件而用的。我意识到我有很多种配置文件，并且Gimp里关于选择配置文件的对话框提供了很多关于配置文件的信息。我的爱普生打印机，对于不同类型的纸就有不同的配置文件，而它们之中大部分都是通过将白点度设置在5000K生成的。
+
+
+
 
 
 Gimp has multiple methods available for interpreting profiles.
@@ -619,12 +678,20 @@ designers can read the Gimp help documentation for details on
 the other options.
 
 
+Gimp对翻译配置文件有很多种可用的办法。你可以设置首选项的色彩管理中的显示渲染缩进（Display Rendering Intent）（用于翻译照片如何在画布上被显示出来）和软打样渲染缩进（Softproof Rendering Intent）（决定打印出来的照片在画布窗口预览起来是什么样的）来实现。这些各式各样的选项都是很技术性的，所以选择感官（Perceptual）对家用或小型商用应该是最好的选择。专业的设计师想研究其他的选项的话，可以阅读Gimp的帮助文档来寻找更详尽的内容。
+
 The File Open Behaviour option determines what Gimp will do
 with images it opens that have ICC profile data embedded in them.
 Cameras often embed profiles in the images they create. There’s
 little reason not to set this to Convert To RGB Workspace; leaving it
 as ‘Ask What To Do’ will cause a prompt to be displayed asking you
 what to do when you open images with embedded profiles.
+
+
+文件打开行为（File Open Behaviour）的选项决定了Gimp对它打开的那些内嵌有ICC配置文件数据的照片做些什么。照相机通常在拍照的时候就在照片中内嵌了那些配置文件。我们没什么理由不把它设置为转化为RGB工作空间（Convert To RGB Workspace）；设置为询问怎么做（Ask What To Do）会当你打开一个内置配置文件的照片时弹出一个提示问你该怎么做。
+
+
+
 
 
 The most important option in the Preferences is the Mark Out
@@ -635,6 +702,9 @@ colour (which defaults to grey). This enables you to see which
 pixels will have to be converted to another colour by the printer. It
 will, in effect, tell you how different your image is likely to be from
 what you see when you’re working on the image on screen.
+
+
+
 
 
 With out-of-gamut colours marked, you may wonder how you
