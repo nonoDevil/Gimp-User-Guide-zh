@@ -73,8 +73,8 @@ Gimp-User-Guide-zh
 	$ git push origin master 
 
 	这样你github帐号上的仓库也是最新的了
-
-        以上命令等价于 
+	
+	以上命令等价于 
 
 	$ git pull git://github.com/nonoDevil/Gimp-User-zh.git    
 
