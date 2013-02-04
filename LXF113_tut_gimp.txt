@@ -360,6 +360,9 @@ LXF113.tut_gimp 95
 Tutorial Gimp
 
 
+Gimp指南
+
+
 The latest versions of most Linux distributions are likely to
 default to Qt 4, but they probably also have Qt 3 available to install
 manually. On Fedora 9, I ran the following to get it:
@@ -367,6 +370,13 @@ sudo yum -y install qt3 qt3-devel
 Vigra, (Vision with Genetic Algorithms) is a computer vision
 library. I installed both the runtime and development libraries for
 this package:
+sudo yum -y install vigra vigra-devel
+
+
+大部分Linux发行版一般都会默认带有Qt4， 但我们依然可以人为地装上Qt 3.在Fefora9上，我运行了以下命令来安装它：
+sudo yum -y install qt3 qt3-devel
+
+Vigra(Vision with Genetic Algorithms) 是一个计算机视觉库。我为这个软件包同时装上了运行时间库和开发库，运行以下命令：
 sudo yum -y install vigra vigra-devel
 
 
@@ -380,6 +390,9 @@ local/<packagename>. I run whichever tools require this
 package with a shell script to make sure that the package is found
 before others with similar names or updated versions are found in
 the normal system directories.
+
+
+这三种软件里面最麻烦的应该要属LittleCMS(www.littlecms.com)， 它的最新版本是1.17 。在最新版本存在的情况下你没法安装预先包装好的1.16版，所以你需要下载1.16版的源代码，并在另外一个目录里编译和安装它。当我陷入这样的问题时，我在/usr/local/<packagename>下安装了专门的软件。我利用一个shell脚本文件运行了每一个需要这个软件的工具，以确认在一个正常的系统里这个软件在被需要时都能找到。
 
 
 Again, be sure you’ve downloaded the source for version 1.16.
