@@ -17,5 +17,5 @@ Hue			色调
 Feather			羽化
 Duplicate Channel	复制频道
 Opacity			透明度
-Filters			过滤
+Filters			过滤/滤镜
 Gaussian Blur		高斯模糊
