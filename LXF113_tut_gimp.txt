@@ -411,7 +411,23 @@ PREFIX=/usr/local/lprof
 sudo python scons.py install
 
 
+再确认一遍你是否已经下载了版本1.16的源代码。为了编译LittleCMS并在/usr/local里将它安装到它自己的目录下，我运行了以下命令：
+./configure --prefix=/usr/local/lcms
+make
+sudo make install
+由于我之前做好了准备，我现在就能编译LPROF并在/usr/local里将它安装到它自己的目录下了，运行以下命令：
+export PATH=/usr/local/lcms/bin:$PATH
+export LD_LIBRARY_PATH=/usr/local/lcms/lib:$LD_LIBRARY_PATH
+python scons.py cxxflags=”-I/usr/local/lcms/include”PREFIX=/usr/local/lprof
+sudo python scons.py install
+
+
+
+
 Management with LPROF
+
+
+管理LPROF
 
 
 To run LPROF, I use this simple script:
@@ -421,11 +437,20 @@ LIBRARY_PATH
 export PATH=/usr/local/lprof/bin:$PATH
 lprof
 
-
 LPROF enables you to create ICC profiles for scanners,
 cameras and monitors. You need to use specialised hardware to
 get highly accurate profiles, but we can get a rough estimate for a
 monitor just using LPROF.
+
+
+我用了以下这个简单的脚本来运行LPROF：
+#!/bin/bash
+export LD_LIBRARY_PATH=/usr/local/lcms/lib:$LD_LIBRARY_PATH
+export PATH=/usr/local/lprof/bin:$PATH
+lprof
+
+
+LPROF能帮你为扫描仪、照相机以及显示器生成它们的ICC配置文件。如果你需要更高精度的配置文件你就得使用特殊的硬件，但通过LPROF我们已经能为一台显示器匡算了。
 
 
 （图旁带<的注释小字：
@@ -439,6 +464,8 @@ on the right. Start
 with the Monitor
 Profile tab.
 
+
+LPROF的窗口（标着LittleCMS Profiler的那个）在右边有许多的标签。你可以从Monitor Profile标签开始。
 ）
 
 You can make a coarse approximation of a monitor profile just
@@ -449,6 +476,9 @@ monitor and your head while you’re doing this. You might look a
 little silly, but you’ll get better results. Don’t leave the cloth over
 the monitor (especially a CRT monitor) for very long because it
 may overheat.
+
+
+
 
 
 The printing ecosystem
