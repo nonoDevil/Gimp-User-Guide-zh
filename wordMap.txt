@@ -15,7 +15,7 @@ paintbrush 		画笔
 circle fuzzy  		模糊圈（也可以不翻译）
 Hue			色调
 Feather			羽化
-Duplicate Channel	复制频道
+Duplicate Channel	复制通道
 Opacity			透明度
 Filters			过滤
 Gaussian Blur		高斯模糊
