@@ -1,8 +1,12 @@
 Gimp Open source image-editing
 software you can get your teeth into
+Gimp 让你着迷的开源图形编辑软件
 Gimp: Creative
+Gimp: 创造力
 Gimp can do more with text than you might think, as our graphics guru
 Michael J Hammel demonstrates with his two beautiful assistants.
+
+Gimp在文字处理上能做的事情比你想象的还要多，就像我们的图形大师Michael J Hammel 和他的两位漂亮的助理所展示的那样。
 
 Gimp is first and foremost a tool for working with raster
 images. Most desktop users will prefer to work with Gimp
@@ -11,6 +15,10 @@ choose other tools like Inkscape or Scribus when working with
 text. But don’t be fooled: Gimp does a great job with text effects,
 and in ways that most people might think can only be done with
 vector applications.
+
+Gimp是第一个同时也是最重要的一个处理光栅图像的工具。大多数的桌面用户都更喜欢用Gimp处理他们的数字照片，但是他们可能会用其他诸如 Inkscape(开源的矢量图形编辑软件) 或者 Scribus(桌面排版软件) 等工具来处理文字。但是不用那么麻烦：Gimp就能做出很棒的文字效果，而且这种效果会让大多数人以为只有矢量图形应用才能完成。
+
+
 This month I’m going to walk you through a little trick with text
 that my wife found in a design magazine. In that tutorial the
 process was handled using InDesign. InDesign, for those who don’t
@@ -19,6 +27,9 @@ boxes to align and block objects within the layout. This particular
 effect, which you can see in the cover image for this tutorial, turns
 out to be even easier in Gimp than described in the original
 InDesign tutorial.
+
+这个月我准备带你们看一个文字处理的小技巧，那是我妻子在一本设计杂志上发现的。在那个教程里使用的是InDesign(专业排版领域的设计软件)来进行设计处理。InDesign，对那些不熟悉它的人来说，是一个排版工具。它能利用框对齐
+
 Projects like this have important periphery components
 beyond just the text. This design requires a source image that has
 sufficient colour and contrast. Without colour and contrast the
