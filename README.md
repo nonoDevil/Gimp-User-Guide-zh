@@ -74,6 +74,12 @@ Gimp-User-Guide-zh
 
 	这样你github帐号上的仓库也是最新的了
 
+        以上命令等价于 
+
+	$ git pull git://github.com/nonoDevil/Gimp-User-zh.git    
+
+	强烈建议在翻译前执行此命令来确保你当前的仓库是最新的，这样能做大大的避免冲突
+
 #### FYI:
 - git - 简易指南：[http://rogerdudler.github.com/git-guide/index.zh.html](http://rogerdudler.github.com/git-guide/index.zh.html)
 
