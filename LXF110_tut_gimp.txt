@@ -28,42 +28,62 @@ effect, which you can see in the cover image for this tutorial, turns
 out to be even easier in Gimp than described in the original
 InDesign tutorial.
 
-这个月我准备带你们看一个文字处理的小技巧，那是我妻子在一本设计杂志上发现的。在那个教程里使用的是InDesign(专业排版领域的设计软件)来进行设计处理。InDesign，对那些不熟悉它的人来说，是一个排版工具。它能利用框对齐
+这个月我准备带你们看一个文字处理的小技巧，那是我妻子在一本设计杂志上发现的。在那个教程里使用的是InDesign(专业排版领域的设计软件)来进行设计处理。InDesign，对那些不熟悉它的人来说，是一个排版工具。它能利用框对齐，块状体进行漂亮的布局。你在教程封面上看到的图片效果，如果看 Gimp 教程来实现要比看 InDesign 教程实现容易的多。 
 
 Projects like this have important periphery components
 beyond just the text. This design requires a source image that has
 sufficient colour and contrast. Without colour and contrast the
 shapes within the image won’t be recognisable through the text.
+
+像这样的项目所要求的边缘组件远超过文本。这个设计需要一张色彩和对比度饱满的原始图片。如果色彩和对比度不饱满的话，那么图片的形状就不能通过文字来很好的分辨出来。
+
+
 The project also requires a suitable font. The font needs to be
 thick and should not use any serifs. Serif fonts will make the final
 image appear cluttered, and in most cases won’t allow as much
 detail from the source image to show through, even when bold
 versions of the serif font are used. It can also make it difficult to
 recognise the text from the image.
+
+这个项目也需要一个合适的字体。这个字体要求厚实，即不能用细体。细体字会让最终图片显得很杂乱，在大多数情况不会通过源图片来显示这么多细节， 即使已经使用了粗体字。但这仍有可能难以从图片中识别出这些文字。
+
 The goal of this project is to map an image on to text but keep
 the original image recognisable. Gimp’s text features make the
 actual design something that can be done in a few minutes and
 with a limited set of steps. So before we dive into that, let’s take a
 look at some of these periphery issues involved when working on
 similar designs.
+
+这个设计项目的目标是映射一张图片到文字中，但是仍然保持这张图片的可识别性。Gimp 的文字功能让实际的设计能够在几分钟内，通过一组有限的步骤即可完成。所以在我们开始钻研之前，让我们先看一下有关的外部文章当进行相似的设计时。
+
 Select a stock image
+选择一张图库里的图片
 To start the project, visit one of the many low-cost stock image
 sites and search for a human portrait. The picture we want needs
 to include two important features. The first is a solid coloured
 background. A cluttered background will make it harder to identify
 the subject of the image when we apply our text effect.
+
+让我们开始吧，首先浏览多个低成本的图片存储网站，并搜索一些人的肖像。我们想要找的图片最好包括两个重要的特点。第一最好是单色背景。一个杂乱的背景配上文字，会让这些文字很难识别出来。
+
 The second important feature is a fair amount of colour
 contrast. An all-black image would work just fine, but would end
 up being nothing more than shadow-filled text. For this project I
 selected a woman in a black dress with enough skin tones to
 provide some colour contrast. We’ll add to that contrast with a soft
 vignette a little later.
+
+第二个重要特性是有一定数量级的色对比度。一个全黑的图片看起来不错，但结果无非就是充斥着阴影的文字。在这个设计项目中，我使用的是一张女性的图片，她身上的黑色裙子与足够的肤色形成了色度对比。我们随后将会使用软模糊技术来增加对比度。
+
 When selecting stock images you should be aware of licensing
 issues. If the image is of inanimate objects, you’re generally safe. If
 the image shows a recognisable face, then you’ll need to make
 sure the publisher of the photo (whoever uploaded it) has
 obtained a model release from the subject of the image. Without
 the model release, you can’t use the image in published work.
+
+当从图片库里选择图片的时候你要意识到许可证的发放问题。如果是一张没有生命物体的图片，那你还算比较安全。如果这张图片出现了一张可以辨识出的人脸，那你就要确保
+
 Last month In last month’s column, author Michael J. Hammel talked about using
 90 Linux Format October 2008
 LXF110.tut_gimp 90
