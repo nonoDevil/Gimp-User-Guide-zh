@@ -1,21 +1,69 @@
-free select 		自由选择工具
-tool option 		工具选项
-color based 		基于颜色
-free hand 		
-select by color 	按颜色选择
 add mode 		添加模式
-fuzzy select  		模糊选择
-invert 			转置
-path 			通道
-foreground select 	前景选择
-contiguous 		连续的
-quick mask 		快速蒙版
-mask 			蒙版
-paintbrush 		画笔 	
+Ask What To Do          询问怎么做
+Canvas                  画布
 circle fuzzy  		模糊圈（也可以不翻译）
+color based 		基于颜色
+Color Management        色彩管理
+Colour Managed Display  颜色管理的显示
+contiguous 		连续的
+Convert To RGB Workspace转换为RGB工作空间
+Display Rendering Intent显示渲染缩进
+Duplicate Channel	复制频道
 Hue			色调
 Feather			羽化
-Duplicate Channel	复制频道
-Opacity			透明度
+File Open Behaviour     文件打开行为
 Filters			过滤/滤镜
+foreground select 	前景选择
+free hand 
+free select 		自由选择工具
+fuzzy select  		模糊选择
 Gaussian Blur		高斯模糊
+invert 			转置
+mask 			蒙版
+Mode of Operation       操作模式
+Monitor Profile         显示器配置文件   （ps：此手册里的profile目测大部分意为“配置文件”）
+Opacity			透明度
+paintbrush 		画笔 
+path 			通道
+Perceptual              感官
+Preference              首选项
+Print Simulation        打印模拟
+quick mask 		快速蒙版
+
+select by color 	按颜色选择
+Softproof Rendering
+Intent                  软打样渲染缩进
+tool option 		工具选项
+
+		
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
