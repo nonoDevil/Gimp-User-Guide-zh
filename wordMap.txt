@@ -19,3 +19,10 @@ Duplicate Channel	复制通道
 Opacity			透明度
 Filters			过滤
 Gaussian Blur		高斯模糊
+
+->陈嘉杰
+boxes to align 		框对齐
+block objects 		块状体
+colour and contrast   	色彩和对比
+periphery components 	外围组件
+
