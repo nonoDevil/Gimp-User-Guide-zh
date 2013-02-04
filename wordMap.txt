@@ -1,0 +1,16 @@
+free select 		自由选择工具
+tool option 		工具选项
+color based 		基于颜色
+free hand 	
+select by color 	按颜色选择
+add mode 		添加模式
+fuzzy select  		模糊选择
+invert 			转置
+path 			通道
+foreground select 	前景选择
+contiguous 		连续的
+quick mask 		快速蒙版
+mask 			蒙版
+paintbrush 		画笔 	
+circle fuzzy  		模糊圈（也可以不翻译）
+
