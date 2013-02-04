@@ -1,317 +1,98 @@
-Tutorial Gimp Open source image-editing
-Gimp
-software you can get your teeth into
-Gimp: Know your
-Everyone knows selections, right? But how well do you really know them?
-This month, Michael J Hammel gets tricky with some awkward images.
-You can drag the hotspots to edit the selection while the
-bounding box is displayed.
+翻译：李欣     (lixin.star3@gmail.com)
 
-If masks are the heart of image compositing, selections are the
-blood that gives them life. Compositing, for those who don’t
-know, is simply the process of merging two images. Without
-masks, compositing would be nothing more than a child’s photo
-collage, created just as you might cut photos from magazines or a
-newspaper. But masks let you do more than lay one image on top
-of another. Masks, and their companion, Layers, let you blend the
-edges of each image with the one below into a seamless collection
-that is more than the sum of its parts.
-There are many ways to create masks, and nearly all of them
-start with a good selection. The trick to making selections into
-useful masks is a fine art of combining selections. By working with
-multiple selections we can outline nearly any shape we require,
-from boxes to fur.
-In this tutorial I’ll start with a review of selection basics and
-then move on to finer-grain techniques for more difficult
-productions. I’ll also cover methods of improving the selection so
-that a mask or layer can more seamlessly blend into another layer.
-The basic selection tools were given an overhaul in Gimp 2.4 and
-now offer more user-friendly interfaces. Both the Rectangle and
-Ellipse selection tools outline a selection with a bounding box that
-includes hotspots for interactive editing of the selection. Move the
-mouse around the bounding box – left, right, top, bottom and the
-corners – to view the hotspots. At the same time, note the
-changes to the cursor that display which direction you can drag to
-modify the selection.
-The selection is active while the bounding box is in place. You
-can, for example, drag and drop the colour boxes from the Toolbox
-into the selection to fill it even while the selection bounding box is
-displayed. However, you may also want to complete the selection
-edits by clicking inside the selection’s dotted outline or hitting the
-Enter key. Completing the selection prevents further editing of the
-selection by removing the bounding box. Editing of the rectangular
-and elliptical selections is limited to height and width when using
-the bounding box hot spots.
-Boxes on the corner
-Fortunately, more editing is possible with the latest version of
-Gimp. Added to the 2.4 release is the ability to transform your
-selection after it is completed. The transform tools in the Toolbox
-(Rotate, Scale, Shear, Perspective and Flip) all support transforms
-on either the current layer, the active selection boundary or paths.
-This means you can create a selection with the Free Select (lasso)
-tool and add perspective to the selection using the Perspective
-tool. But be careful here. The transform tools must be configured
-to operate on the selection by clicking the selection button in the
-Tool Options dialog.
-The transform buttons, which appear in the Tool Options dialog
-for all the transform tools, apply the transform against the image
-(first button), the current selection (second button) or the
-currently active path (third button). Be sure to set this option
-before applying a transform.
-Last month We made words and pictures go together like a horse and carriage.
-88 Linux Format November 2008
-LXF111.tut_gimp Sec2:88
-29/8/08 17:21:24
-Gimp Tutorial
-selections
-sky. Now invert the selection (Select > Invert) to select the flowers.
-Because of the differences in hue the selection is extremely
-accurate with this particular image.
-Sometimes the edge between the subject and the background
-is obvious. In cases like this the Scissors tool can be used to
-outline the subject with a series of anchors just as you would
-create a path. This process takes a little more work but can outline
-an object in great detail and, more importantly, allows you to
-moving the anchors and edit the outline before converting the
-path into a selection.
-Clever scissors
-Combining a colour-based selection with a free hand
-selection doesn’t require any precision work to create.
-In this example above (the sunflowers) I want to select the
-flowers alone. Normally I might use Select By Colour to select the
-sky and then invert the selection. But the sky is filled with faint
-clouds that blend with the flowers in the bottom-right of the
-image. Fortunately, I can start with the flowers instead.
-With the Select By Colour tool chosen from the Toolbox, I set
-the ‘Select By’ menu entry to ‘Hue’ and click on just about any
-yellow part of the flowers (no dragging required – just a click). This
-selects the outline of the flowers but leaves some of the seeds
-unselected. Since the outline of the flower provides a bounding
-area for selection, all that’s required to add a Free Select to it.
-Leaving the current selection intact, I choose the Free Select
-tool from the Toolbox. I make sure the Add Mode is active in the
-Tool Options dialog (second from left in the Mode row) and I then
-draw a freehand selection around the seeds of the flower, dragging
-the mouse outside of the canvas where necessary.
-The Scissors tool works by searching for an edge near where you
-click. The anchor is placed on that edge and a curve drawn
-between the new anchor and the previous anchor. Once you’ve
-outlined the subject you click inside the path you’ve created to
-convert it to a selection. Alternatively, you can use paths to create
-a similar selection. The advantage to a path is that it lives in its
-own dialog (like the Layers dialog) so you can edit the path later to
-modify your selection.
-Although it’s displayed there, a path doesn’t exist in the canvas
-– the path lives only in the Paths dialog. In order to have it show up
-in the canvas you need to either stroke it (to draw in the current
-layer of the image) or convert it to a selection. Both options are
-available as buttons in the Tool Options dialog for the Paths tool.
-The newest addition to Gimp’s selection collection is the
-Foreground Select tool. This tool has built-in intelligence, like the
-Scissors, but is easier to use. When chosen from the Toolbox, the
-Foreground Select tool turns the cursor into a lasso. Use this to
-draw a rough outline around the subject. In the example above-
-right I drew a line around the building, dragging outside the
-Subject isolation
-The whole point of a selection is to pull an object from an image.
-How you do this depends a great deal on the original image.
-Cluttered backgrounds make the process more difficult, but not
-impossible. The trick with this type of image is to use more
-sophisticated tools and methods. The Fuzzy Select tool,
-sometimes referred to as the magic wand, works much like the
-Select By Colour tool, but is even better with images with solid or
-nearly solid coloured backdrops. In fact, as easy as it was to select
-the flowers with Select By Colour, Fuzzy Select can select the
-flowers with one single drag.
-Choose the Fuzzy Select tool from the Toolbox, then click and
-drag slowly through the sky in the image (the sky, not the
-flowers!). As you drag, the selection grows until it selects the entire
-Setting the Select By menu to Hue for Fuzzy Select enables the tool to detect the
-differences in hues of the sky and flowers.
-If you missed last issue Call 0870 837 4773 or +44 1858 438795.
-November 2008 Linux Format 89
-LXF111.tut_gimp Sec2:89
-29/8/08 17:21:29
-Tutorial Gimp
-canvas on the left and re-entering on the right. The outline is
-roughly oval and includes some of the background.
-Once the lasso selection is completed, Foreground Select tints
-the non-selected background blue. After the lasso operation is
-complete the cursor turns into a paintbrush with a circular tip. You
-can increase the size of the tip in the Tool Options (a necessary
-step if you’re working on a very large image, since the default size
-of the brush is best suited to web-sized images as opposed to
-print-sized images). Now click over the foreground subject and
-drag the mouse to draw a line through the foreground object. The
-line should cover a set of pixels that make a good representation of
-the colours in the foreground object. Once you release the mouse
-button, the Foreground Select tool begins to compute the outline
-of the foreground object. To complete the selection, hit the Enter
-key and you’ll see the line of marching ants around the selection.
-The usefulness of Foreground Select is in the ease with which
-the user can make the selection – a rough outline and a brush
-stroke are about all you need. The drawback with Foreground
-Select is that the responsiveness of the brush during the stroke is
-slow when the brush tip is large. Despite this, Foreground Select
-can create extremely accurate selections with little user effort.
-Alternative methods
-The curve
-between anchors
-is jagged when you
-use the scissors
-tool, so it’s better
-to use a path with
-this selection
-Complex selections nearly always involve hair, fur or any other
-sort of very thin lines. Even the most advanced selection tools by
-themselves cannot make these selections. What you need is to
-combine tools or use specialised masking techniques that don’t
-involve the selection tools at all.
-Let’s try Foreground Select on a more complex image – a set
-of tennis balls sitting on the strings of a tennis racket (below right).
-The image is more complex because the tennis balls are not
-touching – their pixels cannot be selected contiguously as was
-done in the previous example. Worse, the edge of the racket is also
-yellow. Fortunately, we can use multiple tools to isolate the tennis
-balls. First, I outline the tennis balls using the Foreground Select
-lasso operation, doing my best to include as little of the racket as
-possible. Then I draw my foreground selection line through all
-three tennis balls. This does a good job of selecting the tennis balls
-only, but it also picks up some of the racket strings while leaving
-out some of the text stamped on the nearest ball.
-Now I turn off the Contiguous button in the Tool Options. Then
-I draw a few more foreground selection lines in various parts of the
-balls, like the dark text. This refines the Foreground Selection a bit
-but there is plenty of work left to do.
-The lasso selection just provides an initial selection that the
-remaining steps of Foreground Select will improve upon.
-Next I switch to Select Background and draw along the edges
-of the balls over the racket strings. I zoom in on this area first to
-get a better look at the area. Zooming in will not alter the size of
-the brush tip so a small brush tip works well for detailed work like
-this. I zoom out and hit Enter to covert this into a selection. Here I
-can see how poor the selection really is. The only choice I have is
-to clean it up with the Quick Mask.
-The Quick Mask works very much like Foreground Select.
-When you enable it (the Quick Mask button is the square button in
-the lower-left of the image window) everything outside of the
-selection is tinted red. Red is the default colour – right click on the
-Quick Mask button to change to a different colour, though the Red
-tint shows up well while working with the yellow tennis balls.
-Next you select a paint tool from the Toolbox. The Paintbrush is
-ideal for this along with using a soft-edged brush such as one of
-the Circle Fuzzy brushes that are part of the default Gimp
-installation. Soft-edged brushes in the Quick Mask work like
-feathering of a selection, though if you choose to use a hard edged
-brush you can always feather the resulting selection later (using
-Select > Feather).
-Now we simply paint over the balls with white to add them to
-the selection. When using Quick Mask, white paint will cause the
-mask to be removed (you don’t actually see the white paint) while
-black paint will add to the mask (you see the mask tint added to
-where you paint). I paint out the basic ball outlines with white paint
-and then switch to black paint to remove areas I don’t want
-Quick Mask lets you paint the areas to be selected (or not
-selected). Soft edged brushes will make the selection feathered.
-90 Linux Format November 2008
-LXF111.tut_gimp Sec2:90
-29/8/08 17:21:30
-Gimp Tutorial
-The green channel was selected for this image, though in this
-case the red channel might work just as well.
-included in the selection. With Quick Mask it’s possible to zoom in
-on the image, use a very small brush, and manually select the fine
-fur or hair in an image. This is a very labour-intensive process,
-however, and except for high-end image productions you probably
-won’t need to do it – it’s just nice to know you can. Once I’ve
-finished painting in the Quick Mask I click on the Quick Mask
-button again to switch back to a real selection.
-Corner cases
-Finally, we have to consider those images that simply don’t
-cooperate with the basic selection tools. In these cases, the image
-needs to be manipulated manually. Take, for example, the
-scholarly-looking canine above. A few passes with Foreground
-Select shows that this tool simply won’t work without heavy
-editing. Because of the computational time required with each
-new drag to add to the foreground object the process becomes
-overly time consuming with extensive tweaking.
-An easier solution is to find a channel that provides the
-greatest contrast and use it as the starting point for creating a
-mask. Open the channels dialog and turn off all the channels by
-clicking on their visibility icon, then turn them back on to find the
-one that has the greatest contrast. For this image, that would be
-the green channel. Right-click on that channel and select
-Duplicate Channel. A duplicate of this channel is added to the
-bottom of the list. Click on the visibility icon (the eyeball to the left
-of the thumbnail) to turn the duplicate channel visibility on.
-We’re going to use this duplicate channel to create a layer
-mask to isolate our friendly mutt. In the layers dialog, turn off the
-visibility of the background (and only) layer. Now you can see the
-channel itself, which looks a lot like a desaturated version of the
-dog layer. Make sure the channel is active by clicking on it in the
-Channels dialog then open the Levels dialog. Adjust the sliders
-until you’ve gotten the best outline of the dog – don’t worry about
-the inside of the dog, as we’ll add that later.
-We don’t want the extra cruft around the edges, so we can
-paint those white directly in the channel. But we don’t have an
-exact outline of the dog yet, so we can’t fill the inside with black
-yet. The way to handle this is to copy the channel (Select > All, Edit
-> Copy), return to the Layers dialog and click on the background
-layer to make it active, then paste into the image window (Edit >
-Paste). Anchor this selection in the Layers dialog (Layer > New).
-Now we can edit this new layer by reducing its opacity (move
-the Opacity slider to 25.0 in the Layers dialog) and carefully draw
-a black line along the edges of the dog where no black in the new
-layer currently exists. I zoomed in here to see the edge more
-cleanly and use a very small brush with a hard edge and the Pencil
-tool. Once the outline is closed, we can select most of the white
-area with the Fuzzy Select tool, grow the selection a few pixels and
-fill it with black. Then we clean up the rest of the image manually
-with the paintbrush.
-With the outline of the dog filled with black in the new layer we
-can copy it into a layer mask of the original layer. Click on the dog
-layer to make it active and then add a layer mask to it (Layer >
-Mask > Add Layer Mask). Click on the new layer with the black
-outline of the dog in the Layers dialog to make it the active layer.
-Copy it (Edit > Copy), then click on the dog layer’s mask – make
-sure to click on the mask itself in the Layers dialog! Paste the copy
-into the mask (Layer > Paste) and anchor it (Layer > Anchor).
-Black represents transparent in a mask, so invert the colours
-(Colours > Invert) in the mask. A light blur should be applied to the
-mask at this point as well (Filters > Blur > Gaussian Blur, about five
-pixels). Now you should have a good outline of the dog. I’ve added
-a green background just so I can see the results. To create a
-selection from this, just convert the mask to a selection (Layer >
-Mask > Mask to Selection).
-It’s all about choice
-Which tools and techniques you use depends a lot of the source
-image. High-contrast images work well with the basic tools. Large
-differences in hue between the background and foreground object
-work well with Fuzzy Select, Select By Colour and Foreground
-Select. Objects that blend into the background, have lots of fine
-lines along the edges and/or sit in front of busy, multicoloured
-backgrounds require much more work using multiple tools,
-adjustments to the Levels and Brightness/Contrast tweaks to
-create a suitable mask.
-In the end, what works best is a lot of trial and error. If there
-were a magic bullet for all selections, Gimp would have it.
-Fortunately, we have a plethora of tools in the Gimp toolchest to
-make our selection experiments quick and painless. LXF
-It takes more
-effort to get this
-selection, but the
-results are worth it.
-Brush tips
-The stock brushes in Gimp are fairly static
-in size. You can duplicate them to edit the
-size and shapes, but I find it easiest to
-create a new brush that I edit manually
-repeatedly for whatever process I’m
-working on. See the New Brush button
-in the Brushes dialog button bar to create
-a new brush.
-Next month We’ll see how to get your work out of Gimp and on to paper.
-November 2008 Linux Format 91
-LXF111.tut_gimp Sec2:91
-29/8/08 17:21:33
+Gimp 让你着迷的开源图形编辑软件
+Gimp：了解你
+    每个人都了解选项，对吗？但是你到底有多了解它们呢？这个月，Michael J Hammel被一些棘手的图像弄的很窘。
+
+    如果罩是图像合成的要点，选项就是给予它们生命的血液。对不了解的人来说，合成就是简单的把两张图片合并的过程。没有罩的话，合成将不会比孩子们的图像拼贴高明多少，创造也许就像你从杂志或者报纸上剪下图片一样。但是罩可以让你做的不仅仅是把一张图片放在另一张图片的上面。罩和其他的合成以及图层，让你混合那些多于其部分和，并且它下面为无缝集合的图片。
+
+    有很多创造罩的方法，而且几乎它们全部都以一个好的选项开始。让选项变为有用的罩的技巧是结合选项的精细工艺。通过处理多个选项我们几乎可以描述出从盒子到皮毛，任意我们需要的选项。
+
+    在这个教程中我将会以回顾选项基础和对进一步更加难以理解的产品细粒度技术开始，我也将会涵盖提高选项的方法，这样罩或者图层可以更加无缝结合于另一个图层。在一次全面修订的Gimp 2.4中给出了基础选项工具，并且现在提供更多友好的接口。矩形（Rectangle）和椭圆（Ellipse）的选项工具都用包括交互式编辑热点的边界框描述一个选项。围绕边界框移动鼠标——左、右、上、下和角落——来观察热点。同时，注意那些你可以托拽修改选项的方向的光标的变化。
+
+    当边界框在这里时选项是有效的，例如，实际上，当选项边界框显示后，你可以从工具箱（Toolbox）中托拽或者拉低颜料盒到选项来填充它。然而，你也可能想要通过点击在选项里打点的描述或者敲击Enter键来完成选项编辑。通过移除边界框来预防对选项的过度编辑并完成选项。矩形和椭圆选项编辑是当使用边界框热点时来限制高度和宽度的。
+
+角落的框
+    幸运的是，在最新版本的Gimp可以进行更多的编辑。2.4的发行版增加了变换你完成后的选项的功能。变换工具在工具箱（Toolbox）中（旋转（Rotate），测量（Sacle），剪切（Shear），透视（Perspective）和翻转（Flip））所有在每一张当前图层、有效选项边界或路径都支持变形。这意味着你可以创造一个自由选择（Free Select）（套索）工具的选项，并且当选项使用透视（Perspective）工具时可以增加透视图。但是在这里要注意，变形工具肯定是被配置为在选择工具（Tool Options）对话框中点击选项按钮时才对选项起作用。
+
+    这些出现在选择工具（Tool Options）对话框中的所有变形工具的变形按钮，提供相反于原图的变形（第一个按钮），当前选项（第二个按钮）或者当前有效路径（第三个按钮）。在请求这些变形之前确定设置这些选项。
+
+（页底）上个月我们把单词和图片放在一起，摆成像一匹马和马车的样子。
+
+选项
+（插话）组合一个按颜色选择（color-based）选项和一个自由选择（free hand）选项，不需要任何精细的工作来创造。
+
+    在上面这个例子里（向日葵）我只想选择那些花。通常我可能使用按颜色选择（Select By Color）来选择天空然后反置选项。但是在图片的右下角混合着花和云的地方，天空被模糊的云充满。幸运的是，我可以用花替代天空来开始。
+
+    从工具箱（Toolbox）选择按颜色选择（Select By Color）工具，我设置选择（‘Select By’）条目为色调（‘Hue’）然后点击花上面的任意黄色部分（不需要托拽——仅仅是点击）。这个选项描述了花的大概轮廓但是留下了一些种子没有选择。因为花轮廓的描述是为选项提供一个边界区域，所有的这些都必须添加上自由选择（Free Select）。
+
+    留下当前完好无损的选项，我从工具箱里选择自由选择（Free Select）工具。我确保在选项工具（Tool Options）（模式（Mode）列的左边第二个）对话框里的添加模式（Add Mode）是开启的，然后我在种子和花的周围画一个自由选择（freehand）选项，在画布外必要的地方托拽鼠标。
+
+主题隔离
+    选项的要点是把主题从图片中剥离。你怎样做大部分取决于原始图像。凌乱的背景让这个过程更加困难，但不是不可能。对付这种类型图片的技巧就是使用更加复杂的工具和方法。模糊选择（Fuzzy Select）工具，有时等同魔杖，用起来很像按颜色选择（Select By Color）工具，而且处理固体或接近固体彩色背景的图片会更好。事实上，使用起来简单的就像按颜色选择（Select By Color）工具来选择花一样，模糊选择（Fuzzy Select）工具可以使用仅仅一个拖拽来选择花。
+
+    从工具箱（Toolbox）里选择模糊选择（Fuzzy Select）工具，然后点击并且缓慢拖拽图片中的天空（天空，不是花！）。当你托拽的时候，选项会一直扩展直到完全选中了天空。现在反置选项（选择（Select）>转置（Invert））来选择花。由于色调的差异，在不同的图片中选项是极其精确的。
+
+    有时主题和背景的边界是非常明显的。当你创造了一条路径时，可以用一系列转折点来描述主题的轮廓，在这种情况下可以用裁剪（Scissors）工具。这个过程会需要更多的工作但是可以非常详细的描述出主题的轮廓，并且更重要的是，在转换路径成为选项之前，允许你移动转折点来编辑轮廓 。
+
+聪明的剪刀
+    裁剪（Scissors）工具通过搜寻在你点击地点周围的边界来工作，转折点被放置在新转折点和旧转折点之间的曲线绘制边缘。一旦你绘制了主题的轮廓，你在路径里面点击后你就创造了它，使它成为一个选项。另外，你可以使用路径来创造一个相同的选项。这对于路径的好处是它存在于它自己的对话框（就像图层（Layers）对话框），这样稍后你就可以编辑路径来修改你的选项。
+
+    尽管展示到这，路径仍没有存在于画布里——路径仅仅存在于路径（Paths）对话框。为了让它在画布里显示，你需要敲击它（在当前图片的图层）或者转换它成为一个选项。两个选择都可以在工具选项（Tool Options）对话框中的Paths（路径）工具中获得。
+
+    最新添加到Gimp中的选项收集是前景选择（Foreground Select）工具，这个工具是内建智能的，就像裁剪（Scissors），但是它更易于使用。当从工具箱（Toolbox）中选择了它时，前景选择（Foreground Select）工具就会把光标变为套索。用这个来绘制一个粗糙的主题轮廓。在例子的右上角我围绕构建画了一条线，托拽左边外面的画布然后从右边重新进入。轮廓是非常粗糙的椭圆并且包括一些背景。
+
+（页底）如果你错过了上一篇文章，致电08708374773或者+441858438795
+
+    一旦套索选项完成，前景选择（Foreground Select）给未选择的蓝背景染色。当套索操作完成后，在一个圆形的提示下光标变为画笔。你可以增加选项工具（Tool Options）中提示的尺寸（如果你处理一张大图时，这是必要的一步，因为默认刷子的大小是最适合于网页大小图片，相反于打印大小的图片）。现在，点击在前景主题并且拖动光标来画一条穿过前景主题的线。这条线应该覆盖一组可以非常好的展示前景主题颜色的像素。一旦你释放了光标按钮，前景选择(Foreground Select)工具就开始计算前景主题的大致轮廓。为了完成选项，敲击Enter键，你将看到在选项周围的行军蚂蚁线。
+
+    前景选项(Foreground Select)有用的地方是用户可以简单的制造选项——你所需要的是一个粗糙的轮廓和刷头触点。前景选项(Foreground Select)的缺点是当刷头非常大的时候刷子触感的响应是非常慢的。尽管这样，前景选项(Foreground Select)在用户投入很少的精力下可以创造出极其精确的选项。
+
+替代方法
+    复杂选项总是包含头发，皮毛或者其他非常细的线。甚至连一些非常先进的选项工具本身都不能做出这些选项。你需要组合使用工具或者使用一点都不用选项的专业的罩技术。
+
+    让我们在一张复杂一点的图片上尝试前景选择(Foreground Select)——一组放在网球拍线上的网球（右下）。这张图更加复杂是因为这些网球并没有接触——它的像素不能像之前完成的那个例子那样连续选择。更糟的是，球拍的边缘也是黄色。幸运的是，我们可以用多个工具来隔离这些网球。第一步，我用前景选择(Foreground Select)套索操作来描述网球的轮廓。尽力尽可能少的包括球拍。通过三个网球，我画出了我的前景选项线。这仅仅是做好了选择网球的工作，但是也得到一些网球线同时留下了一些印在临近球上的文字。
+
+    现在我关掉了选项工具(Tool Options)中的连续(Contiguous)按钮。然后我在那些球不同的区域画了前景选项线，就像黑色的文字。这些精炼了许多前景选项(Foreground Selection)，但是还剩下很多工作要做。
+
+    接下来我转到选择背景(Select Background)，并且沿着球拍线上那些球的边界画。我把这个区域放大是为了更方便看这些区域。放大不会改变刷头尺寸的大小，所以一个小的刷头就会像这样更好的工作。我缩小区域然后敲击Enter键把它转换为一个选项。这样我就可以看到真正的选项有多么的可怜。唯一的选择就是我必须用快罩（Quick Mask）清理它。
+
+    快罩（Quick Mask）工作起来和前景选择(Foreground Select)非常像。当你启用它的时候快罩（Quick Mask）按钮是一个方形的按钮，它在图片窗口的左下方）任何在选项外面的事物都被染为红色。红色是默认的颜色——右击快罩（Quick Mask）按钮来变换不同的颜色，尽管当处理黄色网球时出现红色是非常好的。
+
+    接下来你从工具箱（Toolbox）里选择一个画具。画笔（Paintbrush）是非常理想的，连同使用一个软边刷，就像Gimp默认设置中的一些圆形模糊（Circle Fuzzy）刷子。快罩（Quick Mask）的软边刷工作时就像一个羽化选项。如果你非要选择硬边刷，那你可以稍后羽化结果选项（使用选择（Select）>羽化（Feather））。
+
+    现在我们用白色简单的漆完了这些球，把它们增加到选项。当使用快罩（Quick Mask）时，白色的漆将使罩被删除（你不会真正看到白漆）同时黑漆将曾加到罩上（你看到罩被染色增加到你漆的地方）。我用白漆漆完这些基础球的轮廓然后转为黑漆来删除那些我不想包括在选项中的区域。用快罩（Quick Mask）可以放大图片，使用一个非常小的刷子，然后手动的在一张图中选择较好的皮毛或头发。这是一个非常劳动密集的过程，然而，期待一个高端的图像产品，你可能不需要做这些——只是很高兴知道你可以。一旦我在快罩（Quick Mask）完成了油漆，我会再一次点击快罩（Quick Mask）按钮来转回到一个真正的选项。
+
+角落事例
+    最后，我们不得不考虑这些简单到不需要组合基础选项工具的图片。在这种情况下，图片需要被手动操纵。举个例子，带有学术前瞻性的看上面这条狗。一些前景选择（Foreground Select）的通路显示这些简单的工具不经过重编辑将不会工作。因为计算时间需要每一个新的拖拽来增加前景主题，经过广泛的调整，这个过程变得过度消耗时间。
+
+    一个简单的解决方法是找到一个最好的对比并且使用起来就像起点是为了创造一个罩的频道。打开频道对话框然后通过点击它们的可视图标关掉所有频道，然后返回找到一个最好的对比。对于这张图片，应该是绿色频道。右击这个频道然后选择复制频道（Duplicate Channel）。这个频道的副本被添加在列表的下面。点击可视图表（左边缩略图上的眼球）来调整复制频道可见度。
+
+    我们将使用复制频道创造一个图层罩来隔离我们友好的狗。在图层对话框中，关掉背景（仅有的）图层可见度。现在你可以看到频道本身，非常像一个不饱和的狗的图层版本。当在频道（Channels）对话框里点击频道时它是有效的，然后打开等级（Levels）对话框。调整滑动条直到你得到最佳的狗的轮廓——不用担心里面的狗，稍后我们将会添加它。
+
+    我们不需要边缘周围额外的碎屑，所以我们可以直接在频道里把它们漆成白色。但是我们到现在还没有一个精确的狗的轮廓，所以我们现在还不能把里面漆成黑色。处理这种情况的方法是复制频道（选择（Select）>全部（All），编辑（Edit）>复制（Copy）），返回到图层（Layers）对话框然后点击背景图层使它有效，然后复制到图片窗口（编辑（Edit）>粘贴（Paste））。在图层（Layers）对话框固定住这些选项（图层(Layer)>新建(New)）。
+
+    现在我们可以通过减少它的透明度来编辑这些新的图层（在图层(Layers)对话框中移动透明度(Opacity)滑条至25.0），然后沿着现存的没有黑色的图层的狗的边缘仔细的画一条黑色的线。我放大这部分用来看到更多干净的边缘，然后使用一个非常小的带有硬边缘的铅笔(Pencil)工具的刷头。一旦轮廓关闭，我们可以使用模糊选择(Fuzzy Select)工具来选择大多数白色的地方，扩大一点像素选项然后用黑色填充它。然后我们用画笔手动的清理图片剩下的地方。
+
+    我们可以复制在新的图层中被黑色填充的狗的轮廓到罩的原始层。点击狗的图层让它有效，然后给它增加一个图层遮罩（图层(Layer)>罩(Mask)>增加图层罩(Add Layer Mask)）。在图层(Layers)对话框中点击那个新的带有黑色狗的轮廓的图层让它成为有效的图层。复制它（编辑（Edit）>复制（Copy））,然后点击狗的罩层——确保在图层（Layers）对话框中点击罩本身！把复制品粘贴到罩上（图层（Layer）>粘贴（Paste））然后固定住它（图层（Layer）>锚（Anchor））。黑色在罩里面代表透明，所以在罩里转化颜色（颜色（Colors）>转置（Invet））。这时也要向罩提交一个轻微模糊化（过滤（Filters）>模糊（Blur）>高斯模糊（Gaussian Blur）,大约5个像素）。现在你应该有一个好的狗的轮廓了。我还要增加一个绿色的背景，这样我就可以看到结果了。从这创造一个选项，仅仅是转换罩成为一个选项（图层（Layer）>罩（Mask）> 选择罩（Mask to Selection））。
+
+全部是关于选择的
+    你使用的工具和技术大部分取决于源图片。高对比度的图片用基础工具就可以处理的很好。用模糊选择（Fuzzy Select），按颜色选择（Select By Colour）和前景选择（Foreground Select）可以很好的处理前景和背景主题巨大的色调差异。混合在背景里的主题，沿着边缘或者位于忙碌前面有许多很好的线，多彩的背景需要使用组合工具来做更多的工作，对图层（Levels）和明亮度/对比度（Brightness/Contrast）稍作调整来创造一个合适的罩。
+
+    最后，最好的效果是大量的试验和错误。如果那对所有选项来说是神奇的子弹，Gimp将拥有它。幸运的是，我们在Gimp工具箱中有大量的工具使我们的选项实验迅速而且无碍。
+
+画笔技巧
+    Gimp中常用刷头的尺寸是相当稳定的。你可以复制它们来编辑尺寸和形状，但是我发现在我工作的任何过程中，手动重复编辑创造一个新的刷头是非常简单的。在刷（Brushes）对话框按钮栏中找到新建刷（New Brush）按钮来创造一个新的刷头。
+
+（页底）下个月我们将看到如何将你的工作从Gimp中搬到纸上
+
+
+
+（插话）当边框显示的时候你可以托拽热点来编辑这个选项。
+（插话）为模糊选择（Fuzzy Select）设置选项（Select By）菜单为色调（Hue），让工具可以检测出天空和花之间色调的差异。
+（插话）当你使用裁剪(Scissors)工具时，转折点之间的曲线是参差不齐的。所以用这个路线选项更好。
+（插话）套索选项仅仅提供一个初始选项，前景选项(Foreground Select)将在余下的步骤中改进。
+（插话）快罩（Quick Mask）让你有选择的油漆这些区域（或不加挑选的）。软边刷将使选项羽化。
+（插话）绿色的频道是为这张图片选择的，尽管在这张图中，红色也许可以同样起很好的效果。
+（插话）这要花费更多的经理来获得这个选项，但是结果并不理想。
 
