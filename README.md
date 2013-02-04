@@ -76,3 +76,11 @@ Gimp-User-Guide-zh
 
 #### FYI:
 - git - 简易指南：[http://rogerdudler.github.com/git-guide/index.zh.html](http://rogerdudler.github.com/git-guide/index.zh.html)
+
+#### 翻译格式:
+- 文章内容
+	正文按pdf的顺序翻译，每页最底下的文字在前面加上圆括号，标注为页底（如：（页底）×××××）
+	插画下的文字，前面加上圆括号标注为插话（如：（插话）×××××××），然后按顺序均放在正文的最底部。
+- 专业名词
+	所有专业词语，均以如下方式出现：
+	词语的汉语释义（词语的英文）	例如：蒙版（mask）
