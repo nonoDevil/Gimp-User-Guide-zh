@@ -600,12 +600,17 @@ LXF113.tut_gimp 96
 
 ）
 
-Gimp Tutorial
+
+
+
 
 (以下为图片旁带>的注释小字：
 
 Use the Gamma/Black Point window to visually configure
 your monitor profile without specialised hardware.
+
+
+用Gamma/Black Point窗口，不用专门的硬件也可以直观地设置你显示器的配置文件
 ）
 
 
@@ -615,6 +620,12 @@ experimentation. Gimp 2.4 introduced support for ICC profiles in
 the Colour Management page of the Preferences dialog. This is
 where you select the profiles for your printer and the monitor
 profile that we just created with LPROF.
+
+
+使用配置文件非常简单，但是相应地，将结果“翻译”出来并调节一张照片就比较花精力。Gimp 2.4在首选项中的色彩管理页有对ICC配置文件的设置。在这个页面中你就可以为你的打印机选择配置文件以及为你的显示器选择我们刚刚用LPROF生成的配置文件。
+
+
+
 
 
 The Mode of Operation controls how you will view your images
@@ -630,7 +641,15 @@ clear from Gimp documentation, but for now you can leave these
 set to None.
 
 
+操作模式（Mode of Operation）控制了你将在画布（Canvas）窗口上怎么浏览你的照片。将它设置为颜色管理的显示（Colour Managed Display）会让Gimp利用你的显示器配置文件来显示照片，而将它设置为打印模拟（Print Simulation）会让Gimp利用打印机配置文件来显示照片。怎么选择就由当你遇到超出色域范围的颜色时想怎么预览你的照片来决定。所谓超出色域范围的颜色指的就是当你的打印机用上打印机配置文件时还不能重现的颜色。关于RGB和CMYK的设置，目前在Gimp有关文档里至今还不明确，但是现在你可以将它们设置为无（None）。
+
+
+
+
 Interpreting profiles
+
+
+翻译配置文件
 
 
 Use the Monitor Profile setting to select the profile you created
@@ -640,6 +659,12 @@ Gimp dialog for selecting the profile provides information about
 the profile. For my Epson printer, I have profiles set up for different
 papers, most of which were created using a White Point setting of
 5000K (which is shown here as D50).
+
+
+设置显示器配置文件（Monitor Profile）来选择你刚用LPROF创建的配置文件。打印模拟配置文件（Print Simulation profile）是用来给你的打印机选择配置文件而用的。我意识到我有很多种配置文件，并且Gimp里关于选择配置文件的对话框提供了很多关于配置文件的信息。我的爱普生打印机，对于不同类型的纸就有不同的配置文件，而它们之中大部分都是通过将白点度设置在5000K生成的。
+
+
+
 
 
 Gimp has multiple methods available for interpreting profiles.
@@ -653,12 +678,20 @@ designers can read the Gimp help documentation for details on
 the other options.
 
 
+Gimp对翻译配置文件有很多种可用的办法。你可以设置首选项的色彩管理中的显示渲染缩进（Display Rendering Intent）（用于翻译照片如何在画布上被显示出来）和软打样渲染缩进（Softproof Rendering Intent）（决定打印出来的照片在画布窗口预览起来是什么样的）来实现。这些各式各样的选项都是很技术性的，所以选择感官（Perceptual）对家用或小型商用应该是最好的选择。专业的设计师想研究其他的选项的话，可以阅读Gimp的帮助文档来寻找更详尽的内容。
+
 The File Open Behaviour option determines what Gimp will do
 with images it opens that have ICC profile data embedded in them.
 Cameras often embed profiles in the images they create. There’s
 little reason not to set this to Convert To RGB Workspace; leaving it
 as ‘Ask What To Do’ will cause a prompt to be displayed asking you
 what to do when you open images with embedded profiles.
+
+
+文件打开行为（File Open Behaviour）的选项决定了Gimp对它打开的那些内嵌有ICC配置文件数据的照片做些什么。照相机通常在拍照的时候就在照片中内嵌了那些配置文件。我们没什么理由不把它设置为转化为RGB工作空间（Convert To RGB Workspace）；设置为询问怎么做（Ask What To Do）会当你打开一个内置配置文件的照片时弹出一个提示问你该怎么做。
+
+
+
 
 
 The most important option in the Preferences is the Mark Out
@@ -669,6 +702,9 @@ colour (which defaults to grey). This enables you to see which
 pixels will have to be converted to another colour by the printer. It
 will, in effect, tell you how different your image is likely to be from
 what you see when you’re working on the image on screen.
+
+
+
 
 
 With out-of-gamut colours marked, you may wonder how you
