@@ -10,6 +10,7 @@ Color Management        色彩管理
 Colour Managed Display  颜色管理的显示
 contiguous 		连续的
 Convert To RGB Workspace转换为RGB工作空间
+Curves                  曲线
 Display Rendering Intent显示渲染缩进
 Duplicate Channel	复制频道
 Hue			色调
@@ -22,6 +23,7 @@ free select 		自由选择工具
 fuzzy select  		模糊选择
 Gaussian Blur		高斯模糊
 invert 			转置
+Mark Out Of Gamut       标记出超出全色彩范围的 
 mask 			蒙版
 Mode of Operation       操作模式
 Monitor Profile         显示器配置文件   （ps：此手册里的profile目测大部分意为“配置文件”）
