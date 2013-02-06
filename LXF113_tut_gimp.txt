@@ -705,6 +705,9 @@ what you see when you’re working on the image on screen.
 
 
 
+首选项的设置里最重要的应该就是“标记出超出全色彩范围的（Mark Out Of Gamut ）”。将这个选项勾选起来，并将操作模式（Mode of Operation）设为打印模拟（Print Simulation），Gimp的画布窗口就会将每一个无法正常打印的像素点用一种规定的颜色（默认是灰色）强调出来。这样做可以让你看到哪个像素点会被打印机转化为另一种颜色。实际上它是为了让你看到你现在在屏幕上操作的照片跟实际打印出来的照片会有哪些不一样。
+
+
 
 
 With out-of-gamut colours marked, you may wonder how you
@@ -719,7 +722,13 @@ Curves dialog is not sufficient for your needs. In that case, you’ll
 need to experiment with other tools in the Colour menu.
 
 
+将“标记出超出全色彩范围的”（Mark Out Of Gamut ）勾选起来后，你一定会想知道该怎么修复一张照片以让它被正常地打印出来（不让打印机擅自将不正常像素点擅自修改成其他颜色的话）。不幸的是，Gimp里没有现成的一键修复的选项。于是，我打开“颜色”菜单栏里的“曲线”（Curves）对话框，拖拽调整不同颜色的通道（Colour Channels）里的曲线。如果你勾选上“预览”（Preview），你就可以看到照片里不正常像素点的颜色在变化。这样做的话，也许只要几秒就能修复了，但说不定你会觉得光是调整“曲线”（Curves）不能满足你的需求。如果是这样的话，你还可以尝试“颜色”（Colour）菜单栏里的其他工具。
+
+
 Printing
+
+
+打印
 
 
 With your image colour corrected you’re ready to print. Remember
@@ -729,10 +738,19 @@ print plugin for use with Gimp. With both enabled, you can choose
 which is more appropriate for your needs.
 
 
+如果你的照片色彩都准确的话，你就可以准备打印了。记住用CUPS和Gutenprint来设置你的打印机。Gimp有它自带的打印对话框。Gutenprint也提供了一个可以和Gimp配合使用的打印插件。你可以从两者中选一个对你来说最合适的。
+
+
 Gimp’s built-in Print window offers a print preview, but it
 doesn’t make clear whether the preview is colour-adjusted based
 on ICC profiles. Still, for most home printing, you’ll probably be
 happy with the preview it provides.
+
+
+Gimp自带的“打印”（Print）窗口也提供了打印预览，但它不能清楚地告诉我们预览图样是不是在基于ICC配置文件的条件下被调整过颜色。不过，对大多数家用打印来说，这样的预览你应该已经满意了。
+
+
+
 
 
 Gutenprint’s Print window offers much finer control over the
@@ -747,7 +765,13 @@ specifically for Gimp prints, but not shared with others in your
 household or business.
 
 
+Gutenprint的打印预览窗口对于打印的过程提供了更多详尽的控制选项。这里的打印预览故意以很低的质量显示出来，为了让你更容易地用鼠标拖动纸张来校准，而且这个预览没有用到你的打印机ICC配置文件。在Guntenprint对话框中最重要的是你可以配合使用Gimp设置任何一个连接到你电脑的打印机，即使那个打印机没有在CUPS上设置过。这当然是很有用的，举个例子，如果你有一台专门用于Gimp打印的打印机，但你不想让它跟你其他的家用或商用机器混用，那么这时候就很凑效了。
+
+
 Summary
+
+
+小结
 
 
 Printing support under Linux has become easily good enough for
@@ -759,20 +783,24 @@ release has brought us closer to colour
 Nirvana with the ability to work directly
 convert images from their original colour
 with ICC profiles. While there’s still work to
-space. If you do care, you should convert
 be done with regard to correcting of out-
-the image before working on it. Be certain
 of-gamut issues, we can at least know
-to save your work into a different file so
 when an image won’t fit and can manually
-you can maintain the colour profile
 work at colour correction to fit the image
-information in the original file.
 into gamut for the printer. LXF
+
+
+
+
+有了Gutenprint和CUPS，以及其他由打印机产商提供的一些驱动，Linux下的打印支持对家庭以及小型商业用户已经足够简单了。虽然Gimp下的色彩管理还是有待改进的，但是已经发布的2.4版本带我们进入了一个色彩天堂，我们能够直接改造照片上由ICC文件规定的原始颜色。虽然对于带有超出色域范围颜色的照片，Gimp的功能还有待开发，但至少我们可以清楚什么时候这张照片不会被正常打印出来，并且我们还是可以人为地对颜色进行矫正以让它被打印机正常打印。LXF
+
+
 
 (以下为红灰方框中的提示文字：
 
 To convert or not to convert
+
+到底要不要转换
 
 
 Unless you’re a graphic designer working
@@ -787,13 +815,23 @@ before working on it. Be certain to save your work into a
 different file so you can maintain the colour profile 
 information in the original file.
 
+
+除非你是一个为某个对色彩有特殊需求的客户服务的平面设计师，否则当你用Gimp的时候基本不许要对色彩管理和ICC文件操心太多。如果你都不需要操心这些，那就无所谓是否要转换照片原始的色彩空间。如果你在意，那就在加工照片之前先转换。注意，一定要把你的工程另存为一个文件，这样你就可以保留原始文件里的色彩信息。
+
 )
 
 
 Next month We’ll use quick colour fixes to adjust tints and whiten a smile.
 
+下个月，我们将利用快速色彩修复工具来调整颜色及美白一个微笑。
+
+
+（以下为页脚文字，不翻译：
+
 
 Christmas 2008 Linux Format     97
 LXF113.tut_gimp 97
 27/10/08 7:31:48 pm
+
+）
 
