@@ -82,22 +82,18 @@ sure the publisher of the photo (whoever uploaded it) has
 obtained a model release from the subject of the image. Without
 the model release, you can’t use the image in published work.
 
-当从图片库里选择图片的时候你要意识到许可证的发放问题。如果是一张没有生命物体的图片，那你还算比较安全。如果这张图片出现了一张可以辨识出的人脸，那你就要确保
+当从图片库里选择图片的时候你要意识到许可证的发放问题。如果是一张没有生命物体的图片，那你还算比较安全。如果这张图片出现了一张可以辨识出的人脸，那你可要确保照片的发布者（无论是谁上传的）拥有照片中出现人物的肖像让渡书。如果没有这份让渡书的话，你就不恩呢个在公共场合使用这张图片。
 
 Last month In last month’s column, author Michael J. Hammel talked about using
-90 Linux Format October 2008
-LXF110.tut_gimp 90
-31/7/08 1:35:4 pm
+
+(页底)在上个月的专栏，作者 Michael J. Hammel 讲解了使用方法
+
 Gimp Tutorial
+Gimp 教程
 design
-All three text
-samples are set
-to 18 pixels with
--5 pixel line
-spacing and -2
-pixel tracking.
-The seated woman has a low contrast between background,
-skin and dress; the dancing woman is a much better image.
+设计篇
+
+
 Fortunately, most stock image sites will either require the
 photographer to submit the model release or let you know if no
 model release is available.
@@ -274,9 +270,9 @@ must be converted to a new layer manually (Layer > New).
 What you’ve done here is to paste a white layer with the text
 stamped out of it over the source image. Where the text was
 stamped out, the source image shows. Turn off the visibility of the
+Click on the background layer in the Layers dialog to make it
 Text layer by clicking on the Eye icon to the left of the layer
 thumbnail in the Layers dialog.
-Click on the background layer in the Layers dialog to make it
 the active layer. Choose the Move tool from the Toolbox. Hold
 down the Shift key and click and drag in the image window to
 move the woman and vignette around under the mask. Moving the
@@ -292,4 +288,19 @@ Next month Gimp has tons of selection tools – we’ll look at the most useful.
 October 2008 Linux Format 93
 LXF110.tut_gimp 93
 31/7/08 1:35:21 pm
+
+
+
+All three text
+samples are set
+to 18 pixels with
+-5 pixel line
+spacing and -2
+pixel tracking.
+
+（插话）在这三个例子中，文字大小是18,行间距为5个像素,斑点追踪为2个像素。
+The seated woman has a low contrast between background,
+skin and dress; the dancing woman is a much better image.
+（插话）在坐着的女人这张图片中，她的皮肤和裙子与背景的对比度较低;而跳舞的的女人这张照片的对比效果则要好的多。
+
 
