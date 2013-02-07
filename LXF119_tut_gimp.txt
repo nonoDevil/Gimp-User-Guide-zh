@@ -1,11 +1,11 @@
-Tutorial Gimp Open source image-editing
-Gimp
-software you can get your teeth into
+
 Gimp: Enhance
+
+
 Gimp contains a little-known back door to some powerful layout and preset 
 features. Michael J Hammel picks the lock and roots through the stock.
-Map keyboard and mouse buttons to Gimp events using
-the Preferences > Input Devices > Input Controllers dialog.
+
+
 
 Gimp has many features that are seldom explored
 by the new or even experienced user. Most users
@@ -15,10 +15,15 @@ Gimp mascot. However, few realise that you can get rid of
 those probing eyes by adding the following line to the
 ~/.Gimp-2.6/Gimprc file:
 (toolbox-wilber no)
+
+
 Another hidden feature lets you connect your mouse
 wheel to certain events, such as scaling the current brush
 size. This makes working with brushes a pleasant experience
 when you work with various sizes of image windows.
+
+
+
 Two areas of concern to new Gimp users, whether at
 home hobbyists or experienced artists, are the default
 window layout and the difficulty encountered trying to
@@ -27,6 +32,9 @@ all windows except the image window by simply hitting the
 Tab key (hitting it again brings the windows back). But this
 only hides the windows and doesn’t actually change their
 layout on the screen.
+
+
+
 Both of these problem areas can be addressed with
 hidden features in Gimp. And that’s exactly what Gimp Paint
 Shop is all about. New users of Gimp are sometimes put off
@@ -38,6 +46,14 @@ live within a single parent window. With Gimp, the layout uses
 SDI (single document interface) where each window of a
 single application is independent of other windows in the
 same application.
+
+
+(以下为图片旁带<的注释小字：
+Map keyboard and mouse buttons to Gimp events using
+the Preferences > Input Devices > Input Controllers dialog.
+）
+
+
 New users, especially experienced designers and artists,
 also run into difficulty when setting up Gimp’s tool to perform
 various tasks. It can be confusing, for example, to know which
@@ -45,15 +61,29 @@ brush to use with the Paintbrush versus which to use with the
 Eraser, not to mention how you might configure the Tool
 Options for each. Having each tool use a different brush and
 configuration can make things even more perplexing.
+
+
+（以下为图片旁带<的注释小字：
 This is the original
 window layout for
 Gimp, without the
 GPS updates.
+）
+
+
+
 Last month We showed how to create an iPod advertisement using Gimp.
+
+
+（以下为页脚文字，不翻译，第一页完：
 82     LXF119 June 2009
 LXF119.tut_gimp 82
 www.linuxformat.com
 8/4/09 3:49:3 pm
+）
+
+
+
 Gimp Tutorial
 the interface
 Ramón Miranda ran into these very issues and decided to
