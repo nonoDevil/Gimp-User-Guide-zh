@@ -1,306 +1,76 @@
-Gimp Open source image-editing
-software you can get your teeth into
-Gimp 让你着迷的开源图形编辑软件
-Gimp: Creative
+翻译、一校：陈嘉杰(linux.kakit@gmail.com)  二校： 
+
+
+Gimp 令人着迷的开源图形编辑软件
 Gimp: 创造力
-Gimp can do more with text than you might think, as our graphics guru
-Michael J Hammel demonstrates with his two beautiful assistants.
 
-Gimp在文字处理上能做的事情比你想象的还要多，就像我们的图形大师Michael J Hammel 和他的两位漂亮的助理所展示的那样。
-
-Gimp is first and foremost a tool for working with raster
-images. Most desktop users will prefer to work with Gimp
-when dealing with their digital photographs but might
-choose other tools like Inkscape or Scribus when working with
-text. But don’t be fooled: Gimp does a great job with text effects,
-and in ways that most people might think can only be done with
-vector applications.
-
-Gimp是第一个同时也是最重要的一个处理光栅图像的工具。大多数的桌面用户都更喜欢用Gimp处理他们的数字照片，但是他们可能会用其他诸如 Inkscape(开源的矢量图形编辑软件) 或者 Scribus(桌面排版软件) 等工具来处理文字。但是不用那么麻烦：Gimp就能做出很棒的文字效果，而且这种效果会让大多数人以为只有矢量图形应用才能完成。
+Gimp在文字处理上能做的事情比你想象的还要多，就像我们的图形大师 Michael J Hammel 和他的两位漂亮的助理所展示的那样。
 
 
-This month I’m going to walk you through a little trick with text
-that my wife found in a design magazine. In that tutorial the
-process was handled using InDesign. InDesign, for those who don’t
-use it, is a vector layout tool. It does clever things with text using
-boxes to align and block objects within the layout. This particular
-effect, which you can see in the cover image for this tutorial, turns
-out to be even easier in Gimp than described in the original
-InDesign tutorial.
+	Gimp是第一个同时也是最重要的一个处理光栅图像的工具。大多数的桌面用户都更喜欢用Gimp处理他们的数字照片，但是他们可能会用其他诸如 Inkscape(开源的矢量图形编辑软件) 或者 Scribus(桌面排版软件) 等工具来处理文字。但是不用那么麻烦，Gimp就能做出很棒的文字效果，而且这种效果会让大多数人以为只有矢量图形应用才能完成。
+	这个月我准备给大家展示一个文字处理的小技巧，那是我妻子在一本设计杂志上发现的。在那个教程里使用的是InDesign(专业排版领域的设计软件)来进行设计处理。InDesign，对那些不熟悉它的人来说，是一个排版工具。它能利用框对齐，块状体布局来进行漂亮的设计。你在教程封面上看到的图片效果，如果是看 Gimp 教程来实现要比看 InDesign 教程实现容易的多。 
+	像这样的项目所要求的边缘组件远超过文本。这个设计需要一张色彩和对比度饱满的源图像。如果色彩和对比度不饱满的话，那么图片的形状就不能通过文字来很好的分辨出来。
+	这个项目也需要一个合适的字体。这个字体要求厚实，即不能用细体。细体字会让图片最终显得很杂乱，在大多数情况不会通过源图像来显示这么多细节，即使已经使用了粗体字。但这仍有可能难以从图片中识别出这些文字。
+	这个设计项目的目标是映射一张图片到文字中，但是仍然保持这张图片的可识别性。Gimp 的文字功能让实际的设计能够在几分钟内，通过一组有限的步骤即可完成。所以在我们开始钻研之前，让我们先看一下有类似设计的相关文章。
 
-这个月我准备带你们看一个文字处理的小技巧，那是我妻子在一本设计杂志上发现的。在那个教程里使用的是InDesign(专业排版领域的设计软件)来进行设计处理。InDesign，对那些不熟悉它的人来说，是一个排版工具。它能利用框对齐，块状体进行漂亮的布局。你在教程封面上看到的图片效果，如果看 Gimp 教程来实现要比看 InDesign 教程实现容易的多。 
+从图库选择一张图片
 
-Projects like this have important periphery components
-beyond just the text. This design requires a source image that has
-sufficient colour and contrast. Without colour and contrast the
-shapes within the image won’t be recognisable through the text.
-
-像这样的项目所要求的边缘组件远超过文本。这个设计需要一张色彩和对比度饱满的原始图片。如果色彩和对比度不饱满的话，那么图片的形状就不能通过文字来很好的分辨出来。
-
-
-The project also requires a suitable font. The font needs to be
-thick and should not use any serifs. Serif fonts will make the final
-image appear cluttered, and in most cases won’t allow as much
-detail from the source image to show through, even when bold
-versions of the serif font are used. It can also make it difficult to
-recognise the text from the image.
-
-这个项目也需要一个合适的字体。这个字体要求厚实，即不能用细体。细体字会让最终图片显得很杂乱，在大多数情况不会通过源图片来显示这么多细节， 即使已经使用了粗体字。但这仍有可能难以从图片中识别出这些文字。
-
-The goal of this project is to map an image on to text but keep
-the original image recognisable. Gimp’s text features make the
-actual design something that can be done in a few minutes and
-with a limited set of steps. So before we dive into that, let’s take a
-look at some of these periphery issues involved when working on
-similar designs.
-
-这个设计项目的目标是映射一张图片到文字中，但是仍然保持这张图片的可识别性。Gimp 的文字功能让实际的设计能够在几分钟内，通过一组有限的步骤即可完成。所以在我们开始钻研之前，让我们先看一下有关的外部文章当进行相似的设计时。
-
-Select a stock image
-选择一张图库里的图片
-To start the project, visit one of the many low-cost stock image
-sites and search for a human portrait. The picture we want needs
-to include two important features. The first is a solid coloured
-background. A cluttered background will make it harder to identify
-the subject of the image when we apply our text effect.
-
-让我们开始吧，首先浏览多个低成本的图片存储网站，并搜索一些人的肖像。我们想要找的图片最好包括两个重要的特点。第一最好是单色背景。一个杂乱的背景配上文字，会让这些文字很难识别出来。
-
-The second important feature is a fair amount of colour
-contrast. An all-black image would work just fine, but would end
-up being nothing more than shadow-filled text. For this project I
-selected a woman in a black dress with enough skin tones to
-provide some colour contrast. We’ll add to that contrast with a soft
-vignette a little later.
-
-第二个重要特性是有一定数量级的色对比度。一个全黑的图片看起来不错，但结果无非就是充斥着阴影的文字。在这个设计项目中，我使用的是一张女性的图片，她身上的黑色裙子与足够的肤色形成了色度对比。我们随后将会使用软模糊技术来增加对比度。
-
-When selecting stock images you should be aware of licensing
-issues. If the image is of inanimate objects, you’re generally safe. If
-the image shows a recognisable face, then you’ll need to make
-sure the publisher of the photo (whoever uploaded it) has
-obtained a model release from the subject of the image. Without
-the model release, you can’t use the image in published work.
-
-当从图片库里选择图片的时候你要意识到许可证的发放问题。如果是一张没有生命物体的图片，那你还算比较安全。如果这张图片出现了一张可以辨识出的人脸，那你可要确保照片的发布者（无论是谁上传的）拥有照片中出现人物的肖像让渡书。如果没有这份让渡书的话，你就不恩呢个在公共场合使用这张图片。
-
-Last month In last month’s column, author Michael J. Hammel talked about using
-
-(页底)在上个月的专栏，作者 Michael J. Hammel 讲解了使用方法
-
-Gimp Tutorial
-Gimp 教程
-design
-设计篇
-
-
-Fortunately, most stock image sites will either require the
-photographer to submit the model release or let you know if no
-model release is available.
-Working with comps
-So you’ve scanned a few hundred images and found a few that
-might work. How can you tell how well they’ll work? The answer
-comes from working with comps. A comp is a small version of a
-stock image that typically contains a watermark. Most of the stock
-image sites will allow you to download a comp or, if they don’t
-explicitly offer them, will have large enough sample versions for
-viewing that you can download without paying for them.
-Comps are for experimenting. They’re often too small to use in
-final projects and would be inappropriate considering the
-watermark. But they’re useful for testing an idea. The testing for
-this project requires only that we use a smaller font size that what
-we’ll use in the final project. I used comps of several images before
-selecting the final image of the woman in the black dress. If the
-comps are too small you can double the image size for the
-experiment even if that pixellates the image.
-This effect works best with thick, straight-edged fonts. Script
-fonts don’t show the image very well, even when a bold face is
-used. In this tutorial I’m using the bold version of the Tahoma font
-but any sans font, probably using the bold face, will suffice.
-The first Gimp-specific tip for this tutorial is related to the Text
-tool options. Select the Text tool and then open the Tool Options
-dialog (Dialogs > Tool Options). Just above the button labelled ‘Text
-Along Path’ there are three options. These options are for, top to
-bottom, Indent, Line Spacing and Tracking. We won’t be using the
-indent option but we do want to use the other two. We want the
-value in Line Spacing made smaller (to negative values) so that the
-lines of text will be as close as possible without overlapping.
-Tracking sets the space between letters. This is similar to
-kerning but is not exactly identical. Again, the technical
-explanation is not important here. We just want to reduce this
-setting (also to negative numbers) to reduce the space between
-letters – the closer the better.
-Quick
-tip
-Scan multiple
-stock photo archives,
-such as
-BigStockPhoto.com,
-iStockPhoto.com
-and Stock.xchng
-(www.sxc.hu).
-Adding a vignette
-The first thing we want is to add a soft vignette. This will make the
-final image a little more colourful while keeping the woman’s
-shape recognisable. To do this, we add a transparent layer above
-the main layer (Layer > New) and name this new layer Vignette.
-Select the Elliptical selection tool from the Toolbox and in the
-image window draw an oval selection around the girl. Feather the
-selection (Select > Feather) by 100 pixels. Choose a warm colour
-for the foreground colour by clicking on the foreground colour box
-in the Toolbox. I’m using RGB values of 231/127/35 for this tutorial.
-We now need to add a radial gradient inside the circle.
-Choose the Gradient tool from the Toolbox. In the Tool Options
-dialog (Dialogs > Tool Options) set the Gradient to ‘FG To
-Transparent’ and the Shape to ‘Radial’ In the image, click and drag
-.
-from the middle of the selection to just past the top of the
-selection. Set the vignette layer’s mode to Multiply.
-At this point I add a little noise to the gradient for an artistic
-effect, but this step is optional. To add the noise, select Filters >
-Noise > HSV Noise and set the Holdness to 2, the Saturations to
-255 and the Value to 255. The default setting for Hue (which
-If you missed last issue Call 0870 837 4773 or +44 1858 438795.
-October 2008 Linux Format 91
-LXF110.tut_gimp 91
-31/7/08 1:35:13 pm
-Tutorial Gimp
-Choose a warn colour for the vignette, to add some extra contrast to the final
-image – this really helps in the white areas of the source photograph.
-Quick
-tip
-Vignettes are an
-easy way to add
-colour to high-
-contrast, low-
-colour photos.
-should be 3) should not be changed. Then apply this to the
-Vignette by clicking on the OK button. The noise will only be applied
-within the selection and only to coloured pixels – not transparent
-ones. You can clear the selection now (Select > None) and merge
-the Vignette and background layers (Image > Flatten Image).
-Adding a text layer
-The crux of this tutorial is to use text as a mask over the image. To
-do this, start by resetting the default colours in the Toolbox (the
-small black and white boxes below and to the left of the larger
-black and white boxes). Then create a text layer filled with random
-words. Choose the Text tool from the Toolbox and click in the
-image. This will open up the Text Editor window. In this window,
-paste a large amount of text.
-So what text should you use? I first copied 1,500 words from
-the Lorum Ipsum generator into a 100-character-wide text
-terminal. I then used the Vi editor to remove all line breaks (Shift+J
-on each line, making one long line) and mapped the text to fit the
-window with line breaks (In Vi: G+Q+J). If this isn’t long enough,
-join all the lines again, copy and past below it to extend the text.
-The select and copy this text into the Text Editor window. Using a
-100-character-wide terminal allowed me to create text that would
-Any noise you add to the vignette might not be visible in the
-finished image (this depends on the font thickness).
-be wide enough to cover the image but still include line breaks
-which Gimp needs to block the text.
-Pasting the text will update the image window immediately. You
-can now close the Text Editor window. In the Tool Options dialog
-you’re ready to set the font, size, line spacing and tracking as
-mentioned previously. Choose the font and size before changing
-the spacing and tracking. Remember I used Tahoma Bold, which
-you can find in the Corefonts project on SourceForge. You’ll also
-want the text in black so you can see it in the image window.
-Set the line spacing to -5 and the tracking to -3. This is
-sufficient to push the letters up against each other horizontally
-and vertically without overlapping, at least for this specific font
-and size.
-Getting the source images
-The source images from this tutorial
-were purchased from BigStockPhoto
-for $2 each. The image IDs are
-Pretty Dancing Woman (black
-dress): 1716725 (size: 1066 x 1600)
-Sunflower Girl: 2861058
-(size: 900 x 900)
-Pixel amounts specified in the
-tutorial are based on these source
-image sizes.
-Cows do not require a model release.
-Initially the text will not be aligned with the rest of the image,
-but we’ll fix that with the Align Tool.
-Never miss another issue Subscribe to the #1 source for Linux on p102.
-92 Linux Format October 2008
-LXF110.tut_gimp 92
-31/7/08 1:35:15 pm
-Gimp Tutorial
-The text layer is much larger than the canvas window (which Keeping multiple versions of the text layer and masks lets you compare the masks
-has been zoomed out to show the text layer boundaries). and return to the version that looks best without having to recreate it later.
-Now align the text layer with the Align tool (it looks like a box other set is for distribution, which we aren’t concerned with here).
-with arrows pointing away from all four sides). Click on the image Click on the horizontal and vertical alignment buttons, which each
-window over the visible text. This adds the text layer to the set of look like two arrows pointing to a central line, which is either
-layers to be aligned. Hold the Shift key down and click on the horizontal or vertical. Now the text is aligned over the image.
-background layer (the woman in the dress) in the image window Resize the canvas to fit the text layer, zoom out and shrink-wrap
-to add it to the layers to be aligned. Now the text layer and the the window (Ctrl+E) around the canvas.
-background layer are included in the set of layers to be aligned. 
-You can tell this is the case by looking for small black boxes at the 
-corners of each layer that will be included in the alignment. 
-In Layers dialog make sure the background layer is the active 
-layer, and in the Tool Options dialog, set the ‘Relative To:’ menu to 
-    Active Layer. In the Tool Options dialog there are two sets of six 
-    buttons that look identical. The first set are for alignment (the 
-This is the final image, except that you may want to adjust
-the position of the mask over the background image.
-Create a mask layer
-Quick
-tip
-Generate lots of
-random text using
-the free Lorum
-Ipsum generator:
-www.lipsum.com
-Now we’re ready to create our mask. We start this process by
-adding a White layer to the image (Layer > New, set Fill Type to
-White). Drag this layer into the Layers dialog below the
-background layer. At this point you should drag the text layer
-below the background layer too.
-Click on the Text layer in the Layers dialog to make it the active
-layer, then create a selection of the text (Layer > Text to Selection
-> Text to Selection) and invert the selection (Select > Invert). This
-provides a selection of everything except the text. Click on the
-White layer you just added to make it active. Create a copy from
-the selection (Edit > Copy) and then paste the copy (Edit > Paste).
-This creates a Floating Selection layer in the Layers dialog that
-must be converted to a new layer manually (Layer > New).
-What you’ve done here is to paste a white layer with the text
-stamped out of it over the source image. Where the text was
-stamped out, the source image shows. Turn off the visibility of the
-Click on the background layer in the Layers dialog to make it
-Text layer by clicking on the Eye icon to the left of the layer
-thumbnail in the Layers dialog.
-the active layer. Choose the Move tool from the Toolbox. Hold
-down the Shift key and click and drag in the image window to
-move the woman and vignette around under the mask. Moving the
-source image around under the mask may not be enough to get a
-good result – you may need to adjust the text layer font size,
-tracking or line spacing. You may even need to try a different font.
-If any of this becomes necessary, turn off the visibility of the mask
-layer first and then duplicate the Text layer. Duplication is
-necessary so you keep a copy of the last settings. Adjust the font
-settings in the text layer duplicate. Then repeat the selection,
-invert, copy and paste process to create a new mask. LXF
-Next month Gimp has tons of selection tools – we’ll look at the most useful.
-October 2008 Linux Format 93
-LXF110.tut_gimp 93
-31/7/08 1:35:21 pm
+	让我们开始吧，首先浏览多个低成本的图片存储网站，并搜索一些人的肖像。我们想要找的图片最好包括两个重要的特点。第一最好是单色背景。一个杂乱的背景配上文字，会让这些文字很难识别出来。
+	第二个重要特点是有饱满的色对比度。一个全黑的图片看起来不错，但实际结果无非就是充斥着阴影的文字。在这个设计项目中，我使用的是一张姑娘的图片，她身上的黑色裙子与足够的肤色形成了色度对比。我们随后将会使用软虚化技术来增加对比度。
+	当从图片库里选择图片的时候，你要意识到许可证的发放问题。如果是一张没有生命物体的图片，那你还算比较安全。如果这张图片出现了一张可以辨识出的人脸，那你可要确保照片的发布者（无论是谁上传的）拥有照片中出现人物的肖像让渡书。如果没有这份让渡书的话，你就不能在公共场合使用这张图片。幸运地是，大部分的图片网站都会要求摄影师提交肖像让渡书，或者让其他人知道上传的图片没有一份有效的肖像让渡书
 
 
 
-All three text
-samples are set
-to 18 pixels with
--5 pixel line
-spacing and -2
-pixel tracking.
+(页首)Gimp 教程 设计篇
 
-（插话）在这三个例子中，文字大小是18,行间距为5个像素,斑点追踪为2个像素。
-The seated woman has a low contrast between background,
-skin and dress; the dancing woman is a much better image.
-（插话）在坐着的女人这张图片中，她的皮肤和裙子与背景的对比度较低;而跳舞的的女人这张照片的对比效果则要好的多。
+。
 
+使用排版功能
 
+	你已经浏览了几百张图片并且找到了一些有用的。那么你如何能说明他们多有用呢？答案就是，将图片进行（不同式样的）排版。有一种排版是通常上面含有水印的图片小样。大多数图片网站会允许你下载一种排版的样式，或者说，如果网站没有明确的提供排版的话，他们会有足够多的样板供你预览，而且可以免费下载。
+	排版常常用于测试一些想法。因为它太简单所以不能用在项目后期，而且不适于考虑水印问题。但是用于实现一个的简单模型，用来测试我们的想法却是非常方便的。只要我们使用比项目后期所需的字体小几号的字体就可以了。在最终决定使用黑裙姑娘那张图片之前，我已经使用排版功能测试了好几张图片。如果排版后的图片太小了，那你可以放大图片即使这样做会让图片像素化。
+	使用粗直边的字体效果会更好。手写体的不能很好的展示图片，即使用了黑体也不行。在这节教程中我使用的是 Tahoma bold 字体，如果使用 Sans bold 字体，效果可能也不错。
+	在本节教程中的第一个 Gimp 技巧提示就是有关于文字工具选项的。选择文字工具(Text Tool)，接着打开工具选项对话框(可停靠对话框(Dockable Dialogs) > 工具选项(Tool Options))。在'文字对齐路径'按钮上，有三个选项。这三个选项按照从上到下的顺序分别是：对齐，行间距，字符间距。我们不需特别使用这三个选项。只要求行距保持较小的值（负值），这样文字看起来就比较紧凑，但又不至于重叠在一起。
+	字符间距用来设置两个字母之间的距离。这和字距调整相似，但又不是完全相同。此处技术上的解释并不重要。我们只是想要减少字母之间的距离（减到负数），两个字母越接近越好。
+
+添加虚化效果
+
+	第一件事情就是加上一个轻虚化效果。这会让图片最终显得色彩丰富，同时让图片中姑娘的姿态更容易一眼看出。按照如下操作来实现，我们先为主层加上一个透明效果（点击 图层(Layer) > 新建图层(New)）,接着将这个图层命名为Vignette。
+	从工具箱中选择椭圆选择工具，接着在图片窗口中画一个椭圆圈中女孩。在椭圆选择对话框中，设置羽化半径(选择(Select) > 边缘羽化(Feather))为100像素(pixels)。通过点击工具箱中的前景色选择框(两个长方形框一个是前景色，一个是背景色)，来选择一个暖色调的前景颜色。在这节教程中，我使用的RGB值分别是 231/127/35，现在我们需要在这个椭圆中增加一个梯度渐变效果。
+	从工具箱中选择渐变工具。在工具选择框中(窗口 > 可停靠对话框 > 渐变)设置渐变(Gradient)为 '前景到透明(FG To Transparent)'，接着在工具箱中选择混合工具，将‘形状（shape）’调整成径向（radial）。接着单击椭圆的中心，拖动鼠标到椭圆边。再设置Vignette图层的模式为相乘(Multiply)。
+	在这步操作，我给渐变加了一点噪音，来达到一种艺术性的效果，但是这一步是可选的。加噪音的方法是，选择滤镜（Filters） > 噪音（Noise） > HSV噪音，接着设置保持度（Holdness）为2，饱和度为（Saturations）255,明度（Value）为255。色调（Hue）采用默认值（默认为3）即可。接着点击确定就可以将噪音效果用于Vignette图层了。噪音效果只作用与此次选择，而且只作用于有色像素，透明像素无效。最后清除选择(选择(Select) > 全部不选(None))，再将Vignette图层与背景图层合并(图像(Image) > 平整图像(Flatten Image))。
+	
+添加文本图层
+
+	本节教程的关键部分就是给图片附上一层文字。按照如下方法， 首先将颜色设置成默认值(在工具箱的左下角有一个小的黑色和白色盒子，接着选择文字工具(Text Tool),再点击黑色和白色的方块)。然后在图片上通过点击选择一片区域，这步操作会打开文本编辑器(Text Editor windows)，在这里粘贴一大段文字吧。
+	应该用什么样的文字呢？我第一次是使用的 Lorum Ipsum （常用于排版设计领域的拉丁文文章）文章生成器所生成的1500个单词，100字符宽的终端文本。接着我使用 Vi 编辑器删除所用的换行符（在每行使用Shift + J，使这些文字变成很长的一行），再将文章映射到窗口中（在Vi中使用：G+Q+J）。如果文章不够长，那就把所有内容再复制一遍，来扩展文章长度。选中并复制这些文字到文本编辑器（Text Editor window）。使用100字符宽的终端能让我很好的将文字覆盖到图片上，但是仍有一些换行符会在 Gimp 中的文本中屏蔽掉。 
+	粘贴在文本编辑器中的文字会立刻显示在图片窗口上。现在可以将文本编辑器关掉了。在工具选项对话框中，你已经在之前设置好字体，字体大小，行间距，字符间距。记住我使用的是 Tahoma Bold 字体，你可以在 SourceForge（合作式软件开发管理系统）找到这个字体的核心字型。你也希望文中效果是黑色的，所以你可以在图片窗口中看到。
+	设置行间距为-5,字符间距为-3.这样的设置不会让字符出现重叠，至少在这样的字体和大小下不会。
+	现在使用对齐工具(看起来像一个带有指向四个方向箭头的盒子)来对齐文字。点击图片窗口选中所有可见文字。这步操作会将文本图层添加到对齐列表中。按住 Shift 键不放，再点击图片窗口中的背景图层（穿裙子的姑娘），将其添加到对齐列表中。现在文本图层以及背景图层都被加到对齐列表中了。你可以通过观察每个图层的四个角是否含有黑色的小方块，来判断该图层是否已被加入到对齐列表中。
+	在图层对话框中确保背景图层被选中，在工具选项对话框中，设置 '相对于(Relative to):'菜单为活动图层（Active Layer）。在工具选项对话框中，有两套按钮，分别有6个。第一套按钮是用来对齐（另一套是分布用的，在这里我们不需要用到它）。点击水平对齐和垂直对齐的按钮，看起来像两个箭头指向中心的一条线，有水平方向和垂直方向的。现在文本和图片都已经对齐了。重新设置画布的大小，来适应文本图层，缩小窗口（Ctrl+E）让外围窗口环绕画布。
+
+创建一个蒙版图层
+
+	现在我们已经准备好去创建蒙版了。我们首先来为图片加上一个白色图层（图层（Layer） > 新建图层（New），设置图层填充类型（Fill Type）为白色（White））。拖动这个图层到背景图层的下方。在这步你还要将文本图层也拖到背景图层下房。
+	点击一下图层对话框中的文本图层，让它处于选中状态，接着创建一个文本选区（图层（Layer） > 文字到选区（Text to Selection） > 文字到选区（Text to Selection）），然后反转选区（选择（Select） > 反转(Invert)）。这步操作会让文本图层中，除了文字的区域都被选中。点击刚才添加的白色图层，让它处于选中状态。创建一个选区拷贝（编辑（Edit） > 复制（Copy）），再把复制的内容粘贴（编辑（Edit） > 粘贴（Paste））。这会在图层对话框中创建一个浮动选区（Floating Selection）图层，必须要手动创建一个新的图层来进行修改（图层（Layer）  > 新建图层（New））。
+	你之前所做的操作是粘贴一个有文字的白色图层，来印出底下的源图像。印出文字的地方也会将源图像展示出来。关掉文本图层的显示，只需点击图层对话框中，图层缩略图左侧的眼睛图标即可。
+	点击图层对话框中的背景图层，让其处于选中状态。在工具箱中选择移动工具（Move Tool）。按住 Shift 键不放，接着在图片窗口中点击并拖动蒙版下中带有虚化效果的姑娘的图片。移动蒙版下源图像的位置不一定能获取一种很好的效果，你也许要调整文本图层中的字体大小，行间距，字符间距。甚至需要尝试一种不同的字体。如果需要这么做，首先关掉蒙版的可视效果，接着复制文本图层。要留有一份备份，所以你要复制最后一次的设置。调整副本图层中的字体设置。接着就是重复选区，反转,复制和粘贴的操作来创建一个新的蒙版。LXF
+
+（插话）我们的专家 Michael J Hammel 是 Gimp 项目的贡献者，同时也出版了有关Gimp的三本书，包括他最新的一本书，《The Artist‘s Guide to Gimp Effects》
+（插话）在这三个例子中，文字大小是18,行间距为-5,字符间距为-2。
+（插话）在坐着的姑娘这张图片中，她的皮肤和裙子与背景的对比度较低;而跳舞的的姑娘这张图片的对比效果则好的多。
+（插话）窍门  浏览多种图片网站，比如 BigStockPhoto.com， iStock.com 还有 Stock.xchng (www.sxc.hu)。
+（插话）窍门 虚化是一种能够为图片添加高饱和度或是低饱和度的果的简单方法。
+（插话）窍门 登录 www.lipsum.com 可以免费使用 Lorum Ipsum 生成器来生成一大段随机文本。
+（插话）为虚化效果选择一种警告色(warn-colour)，来为最终图片添加一些额外的对比度，这对原始图片上的白色区域有很好的展示效果。
+（插话）获取源图像
+本节教程中的源图像是从 BigStockPhoto 以每个$2的价格购买的。图片ID：美丽的跳舞姑娘（黑色裙子）：1716725 (大小: 1066 x 1600) 向日葵女孩：2861058 (大小: 900 x 900)，教程中的像素值都是基于这些源图片的大小。
+牛的图片不需要肖像让渡书。
+（插话）初始的文字不能和图片很好的对齐，不过我们可以使用对齐工具（Align Tool）来整理。
+（插话）你为虚化效果所添加的噪音效果，可能在最终图片上看起来并不明显（这依赖于你所使用字体的粗细程度）。
+（插话）文本图层比画布窗口要大一些（使用相乘模式的文本图层和蒙版，能让你比较蒙版缩小之后的文本图层边界）。如果图片看起来效果不错，那之后就不需要进行这个操作了。
+
+（页底）在上个月的专栏，作者 Michael J. Hammel 讲解了 Gimp 的使用方法
+（页底）如果你丢失了上一期文章，你可以联系 0870 837 4773 或者 +44 1858 438795。
+（页底）不要错过在Linux板块排名第一的文章，在102页。
+（页底）下个月将会介绍 Gimp 大量选择工具中最有用的几种工具。
