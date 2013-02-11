@@ -1,9 +1,14 @@
 
 Gimp: Enhance
 
+Gimp：提高技巧
+
 
 Gimp contains a little-known back door to some powerful layout and preset 
 features. Michael J Hammel picks the lock and roots through the stock.
+
+
+对于一些强大的布局和预设的特性 ，Gimp有一个鲜为人知的后门。 ——Michael J Hammel说。
 
 
 
@@ -17,10 +22,17 @@ those probing eyes by adding the following line to the
 (toolbox-wilber no)
 
 
+Gimp有许多的特性是新手乃至有一定使用经验的老手都不知道的。大部分用户发现，在版本2.6中，工具箱里的菜单栏被换成了Wilber （Gimp的吉祥物）的眼睛。然而，很少人知道你其实可以躲开这双犀利的眼睛，只要你在文件~/.Gimp-2.6/gimprc中加上以下这行：
+(toolbox-wilber no)
+
+
 Another hidden feature lets you connect your mouse
 wheel to certain events, such as scaling the current brush
 size. This makes working with brushes a pleasant experience
 when you work with various sizes of image windows.
+
+
+另一个隐藏特性可以让你将鼠标滚轮对应某些活动，比如调整画笔大小。这使得在不同大小的图片窗口里用画笔工作成了一个愉悦的经历。
 
 
 
@@ -32,6 +44,9 @@ all windows except the image window by simply hitting the
 Tab key (hitting it again brings the windows back). But this
 only hides the windows and doesn’t actually change their
 layout on the screen.
+
+
+Gimp新手用户——不管是在家的爱好者还是专业的艺术家——最关心的两个问题就是Gimp默认的窗口布局和设置Gimp工具的种种困难。很少用户知道你可以隐藏除了画布窗口以外的其他所有窗口，只要轻按Tab键即可（再按一下就可以让那些窗口回来）。但这样做仅仅是隐藏了其他窗口，并没有真正改变它们在屏幕上的布局。
 
 
 
@@ -47,10 +62,15 @@ SDI (single document interface) where each window of a
 single application is independent of other windows in the
 same application.
 
+这两个问题都可以通过Gimp的隐藏特性来解决。而且，这就是Gimp 和Paint Shop（译者注：PaintShop是一款可与photoshop媲美的绘图软件。)等软件的意义所在。Gimp的新手有时会因为Gimp的多重窗口和复杂的桌面布局而耽误了做图时间。这种情况常常发生在从Windows或Photoshop等MDI（multiple document interface，多文档界面）环境下转移过来的用户，这些多文档界面的环境下，同一个应用的所有子窗口都属于一个父窗口。而Gimp的窗口布局则是SDI（single document interface，单文档界面），即同一个应用的每个子窗口都各自独立。
+
 
 (以下为图片旁带<的注释小字：
 Map keyboard and mouse buttons to Gimp events using
 the Preferences > Input Devices > Input Controllers dialog.
+
+
+设置键盘快捷键和鼠标左右键对应的Gimp活动，在首选项（Preferences）>输入设备（Input Devices）>配置扩展输入设备（Input Controllers）的对话框中。
 ）
 
 
@@ -63,16 +83,29 @@ Options for each. Having each tool use a different brush and
 configuration can make things even more perplexing.
 
 
+
+有的新手，特别是有经验的设计师或艺术家，还陷入了如何设置Gimp工具以完成各种作品的困境中。有些东西很让人迷茫，比如说用画笔工具（Paintbrush）时用什么画笔，用橡皮擦工具（Eraser）时用什么画笔，更别提该怎么设置这些工具选项。每一种工具对应的不同画笔和设置让事情变得更复杂了。
+
+
 （以下为图片旁带<的注释小字：
 This is the original
 window layout for
 Gimp, without the
 GPS updates.
+
+
+这是Gimp原本的窗口布局，在没有GPS（译者注：Gimp Paint Studio，可以为你的gimp增加一系列画笔 工具箱和更多东西,让你的工作更上一层楼。）改造的情况下。
+
+
+
 ）
 
 
 
 Last month We showed how to create an iPod advertisement using Gimp.
+
+
+上个月我们演示了如何用Gimp做一张iPod广告。
 
 
 （以下为页脚文字，不翻译，第一页完：
