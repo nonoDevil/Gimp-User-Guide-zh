@@ -117,14 +117,24 @@ www.linuxformat.com
 
 
 
-Gimp Tutorial
+
 the interface
+
+界面
+
+
 Ramón Miranda ran into these very issues and decided to
 do something about it. Starting with Gimp’s built-in tool
 presets and with a little help from the Gimp community,
 Ramón was able to configure Gimp to ease the confusion for
 new users. The result of his work is what he calls Gimp Paint
 Shop, or GPS.
+
+
+Ramón Miranda就是陷入了这样的困境，并且他下决心做些什么。通过Gimp社区的一些帮忙，利用Gimp内置的工具预设，Ramón完成了Gimp的配置，解决了困扰新手用户许久的问题。他的工作结果就是他口中的Gimp Paint Shop,简称GPS。
+
+
+
 GPS is a collection of data files and Gimp configuration
 files that, once installed, ease experienced artists into the
 Gimp world. While many users and developers continue the
@@ -133,6 +143,12 @@ decided to create a layout for Gimp’s windows that simulates
 the former yet works within the rules of the latter, while at the
 same time adding configurations that ease the use of Gimp
 for many common drawing and painting tasks.
+
+
+GPS是一系列数据文件和Gimp配置文件的集成，一旦装上它，艺术家就能顺利地进入Gimp的世界。虽然很多用户和开发者仍在争论MDI和SDI哪个更好，Ramon还是决定为Gimp窗口制作出一个可以模拟出作品编辑后的预览图同时还能为常见的绘画、喷漆任务自动增加一些配置文件的工具。
+
+
+
 Of course, GPS isn’t for everyone. For a start, it requires a
 large display, typically 1280x960 or better, although you can
 alter this with your window layout. Secondly, its primary use is
@@ -140,7 +156,19 @@ for artists who focus on using Gimp for drawing and painting
 exclusively, not for photo enhancement. The configurations
 installed with GPS are mainly for people who already know
 how to draw but are not yet familiar with using Gimp.
+
+
+当然，GPS不是每个人都适用的。首先，它需要一个大的显示器，特别是分辨率至少要在1280x960以上，虽然你可以通过你的窗口布局来更改分辨率。其次，它主要用途是让一部分艺术家专注与绘制图片，不是为了用于照片美化。GPS里装好的配置文件主要是为那些已经知道如何绘制一张图片、但不熟悉Gimp的人们服务的。
+
+
+
 Package contents
+
+
+包含的内容
+
+
+
 GPS was originally packaged in a RAR file, then later
 repackaged into a 7zip
 archive. Neither are common
@@ -149,6 +177,12 @@ repackaged GPS again as a
 typical tar.gz file that you can
 snag from my website (see
 below) or from the LXFDVD.
+
+
+GPS最早是被压缩在一个RAR压缩包里，后来又被压缩在一个7zip压缩包里（译者注：和RAR类似，7zip也是一个压缩解压软件）。这两种都不是Linux下常见的归档文件格式，所以我又重新将GPS打包成一个典型的tar.gz文件，你可以去我的网站上下载（看网页下面），或从LXF的DVD中获得。
+
+
+
 The package contains the following directories:
 brushes A collection of brushes.
 palettes A collection of colour palettes.
@@ -156,8 +190,72 @@ tool-options A collection of tool presets.
 It also contains two files used to configure Gimp:
 sessionrc Initialises the window layout for Gimp.
 toolrc Adds two commonly used tools to the Toolbox.
+
+
+压缩包中包含有以下内容：
+brushes：这是一个笔刷的集合。
+tool-option：这是一个工具预设的集合。它还包含了两个用于配置Gimp的文件。
+sessionrc：可以将Gimp窗口布局以特定方式初始化。
+toolrc：可以往工具箱（Toolbox）里增添两个常用的工具。
+
+
+
+
+（以下为红灰提示框中的文字：
+
+
+GPS archive and docs
+
+
+关于GPS的归档文件和文档
+
+
+The original documentation was written in Spanish and 
+provided in PDF format. This was later translated to English 
+and placed on a web page. I copied this and merged it with 
+the original images from the Spanish PDF to produce an 
+edited English language version of the PDF.
+
+The document, like GPS itself, is GPL licensed, and I’ve 
+also made available the OpenOffice.org version I created to 
+generate the PDF:
+ www.graphics-muse.org/source/GPS.odt
+ www.graphics-muse.org/source/GPS.pdf
+ www.graphics-muse.org/source/gps_v1.0.tar.gz.
+
+
+最早的文档是一份用西班牙语写的PDF文件。这份文档后来被翻译成英语并放在了网页上。我复制了网页上的文字并与原本那份PDF文件里的图片结合起来，做成了一个英文版的PDF。
+
+这份文档，和GPS本身一样，都是经过GNU通用共用许可授权的。同时我还做了一份OpenOffice.org版本的文档，下载地址见下：
+ www.graphics-muse.org/source/GPS.odt
+ www.graphics-muse.org/source/GPS.pdf
+ www.graphics-muse.org/source/gps_v1.0.tar.gz.
+
+）
+
+
+(以下为文章正中间的大字插话：
+“GPS is for artists who
+focus on using Gimp for
+drawing and painting”
+
+
+“GPS是为了让一些艺术家专注于绘制图片。”
+）
+
+
+
+
+（以下为图片旁带<的提示小字：
 The GPS window layout for Gimp – an ideal base of operations for artists who
 focus on drawing and painting, but who aren’t yet familiar with the program.
+
+
+这是GPS为Gimp设置的窗口布局 —— 为那些想要专注于绘制图片但还不熟悉这款软件的艺术家铺好了操作基础。
+）
+
+
+
 Most Gimp users know about brushes and where to find
 them. What they don’t know is that various brushes are best
 used with specific tools. The complete collection of brushes in
@@ -171,6 +269,9 @@ and then select one of the GPS
 tool presets. More on using tool
 presets in a
 moment. Let’s finish the installation first.
+
+
+
 Download the archive of choice and
 unpack it into any directory. To utilise the
 window layout changes and tool presets,
@@ -184,58 +285,88 @@ version of the archive is used.
 % tar xvzf gps_v1.0.tar.gz
 % cd gps_v1.0
 % cp -r * ~/.Gimp-2.6/
-“GPS is for artists who
-focus on using Gimp for
-drawing and painting”
-GPS archive and docs
-The original documentation was written in Spanish and 
-provided in PDF format. This was later translated to English 
-and placed on a web page. I copied this and merged it with 
-the original images from the Spanish PDF to produce an 
-edited English language version of the PDF. 
-The document, like GPS itself, is GPL licensed, and I’ve 
-also made available the OpenOffice.org version I created to 
-generate the PDF:
- www.graphics-muse.org/source/GPS.odt
- www.graphics-muse.org/source/GPS.pdf
- www.graphics-muse.org/source/gps_v1.0.tar.gz.
-Gimp Paint Shop
+
+
+
+
+
+
+
+（以下为图片旁带<的提示小字：
+
 The GPS
 presets for the
 Paintbrush tool.
+）
+
+
+
 Gimp window layout
+
+
+
 The installation of GPS is copied in a new
 sessionrc file. This file is read by Gimp at
 startup to place Gimp’s various windows in the
 same position on the desktop as the last time
 Gimp was run. The file is rewritten when Gimp
 exits. By copying in the GPS version of the
+sessionrc file the window positions are re-initialised to the
+preferred GPS layout. Any changes that are made during the
+Gimp session will be saved to the sessionrc file.
+
+
+
 If you missed last issue Call 0870 837 4773 or +44 1858 438795.
+
+
+（以下为页脚文字，不翻译，第二页完：
 www.tuxradar.com
 LXF119.tut_gimp 83
 June 2009 LXF119     83
 8/4/09 3:49:4 pm
+）
+
+
+
 Tutorial Gimp
+
+
+
 layers, channels, paths, undo, selection and histogram. This
 dock is a bit crowded but it does provide quick and ready
 access to features without having to use menus.
+
+
+
 At the bottom of the right-hand side docks is a dock with
 windows related to brushes, gradients and patterns. This
 grouping is consistent with the grouping of windows for
 managing the foreground and background colours. The
 layout is very intuitive.
+
+
+
 With this updated layout users will no longer have to scan
 the Windows menu or look for windows hidden under other
 windows (as is often the case using SDI and Linux window
 managers). Now, all the windows are opened immediately
 when Gimp starts and are stored in docks where they can be
 easily located.
+
+
+
 Using tool presets
+
+
+（以下为图片旁带<的提示小字：
 GPS provides ways of quickly setting the foreground and background colours
 by using multiple related windows in a single dock.
-sessionrc file the window positions are re-initialised to the
-preferred GPS layout. Any changes that are made during the
-Gimp session will be saved to the sessionrc file.
+）
+
+
+
+
 The GPS layout makes a number of changes to Gimp’s
 default window layout. First, it opens nearly all the available
 windows into a set of five docks. It then places two of these
