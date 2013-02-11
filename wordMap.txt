@@ -44,6 +44,7 @@ Opacity			透明度
 paintbrush 		画笔 
 path 			通道
 Perceptual              感官
+perceptual option 	知觉选择
 periphery components 	外围组件
 pixel tracking 		像素间距
 pixellate 		滤镜(像素化)
