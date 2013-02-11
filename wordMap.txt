@@ -1,15 +1,14 @@
 add mode 		添加模式
 Ask What To Do          询问怎么做
 block objects 		块状体
-straight-edged font 	直边体
 bold face  		黑体字，粗体铅字
 boxes to align 		框对齐
 Canvas                  画布
 circle fuzzy  		模糊圈（也可以不翻译）
 click and drug 		单击并拖动
 color based 		基于颜色
-colour and contrast   	色彩和对比
 Color Management        色彩管理
+colour and contrast   	色彩和对比
 Colour Managed Display  颜色管理的显示
 comps 			排版
 contiguous 		连续的
@@ -18,22 +17,25 @@ Curves                  曲线
 Display Rendering Intent显示渲染缩进
 Duplicate Channel	复制频道
 Elliptical selection tool 椭圆选择工具
-Hue			色调
 Feather			羽化
 File Open Behaviour     文件打开行为
 Filters			过滤/滤镜
 Flatten Image 		平整图像
+floating selection 	浮动选区
 foreground select 	前景选择
 free hand 
 free select 		自由选择工具
 fuzzy select  		模糊选择
 Gaussian Blur		高斯模糊
-hue 			色调
+hight-colour 		高饱和度
 Holdness 		保持度
+Hue			色调
+hue 			色调
+Intent                  软打样渲染缩进
 invert 			转置
+layer thumbnaill  	图层缩略图
 line spacing 		行距
 low-colour 		低饱和度
-hight-colour 		高饱和度
 Mark Out Of Gamut       标记出超出全色彩范围的 
 mask 			蒙版
 Mode of Operation       操作模式
@@ -41,26 +43,24 @@ Monitor Profile         显示器配置文件   （ps：此手册里的profile�
 Opacity			透明度
 paintbrush 		画笔 
 path 			通道
-periphery components 	外围组件
 Perceptual              感官
-pixellate 		滤镜(像素化)
+periphery components 	外围组件
 pixel tracking 		像素间距
+pixellate 		滤镜(像素化)
 Preference              首选项
 Print Simulation        打印模拟
 quick mask 		快速蒙版
+Quick tip 		窍门
 Saturations 		饱和度
 script fonts 		手写体
 select by color 	按颜色选择
 Shape 			填充样式
 Softproof Rendering
-Intent                  软打样渲染缩进
-tool option 		工具选项
+stamp out of 	 	印上
+straight-edged font 	直边体
 Text Along Path 	文字对齐路径
+tool option 		工具选项
 Tracking 		间距
 Value 			明度
-zoom out 		缩小
 zoom in 		放大
-floating selection 	浮动选区
-layer thumbnaill  	图层缩略图
-Quick tip 		窍门
-stamp out of 	 	印上
+zoom out 		缩小
