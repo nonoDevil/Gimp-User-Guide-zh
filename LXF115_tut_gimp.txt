@@ -1,11 +1,15 @@
 Tutorial Gimp Open source image-editing
-Gimp
-software you can get your teeth into
-Gimp: A Bottle
+Gimp software you can get your teeth into
+>>Gimp:开源图像处理软件，值得注目
+
+Gimp:A Bottle of wine
+Gimp：一个酒瓶
+
 Drawing with the Gimp is a ‘path’ you can only follow with a proper ‘guide’.
 Michael J Hammel offers both in this design of a 3D wine bottle.
-The grid will allow precise positioning of path control
-points as well as precise editing of the path curves.
+用Gimp绘画是一条必须跟随指引的路。
+迈克尔·J·哈默尔提供设计3D酒瓶的道路和指引。
+
 
 By now you’re all familiar with how Gimp can be used
 with photo manipulation. In past issues I’ve talked
@@ -14,6 +18,8 @@ showed how colour edits can make photos fit just about any
 project. But photo editing is just one side of Gimp. We can, of
 course, create graphics from scratch. And we can do it using
 vector drawing.
+现在，你已经熟悉了Gimp在照片处理中的作用。在前几篇文章中，我谈过如何使用现成的照片做平面设计，并展示了颜色编辑如何令照片符合各种项目。但是照片处理只是Gimp的一部分功能。我们可以从头创建图形，使用矢量做图。
+
 In a nutshell, photo editing is raster editing, and drawing
 with editable lines is vector editing. While I can draw using
 either Wacom or Aiptek tablets and Gimp paint tools, this
@@ -26,6 +32,8 @@ image that can be edited at any time to change their shape
 using control points and drag handles. Path edits do not
 immediately affect the image window – you have to retrace
 the paths or convert them to selections for use in the image.
+简而言之，照片编辑是位图编辑，用可更改的线条绘图是矢量做图。我可以用Wacom数位板或Aiptek绘图板来搭配Gimp绘图工具。这个月我想给你们展示只用辅助线、网格和路径来画图。辅助线，指的是你从标尺中拉出的直线，帮助你准确地定位点、给选区设立边界或使用绘图工具追踪之。路径是图像中的矢量元素，可以随时根据控制点、拖拽控制柄来更改形状。路径编辑不会立刻影响图像窗口——你需要重绘路径或把它们变成选区。
+
 Paths are to drawing what layers are to photo editing. You
 create multiple paths in a single path layer and then create
 multiple path layers to create a drawing. Since paths are
@@ -33,6 +41,8 @@ editable curves – not just straight lines – they are perfect for
 drawing manga or other types of cartoons. But like most
 Gimp features, they aren’t limited to just cartoons. We’re
 going to use them as the basis of a 3D shape.
+路径是用来绘画的，就像图层是用来编辑照片的一样。先在同一个路径图层中创建多个路径，然后在通过多个路径图层构成一副图。因为路径是可更改的线条——不只是直线——它们可以完美地完成日本漫画或其他种类的卡通。。就像Gimp的其他特点一样，路径并不限于制作卡通。我们将用路径做出3D图形的基础。
+
 This tutorial is for both new and experienced Gimp users
 who haven’t yet ventured into the world of drawing from
 scratch. You will need to have a basic knowledge of Gimp’s
@@ -42,17 +52,19 @@ familiar with creating new layers and naming them. You’ll get a
 thorough understanding of how guides can perfectly align
 your design elements, how drawings don’t have be done in
 colour initially and how 3D effects are just a matter of lighting.
-Get used to guides – this project uses plenty of them!
-Last month We swapped colours selections and Gimp’s colour tools.
-90 Linux Format February 2009
-LXF115.tut_gimp 90
-15/12/08 10:52:51 am
-Gimp Tutorial
-of wine
+本指南适合新用户，也适合尚未尝试过徒手作图的熟练用户。你需要对Gimp的窗口有一个基本的了解——工具箱，图像窗口，对话框——虽然我也会提供所用到的菜单项的位置。你需要熟悉如何建立新图层并命名图层。你将明白辅助线如何能令你的设计元素对齐，明白为何开始时图画不需要用颜色完成，更将明白3D效果只是调节亮度的活儿而已。
+
+（Last month We swapped colours selections and Gimp’s colour tools.
+）
+（页底1：上个月我们了解了颜色选择和Gimp的颜色工具）
+
 This is a two-part tutorial. In this first part I’ll design the
 bottle and labels without any text. Next month I’ll add the
 text, some graphic enhancements and a detailed bottle cap.
+这个指南分为两部分。第一部分中我会设计瓶子和标签，不含文字。下个月我会加上文字、图形装饰和细节丰富的瓶塞。
+
 Drawing the bottle shape
+（小标题）画瓶子的形状
 Start with a new 800x600 image window (File > New). Gimp
 supports a Snap To Grid feature that will be used along with
 the guides. Configure the grid (Image > Configure Grid) to
@@ -60,6 +72,8 @@ use a spacing of 10x10 pixels and to use grid dots. Then
 enable the Snap To Grid feature (View > Snap To Grid). The
 grid should also be visible (View > Show Grid) when you’re
 editing curves.
+新建一个800x600的画框（文件>新建）。Gimp支持捕捉网格功能，搭配辅助线使用。配置网格（图像>配置网格），使用10x10的像素间距及网格点形式。点开吸附到网格（查看>吸附到网格）。在你编辑曲线时，网格还需要可视化（查看>显示网格）。
+
 The bottle outline is created by first outlining the left half
 and then duplicating and flipping this to create the right half.
 The left half is drawn using a path. A set of guides are used to
@@ -71,6 +85,8 @@ Button in the upper-left of the image window, just below the
 File menu option. All menus accessed from this button have a
 dotted line at the top. Clicking on the dotted line tears off the
 menu into its own window.
+绘制瓶子轮廓，首先画出左半边，然后复制、翻转得到右半边。左半边是用路径绘制的。绘制过程中使用了一系列参考线来精确地对齐路径控制点。这部分需要四条垂直线和五条水平线。在放置参考线时，使用漂浮菜单更为便捷。漂浮窗口在图像窗口的左上方，在文件按钮的下面。从这个按键中调出的菜单项顶部都有虚线。点住虚线能把菜单拖出来，成为单独的菜单。
+
 Guides can be precisely positioned using the Image >
 Guides menu. The first vertical guide is placed in the exact
 centre of the image window. Use the New Guides (By
@@ -79,6 +95,8 @@ to 50. Additional vertical guides, created with the New Guide
 option, should be positioned at 320, 340 and 370. Horizontal
 guides should be positioned at 40, 200, 280, 520 and 560.
 These positions (except the very first) are all pixel offsets.
+辅助线可以精确定位。使用图像>辅助先菜单即可。第一条垂直辅助线放在图像窗口的正中间。使用新建参考线（按百分比），将方向设置为垂直，位置设置为50。其他垂直参考线使用新建参考线，位置设置在320、340和370。水平参考线放置在40、200、280、520和560。这些位置（除了第一条）都是按像素偏移的。
+
 Choose the Paths tool from the Toolbox. In the Tool
 Options dialog make sure the Edit Mode is set to Design. In
 the image window, click on the following guide intersections
@@ -93,53 +111,38 @@ following grid intersections using the specified drag amounts:
 320/280 (up 4 grid dots)
 320/520 (down 3 grid dots)
 340/560 (up 1 and left 2 grid dots)
+在工具箱选择路径工具。在工具选项对话框中选择设计模式。在图像窗口中，点击辅助线的交叉点（坐标先是垂直线再是水平线）来建立路径控制点。点分别是400/40、 370/40、370/200、320/280、320/520、340/560和400/560。这是一条由多段直线构成的轮廓，需要倒角。在工具选项对话框对话框中，设置编辑模式为编辑。点击拖动370/200的控制点，调出控制柄。向下拖动三格，向左一格。其他的点做如下调整：
+320/280向上四格，320/520向下三格，340/560向上一格、向左两格。
+
 In the Paths dialog, click on the path name to rename this
 path ‘Left Border’ In the Tool Options dialog click on Selection
-.
 from Path.
-The blur is kept
-to 30 pixels so it
-doesn’t spread
-outside the width
-of the bottle.
+在路径对话框中，点击路径名字，重命名这条路径为“左边界”。在工具选项对话框中，点击从路径创建选区。
+
 The finest wine known to humanity
-The first handle is for the line coming into the control
-point from the previous control, the second handle is for
-the line leaving the control point.
-Quick
-tip
-Grid dots are visible
-in white areas of
-the bottle. This isn’t
-a bug, but rather
-helps to see the
-grid over the image
-for alignment
-purposes. You can
-change the colour
-of the dots, to
-see them in dark
-regions too, in the
-Preferences dialog.
+（小标题）人世间最好葡萄酒
+
 The shape is now outlined. Add a transparent layer (Layer >
 New) and name this layer ‘Bottle Shape’ Fill the selection with
-.
-black. Copy the selection (Edit > Copy) and paste it (Edit >
+.black. Copy the selection (Edit > Copy) and paste it (Edit >
 Paste) as a new layer (Layer > New after pasting). Flip
 horizontally this copied layer using the Flip tool from the
 Toolbox. Use the Move tool and click and drag in the image
 window to move this layer so that the left edge of the bottle in
-If you missed last issue Call 0870 837 4773 or +44 1858 438795.
-February 2009 Linux Format 91
-LXF115.tut_gimp 91
-15/12/08 10:52:51 am
-Tutorial Gimp
 this layer aligns with the right-hand edge of this bottle in the
 Bottle Shape layer. This copied layer should be the active
 layer (if not, click on the top layer in the Layers dialog to make
 it active). Merge it with the Bottle Shape layer (Layers >
 Merge Down).
+现在瓶子的形状画出来了。增加一个透明图层（图层>新建图层），并命名为“瓶子外形”。填充选区为黑色。复制选区（编辑>复制），并粘贴（编辑>粘贴）为新图层（图层>粘贴为新图层？？？中文版没有找到）。使用工具箱中的翻转工具水平翻转复制的图层。使用移动工具拖拽复制的图层，使左右两边对齐。这个复制的图层需要作为当前图层（如果不是当前图层，点击图层对话框的最上面一个图层来激活）。将此层与瓶子外形图层合并（图层>向下合并）。
+
+
+（If you missed last issue Call 0870 837 4773 or +44 1858 438795.
+）
+（页底2：如果你没有收到上一期，请致电0870 837 4773或+44 1858 438795）
+
 Add highlights
+（小标题）加高光
 Extruding the bottle into 3D comes next. This is done simply
 by adding some lighting effects in the form of coloured filled
 and blurred selections. Create a transparent layer and name
@@ -149,6 +152,8 @@ six selections: two on the left-hand side of the body and the
 neck of the bottle will act as reflected white light, and four on
 the right-hand side will simulate light shining through the
 bottle and its contents.
+下面要将瓶子做成3D的啦。只需填上颜色，并在模糊化的选区加高光效果即可。建立透明图层并命名为“高光-瓶身左侧”。确认在图层对话框中该层在顶部。高光有六个选区：瓶身左边两个选区加上瓶颈是反射白光。右边四个选区模拟出穿透瓶子和酒的光。
+
 Choose the Rectangular Selection tool from the Toolbox.
 Drag a selection in the image window starting at the
 intersection of the guides at 340/280 and dragging to the
@@ -161,10 +166,14 @@ to 70%. Fill the rectangle with white. Remove the selection
 (Select > None). Apply a Gaussian Blur (Filters > Blur >
 Gaussian Blur) that is 30 pixels in both the X and Y directions.
 Reduce the layer opacity in the Layers dialog to 40%.
+使用矩形选择工具。从窗口的340/280点到400/520点拖一个选框出来。在工具选项对话框中将大小改为40x240,位置改为350x280。将鼠标重新放入窗口，敲击回车键确认选区。使用圆角矩形对话框（选择>圆角矩形）来倒角，设置数值在70%。将矩形填充为白色。取消选区（选择>全部不选）。在X方向和Y方向同时应用30像素的高斯模糊（滤镜>模糊>高斯模糊）。在图层对话框将不透明度改为40%。
+
 There are two right-hand side selections on the body of
 the bottle. The first is the same width and height as the
 highlight on the left-hand side and the second is just above
 but smaller, round and rotated .
+瓶身右侧有两个选区。第一个和左边的同等大小。第二个在上面一些，小、圆润，且需要旋转。
+
 Create a transparent layer and name it Highlights-
 RightBottle. Make sure this layer is at the top of the layer
 stack. Create another selection just as you did for the left-
@@ -173,6 +182,8 @@ the corners again. Click on the Foreground colour box in the
 Toolbox and set the RGB values to 198/31/31, respectively.
 Fill the selection and then remove it, but don’t blur yet. Set
 the layer transparency to 40%.
+新建透明图层，命名为“高光-瓶身右侧”。确认这个图层在图层堆的顶层。新建一个和左边高光一样的选区，位置设置为420x280，依旧要倒角。点击前景颜色，设置RGB值为198/31/31。填充选区，取消选择，先不要做模糊处理。设置图层不透明度为40%。
+
 Choose the Elliptical selection tool from the Toolbox.
 Create an oval selection starting at the intersection of guides
 at 340/200 to 400/280. In the Tool Options dialog set the
@@ -186,9 +197,11 @@ Rotate button to rotate the selection. Shrink the selection
 by five pixels. Fill the selection with the same colour as the
 previous selection then remove the selection. Finally,
 Gaussian blur the layer by 30 pixels.
+选用椭圆选区工具，创建一个椭圆型的选区，由340/200拖到400/280.在工具选项对话框中将位置设置为400x210。按下回车确认选区。选择旋转工具，在工具选项对话框中设置变换选项为选区。点击图像窗口，在打开的旋转对话框中设置角度为-40度，然后点击旋转键。缩小选区（选区>收缩）10个像素并羽化（选区>羽化）5个像素。使用之前的颜色填充选区，取消选择。最后，对该图层高斯模糊30个像素。
+
 Throat shadows
-You can create a more complex gradient with multiple levels of grey to give
-the gold trim on the label a more sophisticated appearance.
+（小标题）瓶颈阴影
+
 The highlights in the bottle’s throat are made in a similar
 fashion. Start with a transparent layer named Highlights-
 Throat. Drag a rectangular selection from the intersection of
@@ -196,6 +209,8 @@ guides at 320/40 down to 340/200. In the Tool Options
 change the size of the selection to 20 x 120 and the position
 to 380x60. Round the selection, feather it by five pixels and fill
 it with white. Remove the selection.
+瓶颈的高光是用类似方法做的。先新建一个名为“高光-瓶颈”的透明图层。从320/40 至340/200拖出一个矩形选区。调整大小为20x120,位置为380x60。接下来，倒圆，羽化5个像素，填充白色，取消选择。
+
 Repeat this selection on the same layer but set the
 position to 408x60 and its size to 15 x 90. Feather again and
 fill the selection with the red colour from the right-hand side
@@ -207,13 +222,63 @@ position it manually. Feather and fill with the red colour again.
 Remove the selection, then turn the Snap To options back on.
 Finally, blur this entire layer by 20 pixels and set the layer
 opacity to 40%.
+在同一图层中重复该过程，位置变为408x60，大小变为15x90。羽化，填充红色（和刚才右边的选区一样）。取消选择。在它下面做一个圆形选区，使用椭圆工具，手动放置。为了放置准确，可以关掉显示中的吸附到网格和吸附到参考线。继续羽化并填充红色，取消选区。重新打开吸附功能。在最后，对该图层做20像素的模糊，不透明度改为40%。
+
 What would a wine bottle be without its label? Boring, at
 least. This bottle’s label will once again be outlined with
-Never miss another issue Subscribe the #1 source for Linux on p102.
-92 Linux Format February 2009
-LXF115.tut_gimp 92
-15/12/08 10:52:52 am
-Gimp Tutorial
+guides but created using some new tools: gradients and the
+Colourise dialog.
+酒瓶没有标签怎么行？太单调了。瓶子的标签依旧用参考线辅助画出，但会使用新工具：渐变及单色化对话框。
+
+（Never miss another issue Subscribe the #1 source for Linux on p102.
+）
+（页底3：不要错过另一期。在第102页订阅#1 source for Linux）
+
+
+Create a transparent layer named White Label and be
+certain it sits at the top of the layer stack. Add vertical guides
+positioned at offsets of 200, 480, and 600 pixels using the
+New Guides dialog. Add horizontal guides at 340 and 410.
+Choose the Rectangle Select tool from the Toolbox and drag a
+selection from the guide intersection of 320/280 to 480/410.
+创建透明图层，命名为“白色标签”，确认它是最上方的一层。使用新建参考线将垂直参考线放置在200、480、600像素的位置，并添加位置在340和410的水平参考线。用矩形选区工具做一个从320/280到480/410的选区。
+
+Reset the Foreground and Background colours in the
+Toolbox (click on the smaller boxes to the lower left of them).
+Choose the Gradient tool from the Toolbox. In the Tool
+Options set the Shape to Bi-Linear. Set the Gradient to ‘FG to
+BG (RGB)’ and enable the Reverse button. In the image
+window drag from the the guide intersection of 370/340 left
+to the intersection at 200/340.
+重置前景色和背景色（点它们左下角的小图标）。选择混合工具。在工具选项中，设置对称线性。设置渐变为“前景到背景（RGB）”。在图像窗口中，从370/340拖到200/340。
+
+Gold trim
+(小标题)金色装饰边
+
+The white label will be edged with gold trim, which is created
+in much the same way that the white label was created,
+though with some colour added. Additionally, there will be
+multiple pieces of trim. The trick with these will be to create
+multiple, disconnected selections and apply the trim fill and
+colouring all at once.
+白色标签边缘有金色装饰边，和标签是同样的做法，只不过加了颜色。另外，会用到不同的渐变。做这个会用到多个不相连的选区，不过它们的渐变和上色是同时添加的。
+
+Create a transparent layer named Gold Trim and be
+certain it sits at the top of the layer stack. The part of the
+project needs four more horizontal guides. Using the New
+Guide dialog once again, add horizontal guides at 415, 445,
+450, and 515. Use the Rectangle Select tool to create a
+selection starting at the intersection of 320/410 and dragging
+to the right at intersection 480/415. In the Tool Options dialog
+set the Mode to ‘Add’ (second icon from the left). Now create
+selections 320/445 to 480/450 and 320/515 to 480/520.
+This leaves three separate selections.
+创建一个透明图层并命名为“金色装饰边”，确保在最上层。这部分需要再加四条水平参考线。依旧使用新建参考线对话框，在415、445、450、515处添加水平参考线。使用矩形选区工具创建选区，从320/410拖到480/415。在工具选项对话框中把模式改为“合并到当前选区”（左数第二个图标）。在320/445到480/450、320/515到480/520做选区。这样就有了三块不相连的选区。
+
+Use the Gradient tool with the same settings as the White
+Label and drag from the horizontal guide at 370 left to the
+guide at 200. Open the Colourise dialog (Colour > Colourise)
+and set the Hue to 50, the Saturation to 86 and the Lightness
 to 0 and apply these settings. Finally, apply a Levels
 adjustment (Colour > Levels) by setting the Input Levels
 midpoint value to 0.25. A thick blue stripe will add a little
@@ -228,43 +293,24 @@ and make sure the reverse button is set. Make sure the Shape
 is set to Bi-Linear. Drag on any horizontal guide starting at the
 vertical guide at 370 and over to the left to the vertical guide
 at 200.
+使用和白色标签一样的渐变设置，从370的那条水平参考线［译者注：此处似有谬误，应为垂直参考线］向左拖到200的参考线。打开单色化对话框（颜色>单色化），设置色调为50,饱和度为86,亮度为0,并应用设置。最后，应用色阶调整（颜色>色阶），将输入色阶的中点放到0.25。深蓝色条会给标签增添一点色彩。我们要把它做得像白色标签一样，但是稍微低一点。依旧建立透明选区，确认在最上层。建立矩形选区，从320/450拖到480/515。使用渐变工具，前景到背景（RGB）渐变，确保打开了反向按钮。形状设为对称线性，在任意一条水平参考线上拖动，370的垂直参考线拖到200的垂直参考线。
+
 Finally, use the Colourise dialog to paint the label a dark
 blue. Set the Hue to 216, the Saturation to 77 and the Value to
 -36. The choice of colour here is arbitrary. Any other settings
 in the Colourise dialog will work just as well – It’s strictly a
 matter of artistic preference.
-Quick
-tip
-Like many artists,
-I get my ideas from
-others. This tutorial
-is an extrapolation
-to Gimp of a
-Photoshop tutorial
-found on
-PSDFan.com.
+最后，用单色化对话框将标签涂成深蓝色。把色调改为216,饱和度为77,亮度为-36。这里改的颜色是随意的。单色化对话框中其他设置也可以用——这只是一种外观审美的选择。
+
 Gold wrapper
-Use whatever colours you like for the label – you’ll
-probably want to avoid lime green though!
-guides but created using some new tools: gradients and the
-Colourise dialog.
-Create a transparent layer named White Label and be
-certain it sits at the top of the layer stack. Add vertical guides
-positioned at offsets of 200, 480, and 600 pixels using the
-New Guides dialog. Add horizontal guides at 340 and 410.
-Choose the Rectangle Select tool from the Toolbox and drag a
-selection from the guide intersection of 320/280 to 480/410.
-Reset the Foreground and Background colours in the
-Toolbox (click on the smaller boxes to the lower left of them).
-Choose the Gradient tool from the Toolbox. In the Tool
-Options set the Shape to Bi-Linear. Set the Gradient to ‘FG to
-BG (RGB)’ and enable the Reverse button. In the image
-window drag from the the guide intersection of 370/340 left
-to the intersection at 200/340.
+（小标题）金色包装
+
 The last piece to be added to the wine bottle in this first part
 of the tutorial is a gold wrapper along the bottle’s throat. Like
 the white and blue labels, this wrapper is created with a
 simple, coloured gradient.
+本部分指南中最后一个内容就是要在瓶子上加金色包装，加在瓶颈上。就像白色和蓝色标签一样，这个包装是使用有色的简单渐变制作的。
+
 Create a transparent layer named Gold Wrapper and
 make sure it is positioned at the top of the layer stack. The
 wrapper needs some new guides. Add a horizontal guide at
@@ -275,32 +321,62 @@ but drag left to right this time, from the vertical guide at 390
 to the vertical guide at 430. Use Colourise with the Hue,
 Saturation and Lightness set to 50, 86 and 0, respectively.
 Finish this part of the tutorial by adjusting the Levels on this
-selection, setting the Input Levels midpoint to 0.50. LXF
-Gold trim
-The white label will be edged with gold trim, which is created
-in much the same way that the white label was created,
-though with some colour added. Additionally, there will be
-multiple pieces of trim. The trick with these will be to create
-multiple, disconnected selections and apply the trim fill and
-colouring all at once.
-Create a transparent layer named Gold Trim and be
-certain it sits at the top of the layer stack. The part of the
-project needs four more horizontal guides. Using the New
-Guide dialog once again, add horizontal guides at 415, 445,
-450, and 515. Use the Rectangle Select tool to create a
-selection starting at the intersection of 320/410 and dragging
-to the right at intersection 480/415. In the Tool Options dialog
-set the Mode to ‘Add’ (second icon from the left). Now create
-selections 320/445 to 480/450 and 320/515 to 480/520.
-This leaves three separate selections.
-Use the Gradient tool with the same settings as the White
-Label and drag from the horizontal guide at 370 left to the
-guide at 200. Open the Colourise dialog (Colour > Colourise)
-and set the Hue to 50, the Saturation to 86 and the Lightness
-The choice of colour here is arbitrary. Any other settings in the Colourise
-dialog will work just as well. It’s strictly a matter of artistic preference.
-Next month We’ll add details to the label and create a cap.
-February 2009 Linux Format 93
-LXF115.tut_gimp 93
-15/12/08 10:52:53 am
+selection, setting the Input Levels midpoint to 0.50. 
+创建一个名叫“金色包装”的透明图层，确保图层在最顶层。这层也需要新参考线。增加140的水平线和390、430的垂直线。拖一个从370/40到430/140的选区，再做一个和蓝色一样的渐变，不过变成从左到右，起始在390的垂直线，终止在430的垂直线。单色化为色调50、饱和度86、亮度0。最后一步是改变色阶，把输入色阶的中点放到0.5。
+
+
+（Next month We’ll add details to the label and create a cap.
+）
+（页底4：下个月我们要给标签加细节，再做一个瓶塞。）
+
+
+（The grid will allow precise positioning of path control
+points as well as precise editing of the path curves.
+）
+（插话：网格能辅助路径控制点的精确定位，以及路径曲线精确编辑。）
+（Get used to guides – this project uses plenty of them!
+）
+（插话：适应辅助线——本项目常常用到它！）
+（The blur is kept
+to 30 pixels so it
+doesn’t spread
+outside the width
+of the bottle.
+）
+（插话：模糊控制在30像素以内，不会扩散到瓶子的宽度之外。）
+
+（The first handle is for the line coming into the control
+point from the previous control, the second handle is for
+the line leaving the control point.
+）
+（插话：第一个控制柄是控制先画的一段，第二个控制柄是控制后画的一段。）
+
+
+（Quick tip
+Grid dots are visible
+in white areas of
+the bottle. This isn’t
+a bug, but rather
+helps to see the
+grid over the image
+for alignment
+purposes. You can
+change the colour
+of the dots, to
+see them in dark
+regions too, in the
+Preferences dialog.
+）
+（插入框：小技巧 格点在瓶子的白色部分是可见的。这不是软件故障，而是帮助你在对齐时能看到网格。你可以更改点的颜色，这样就能在黑暗区域也看到点了。这个在对话框的外观中更改。）
+
+（You can create a more complex gradient with multiple levels of grey to givethe gold trim on the label a more sophisticated appearance.）
+（你可以把渐变做得更复杂一些，使得标签上的金色装饰边显得更精致。）
+
+（Use whatever colours you like for the label – you’ll
+probably want to avoid lime green though!）
+（插话：标签上用什么颜色都行——不过你最好避免使用灰绿色！）
+
+（The choice of colour here is arbitrary. Any other settings in the Colourise dialog will work just as well. It’s strictly a matter of artistic preference.）
+（插话：这里改的颜色是随意的。单色化对话框中其他设置也可以用-这只是一种外观审美的选择。）
+
 
