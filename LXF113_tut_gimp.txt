@@ -1,249 +1,68 @@
-﻿翻sd ad a 译:陈鹤心 (chenhexin1993@gmail.com) 一校：陈嘉杰（linux.kakit@gmail.com）
+翻sd ad a 译:陈鹤心 (chenhexin1993@gmail.com) 一校：陈嘉杰（linux.kakit@gmail.com）
 
-Tutorial 
 教程
 
-Gimp Open source image-editing
-software you can get your teeth into
 
 Gimp，一款让您全身心投入的开源图像处理软件
 
-Gimp: Printing & Color
-
 Gimp:打印 & 色彩 
 
-Gimp, CUPS and Gutenprint are a fellowship that can lead you on your quest for
-high quality prints – Michael J Hammel continues his graphics tutorial series.
 
-Gimp、CUPS（译者注：Common Unix Printing System，通用Unix打印管理系统）和Gutenprint（译者注：高质量的Ghostscript打印机驱动）在帮您完成高质量相片的过程中是合作关系。——Michael J Hamel在他的制图系列教程中继续说道。
+Gimp、CUPS（译者注：Common Unix Printing System，通用Unix打印管理系统）和Gutenprint（译者注：高质量的Ghostscript打印机驱动）在帮您完成高质量相片的过程中是合作关系。——Michael J Hamel在他的制图系列教程中说道。
 
-
-
-Ever since the birth of Gnome and KDE, printing support has
-been the bane of the Linux office desktop user. Advances in
-2D and 3D graphics have been phenomenal thanks to the
-requirements of the special effects industry in Hollywood, yet
-with high-quality futuristic displays at our doorstep, we still settle
-for Stone Age prints. Until recently, the lack of a unified printing
-system has meant that desktop applications have either
-implemented their own printing features or relied on the lowest
-common denominators, often leading to low-quality prints or, even
-worse, no facility for printing at all. Even when we started to
-acquire good quality printer drivers and the necessary tools to use
-them on the desktop, colour management in Linux applications
-has been essentially non-existent.
-
-
-
-自Gnome和KDE诞生以来，打印支持就成了使用Linux桌面版办公用户的痛苦根源。由于好莱坞对特效工业的需求，2D和3D图形学的进展十分迅猛。然而，哪怕我们家中就摆放着高质量的、充满未来感的显示设备，我们仍在解决石器时代的打印问题。直到最近，对统一打印系统的缺少意味着桌面应用要么得实现他们自己的打印特性，要么得依赖于最低端普遍的共同特性，这样常常导致了制作出低质量的照片，或者更差的是，根本没有适用于他们打印系统的设备。虽然我们开始寻求高质量的打印驱动和必要的工具来用于桌面，但色彩管理在Linux应用里却还是基本上不存在。
-
-Fortunately, that’s started to change in a big way. The Linux
-printing scene has seen a wealth of printer driver support from
-both open source and commercial providers. As a result, the
-under-the-hood printing system has evolved into a system of
-libraries and utilities that desktop systems such as Gnome and
-KDE can harness – all tied together through the magic of CUPS.
+自Gnome和KDE诞生以来，打印支持就成了使用Linux桌面版办公用户的痛苦根源。由于好莱坞对特效工业的需求，2D和3D图形学的进展十分迅猛。然而，哪怕我们家中就摆放着高质量的、充满未来感的显示设备，我们仍在解决石器时代的打印问题。直到最近，统一打印系统的缺少意味着桌面应用要么得实现他们自己的打印特性，要么得依赖于最低端普遍的共同特性，这样常常导致了制作出低质量的照片，或者更差的是，根本没有适用于他们打印系统的设备。虽然我们开始寻求高质量的打印驱动和必要的工具来用于桌面，但色彩管理在Linux应用里却还是基本上不存在。
 
 幸运的是，这样的窘境开始以一种了不起的方式改变了。Linux打印技术看到了一丝曙光，开源提供商和广告商为有关打印机驱动提供了大量的支持。其成果就是，底层的打印系统发展出了一种由函数库和公用程式组成的系统，这种系统能被像Gnome和KDE这样的桌面系统轻松驾驭——只要与CUPS的强大魔力结合起来。
 
 
-Drivers, spoolers, filters and printers
-
 驱动程序（drivers）、后台打印程序（spoolers）、过滤器程序（filters）和打印机（printers）
-
-
-Before we dive into how to use all of this with Gimp, it’s important
-to have a basic understanding of how printing works under Linux.
-Printers come in two forms: PostScript and non-PostScript.
-PostScript is a device-independent language that describes the
-data to be printed. PostScript-capable printers can understand 
-this language directly, whereas non-compatible printers must have
-data converted into a custom printer language. Getting files into
-PostScript in the first place is a multi-step process that involves a
-series of software packages.
 
 
 在我们一头钻进去研究如何利用Gimp使用这些东西之前，有必要对打印在Linux下的工作原理有个基本了解。打印机有两种形式：PostScript打印机和non-PonstScript打印机。PostScript是以相对设备独立的方式，描述影像的一种方便的语言。支持PostScript的打印机就能直接理解这种语言，反之，不兼容此语言的打印机就必须将数据转化成一种特别制定的打印机语言。将文件用PostScript语言封装是一个需要一系列软件的多步式封装过程。
 
-The Linux printing environment is made up of four levels of
-software: drivers, spoolers, filters and applications. Printer drivers
-form the backbone of printing; they send data to the printer using
-a language the printer will understand. Some Epson printers, for
-example, use a language called ESC/P while other manufacturers
-use a language called PCL. The data must already be in that
-language when the driver receives it, however; the drivers are not
-responsible for doing any data conversions.
-
-
 Linux的打印环境有四个不同等级的软件组成：驱动程序、后台打印程序、过滤器程序和应用程序。驱动程序是打印的脊柱，它们用一种打印机能理解的语言将数据输送给打印机。比如说，有些爱普生（译者注：Epson，一种日本打印机品牌）打印机用一种叫ESC/P的语言，而其他制造商用一种叫PCL的语言。当驱动程序接受数据时，数据必须以指定语言的形式存在，否则驱动就不能做出任何回应以进行待打印数据的转换。
-
-
-CUPS and Gutenprint
 
 
 CUPS和Gutenprint
 
-Printer drivers for Linux come primarily from the Gutenprint
-and/or Ghostscript projects, although HP have their own set of
-drivers (known as the HPIJS) that they actively support. Other
-vendors, including Epson, offer drivers for their printers as well. All
-of the drivers are intended to be fed data to print via the various
-Linux print spoolers.
 
+Linux的打印机驱动主要是来自Gutenprint和Ghostscript项目，虽然惠普有他们为自己的打印机提供的驱动（像HPIJS），其他厂商，包括爱普生，也为他们自己的打印机提供驱动。所有的这些驱动都是为了将数据输入到各种Linux的后台打印程序来完成打印。
 
-Linux的打印机驱动主要是来自Gutenprint和Ghostscript项目，虽然惠普有他们为自己提供的驱动（像HPIJS），其他厂商，包括爱普生，也为他们自己的打印机提供驱动。所有的这些驱动都是为了将数据输入到各种Linux的后台打印程序来完成打印。
+驱动位于打印环境中四层软件的最下层。相对而言，应用程序位于最上层，后台打印程序位于中间层。当一个应用程序需要打印一个文件时，它将文件传送给后台打印程序，后台打印程序将这个任务放入打印队列中（如果此时后台打印程序没有其他打印任务）。可用于Linux的后台打印程序有很多，包括LPR（译者注：Line Printer Remote，远程行式打印机），LPRng（译者注：LPR Next Generation下一代远程行式打印机）和CUPS（通用Unix打印管理系统）。由于各种各样的原因，CUPS成为了不同Linux发行版中后台打印程序的标准，虽然对终端用户来说这些Linux发行版没有什么区别，但了解你使用的是CUPS，由它来设置你的打印机是很重要的。
 
-
-Drivers are at the bottom of this four-layer software stack for
-printing. At the opposite end are applications, with spoolers just
-below. When an application is directed to print a file, it sends it to a
-print spooler, which queues it up to be processed later (when the
-spooler is not busy with other print jobs). There are many spoolers
-available for Linux, including LPR (Line Printer Remote), LPRng
-and CUPS (Common Unix Printing System). CUPS is becoming
-the standard for spoolers on Linux distributions for a variety of
-reasons, although none of these make much difference to end
-users. It’s important to note that you’ll be working with CUPS to
-set up your printers.
-
-
-驱动位于打印环境中四层软件的最下层。相对而言，应用程序位于最上层，后台打印程序位于中间层。当一个应用程序需要打印一个文件时，它将文件传送给后台打印程序，后台打印程序将这个任务放入打印队列中（如果此时后台打印程序没有其他打印任务）。可用于Linux的后台打印程序有很多，包括LPR（译者注：Line Printer Remote，远程行式打印机），LPRng（译者注：LPR Next Generation下一代远程行式打印机）和CUPS（通用Unix打印管理系统）。由于各种各样的原因，CUPS成为了不同Linux发行版中后台打印程序的标准，虽然对终端用户来说这些Linux发行版没有什么区别，但了解你使用的是CUPS，来设置你的打印机是很重要的。
-
-Once a spooler has a file queued for printing, it runs the file
-through one or more filters that convert it into various formats.
-The filtering process is better know as a ‘RIP’ (Raster Image
-Processing). In some cases the files need to be converted into
-PostScript first, then into a printer-specific format before being
-sent to the printer driver. In other cases the file may already be in
-PostScript format, or may not need to be converted to another
-form before being sent to the printer driver.
-
-
-一旦一个后台打印程序的打印队列里有一个任务时，计算机还会运行一个或更多的过滤器程序(filter)来将文件转化成各种各样的格式。这个过滤的过程应该被称为RIP（译者注：Raster ImageProcessing，光栅图像处理）。在某些情况下，文件需要先被转化为PostScript格式的，然后，在被传送给打印机驱动前，还要转化为一种打印机指定的格式。在其他情况下，文件可能是PostScript格式的，并且在传送给打印机驱动前不许要被转化为其他格式。
-
-
-Filters can come from a number of software packages. The
-most widely used set of filters come from the Foomatic package,
-but you won’t need to worry about them much because you’ll get
-the ones you need when you install CUPS.
-
+一旦一个后台打印程序的打印队列里有一个任务时，计算机还会运行一个或更多的过滤器程序(filter)来将文件转化成各种各样的格式。这个过滤的过程应该被称为RIP（译者注：Raster ImageProcessing，光栅图像处理）。在某些情况下，文件需要先被转化为PostScript格式的，然后，在被传送给打印机驱动前，还要转化为一种打印机指定的格式。在其他情况下，文件可能是PostScript格式的，并且在传送给打印机驱动前不需要被转化为其他格式。
 
 过滤器程序可以从很多软件包中获得。用得最多的一种是Foomatic（译者注：是用于连接CUPS和GhostScript的一个脚本程序），但是你完全没必要为如何获得一个过滤器程序操心太多，因为当你安装CUPS时你就获得了过滤器程序。
-
-
-With all that software ready and under the hood, it’s time to
-configure your printer. As well as checking the OpenPrinting
-website (www.linuxfoundation.org/openprinting) to see if the
-printer is supported, you’ll also want to install CUPS. CUPS is both
-a spooler and a configuration tool. It allows you to configure your
-printers whether they’re directly connected to your system, located
-on your local network or connected to another system elsewhere
-on your network. There’s a web-based config tool available, along
-with desktop-specific tools for both Gnome and KDE.
-
 
 在所有软件都在后台准备就绪时，是时候来配置你的打印机了。并且，你还需要检查一下OpenPrinting（译者注：一个Linux基金会）网站（www.linuxfoundation.org/openprinting）来看看你的打印机是否被此基金会的项目所支持。你应该还会想安装一下CUPS。CUPS是一个后台打印程序也是一个配置工具，它能帮你来检查你的打印机是否直接被连接到你的系统上，是否连接到你当前局域网内，或是否连接到你当前局域网内的其他系统。有网页版的设置工具可以用，另外还有Gnome和KDE这两种桌面都能用的桌面版工具。
 
 
-Last month We saw how selection mixes can pull complex subjects from images.
-
-
-上个月我们体会到了选择工具的混合时候用时，可以在图片上进行复杂的工作。
-
+上个月我们体会到了选择工具的混合使用，就可以在图片上进行复杂的工作。
 
 （以下为页脚文字，不翻译，第一页完：
 
 94 Linux Format Christmas 2008
 LXF113.tut_gimp 94
 27/10/08 7:31:46 pm
-Gimp Tutorial
-）
+Gimp Tutorial）
 
 
-CUPS uses one or more filters to rip data into a format that can
-be used by a printer driver. This spooler package is designed to
-hide the filtering process, so users don’t have to know whether
-a particular file is being converted before printing. All you need
-to know is what printer model you have and how it’ll be connected
-to your system.
-
-
-CUPS用一个或多个过滤器程序来把数据过滤成一种能被打印机驱动使用的文字。后台打印程序就是被设计成将过滤过程隐藏起来，所以用户没必要知道某个文件在打印之前正在被转换的格式。你所需要了解的就只有你的打印机型号，还有怎么将打印机跟你的系统连接起来。
-
-
-CUPS also uses PPD (PostScript Printer Description) files,
-which describe the features of printers to applications that need to
-use them. Despite the name, these files are used for describing
-both PostScript and non-PostScript printers. Again, in most cases
-you won’t need to acquire these files if CUPS and Gutenprint
-support the printer.
-
+CUPS用一个或多个过滤器程序把数据过滤成一种能被打印机驱动使用的文字。后台打印程序就是被设计成将过滤过程隐藏起来，所以用户没必要知道某个文件在打印之前正在被转换的格式。你所需要了解的就只有你的打印机型号，还有怎么将打印机跟你的系统连接起来。
 
 CUPS也会使用PPD文件（译者注：PostScript Printer Description files，Postscript打印机描述文件。它为一台特定的Postscript打印机描述标准字型，纸张大小，分辨率和其他的能力的文件。一个打印机驱动器程序使用一个PPD文件以了解指定的打印机的能力。）虽然名字叫PostScript打印机描述文件，但这些文件既能用于描述PostScript打印机也能用于描述non-PostScript打印机。再说一遍，在大多数情况下，一旦CUPS和Gutenprint支持你的打印机，你就不需要操心后台打印程序的工作。
 
-
-Gutenprint includes drivers for a huge number of printers.
-However, because the package is under constant development,
-the version of Gutenprint on your Linux distribution may not be up
-to date. Fortunately, the version available from the OpenPrinting
-website is always matched against its database of supported
-printers, so if the database says the printer is supported but your
-version of Gutenprint doesn’t have it, simply replace it with the
-new version from the OpenPrinting site.
-
-
-Gutenprint包含很多种打印机的驱动。然而，由于该软件一直处在不断开发中，你的Linux发行版里的Gutenprint也许不一定是最新版的。幸运的是，如果你的打印机被OpenPrinting数据库表明为支持、但你的Gutenprint版本又不是最新的话，你就可以登录OpenPrinting网站来更新到最新的版本。
-
-
-Colour management
+Gutenprint包含很多种打印机的驱动。然而，由于该软件一直处在不断开发中，你的Linux发行版里的Gutenprint也许不一定是最新版的。幸运的是，如果你的打印机被OpenPrinting数据库表明为支持、但你的Gutenprint版本又不是最新的话，你可以登录OpenPrinting网站更新到最新的版本。
 
 
 色彩管理
 
 
-Colour management is the process of matching colours between
-input devices (such as scanners and cameras), editing tools (such
-as Gimp) and output devices (such as your monitor or printer).
-Each input or output device has a range of colours it can work
-with, but you can usually edit a wider range with your applications.
-The goal of colour management software is to map colours from
-the input and editing phases to the range of colours that can be
-displayed on the output device in order to help assure the result is
-visually identical to the source.
-
-
 色彩管理是一个在输入设备（比如扫描仪和照相机）、编辑工具（比如Gimp）和输出设备（比如你的显示器或打印机）之间匹配颜色的过程。每个输入和输出设备都有一套它自己工作的颜色，但你通常也可以利用你的应用程序在更多颜色上编辑。色彩管理软件的工作就是在你将源文件输入和编辑后，用它的那一系列颜色着色好，最后能保证输出的样子跟源文件在视觉上基本符合。
-
-
-Under Linux, colour management in applications is primarily
-handled through a package known as LittleCMS. This is another of
-those packages you don’t need to worry about, because your
-application will install it if it needs it. Applications use LittleCMS in
-conjunction with ICC colour profiles, which are files describing the
-colour capabilities of a particular device, sometimes under specific
-conditions. For example, most cameras have their ICC profiles
-embedded in the images they take. This is why you sometimes see
-a message pop up in Gimp, telling you the image is in a certain
-colour space and asking if you want to convert it to a different
-one. Printers, on the other hand, often deliver their profiles via
-setup disks and usually provide one profile for each of the different
-types of paper they can print on to.
-
 
 在Linux下，应用商店里的色彩管理软件一般就是LittleCMS（译者注：一个小型的，精确高效的色彩管理引擎）。这又是一个你不需要操心太多的软件，因为你的应用程序在需要的时候会自动安装上这个引擎。应用程序将LittleCMS和ICC颜色配置文件结合起来用，ICC颜色配置文件就是在某些特殊情况下用于描述指定设备的色彩性能的文件。例如，大多数相机在摄像时都会在照片数据里内嵌ICC颜色配置文件。这就是为什么有时候你用Gimp要编辑一张照片时，它会弹出提示告诉你该照片处于某种特定的色彩空间，你要不要把它转换成另外一种色彩空间。另一方面，打印机也会自己通过安装盘传递配置文件，并且通常给它能在上面打印的每一张、不同类型的纸都提供统一的配置文件。
 
+对于Linux下的打印机，你可能在硬件安装盘中寻找ICC配置文件时遇到问题。就我遇到的情况来说，当我要配置我新买的Epson Stylus Photo R280打印机时，我发现ICC配置文件藏在安装盘的一个CAB归档文件里。你需要安装Cabextract（译者注：这是个自由软件，用于解包微软的.cab 压缩文件。它可以运行在UNIX、Linux、Mac OS X、minix 等等系统上。）来解压这些文件。然后，让我们将CAB文件复制到一个目录，并运行命令：
 
-For printers under Linux, you may run into problems trying to
-find the ICC profile files on the hardware’s setup disc. In my case, I
-was able to find the profiles for my new Epson Stylus Photo R280
-buried in CAB archive files on the disc. You need to install the
-Cabextract utility to unpack these files. Do this by copying the CAB
-
-file to a directory and running:
-cabextract filename.CAB
-
-
-对于Linux下的打印机，你可能会在从硬件安装盘中寻找ICC配置文件时遇到问题。就我遇到的情况来说，当我要配置我新买的Epson Stylus Photo R280打印机时，我发现ICC配置文件藏在安装盘的一个CAB归档文件里。你需要安装Cabextract（译者注：是个自由软件，用于解包微软的 .cab 压缩文件。它可以运行在UNIX、Linux、Mac OS X、minix 等等系统上。）来解压这些文件。然后，让我们将CAB文件复制到一个目录，并运行命令：
 cabextract filename.CAB
 
 
@@ -251,66 +70,14 @@ cabextract filename.CAB
 
 (以下为图片旁带>的注释小字：
 
-For my Epson
-R280, there were
-two CAB files that
-contained identical
-binary ICM files. I
-unpacked one CAB
-file and saved only
-the ICM files.
 
-
-就我的Epson R280打印机来说，有两个CAB压缩包里包含了相同的二进制ICM文件，所以我就解压了一个CAB包并把那些ICM文件保存了下来。
-）
-
-
-I ran the file command on all files extracted from the archive
-and found that the ICM files were ICC colour profiles. I copied
-these to a directory where I can keep them safe (with my
-backups). I found multiple profiles and had to open them in Gimp
-to identify their purpose, which turned out to be one profile for
-each type of paper the printer supported.
-
+就我的Epson R280打印机来说，有两个CAB压缩包里包含了相同的二进制ICM文件，所以我就解压了一个CAB包并把那些ICM文件保存了下来。）
 
 我将那些从压缩包解压出来的文件都打开运行了一遍，最后发现那些ICM文件就是我要找的ICC颜色配置文件。我把它们都复制到一个稳定安全的目录中（和我的备份文件放在一次）。我发现这些配置文件有很多，所以我就都在Gimp中打开了它们以确认它们各自的用途，最后发现它们分别是此台打印机支持的每一种纸张的配置文件。
 
-
-
-
-
-
-Install LPROF
-
-
 安装LPROF（译者注：LPROF 是一个用于创建设备兼容，如相机、扫描仪、显示器的ICC兼容型材的颜色分析器。这些配置提供跨设备的色彩一致性。他们可以用在颜色配置文件识别软件，如GIMP与Scribus。）
 
-
-
-
-
-Once you have your printer configured, have the printer ICC profile
-files to hand and prepare to use colour management under Linux.
-We’re not quite ready to do that yet because we don’t have an ICC
-monitor profile, so first we need to create one. We can do that
-easily using LPROF, but that package isn’t available for all
-distributions and requires a lot of effort to compile for those it
-doesn’t support. This section is for those who have problems
-compiling LPROF on their systems. For those users with a
-distribution that already has LPROF, such as Ubuntu, skip to the
-next section to see how to use it.
-
-
 一旦你完成了打印机的配置，你一定准备着手处理ICC配置文件以用于Linux下的色彩管理。但是我们还差几个步骤，因为我们还没有一个ICC显示器配置文件，所以我们首先要创造一个。我们可以用LPROF简单地做到，但LPROF不是支持所有的Linux发行版，而且，对于那些它不支持的发行版还需要很麻烦地编译。接下来这个小节是为那些在他们系统中编译LPROF遇到困难的用户写的。如果你的Linux发行版已经有了LPROF（比如Ubuntu），那就跳过这段直接看下一段如何使用。
-
-
-First, download a copy of the latest version of LPROF from
-http://lprof.sourceforge.net. I’m working with version 1.11.4.
-This version has multiple requirements, the most important of
-which are:
-Qt 3
-Vigra
-LittleCMS v1.16
 
 
 首先，从http://lprof.sourceforge.net下载一份最新版本的LPROF。我现在用的版本是1.11.4。这个版本的使用有一些必要条件，其中最重要的是：
@@ -321,29 +88,9 @@ LittleCMS v1.16
 
 （以下为红灰提示框里的字：
 
-Specialised hardware
-
-
 特殊硬件
 
-If the nature of your work means you need
-that extra degree of precision in your
-profiles, you should check out ArgyllCMS
-(www.argyllcms.com/doc/ArgyllDoc.
-html), a colour management system for
-Linux similar to LittleCMS. The
-documentation for ArgyllCMS lists a
-variety of specialised hardware that can
-be used for calibrating monitors and
-other devices.
-
-
-如果你工作的性质决定了你在配置文件上需要很高的精确度，你就需要用ArgyllCMS（它的参考文档在www.argyllcms.com/doc/ArgyllDoc.html），一种跟LittleCMS类似的Linux下的色彩管理系统。ArgyllCMS的参考文档列出了可用于校正显示器和其他设备的许多种特殊的硬件。
-
-）
-
-
-If you missed last issue Call 0870 837 4773 or +44 1858 438795.
+如果你工作的性质决定了你在配置文件上需要很高的精确度，你就需要用ArgyllCMS（它的参考文档在www.argyllcms.com/doc/ArgyllDoc.html），一种跟LittleCMS类似的Linux下的色彩管理系统。ArgyllCMS的参考文档列出了可用于校正显示器和其他设备的许多种特殊的硬件。）
 
 
 如果你错过了上一期，打电话到0870 837 4773 或 +44 1858 438795。
@@ -351,72 +98,33 @@ If you missed last issue Call 0870 837 4773 or +44 1858 438795.
 
 （以下为页脚文字，第二页完。 ：
 
-Christmas 2008 Linux Format     95
+Christmas 2008 Linux Format  95
 LXF113.tut_gimp 95
-27/10/08 7:31:47 pm
-
-）
-
-
-Tutorial Gimp
+27/10/08 7:31:47 pm）
 
 
 Gimp指南
 
 
-The latest versions of most Linux distributions are likely to
-default to Qt 4, but they probably also have Qt 3 available to install
-manually. On Fedora 9, I ran the following to get it:
+大部分Linux发行版一般都会默认带有Qt4， 但我们依然可以人为地装上Qt3.在Fefora9上，我运行了以下命令来安装它：
+
 sudo yum -y install qt3 qt3-devel
-Vigra, (Vision with Genetic Algorithms) is a computer vision
-library. I installed both the runtime and development libraries for
-this package:
+
+Vigra(Vision with Genetic Algorithms)是一个计算机视觉库。我为这个软件包同时装上了运行时间库和开发库，运行以下命令：
+
 sudo yum -y install vigra vigra-devel
 
 
-大部分Linux发行版一般都会默认带有Qt4， 但我们依然可以人为地装上Qt 3.在Fefora9上，我运行了以下命令来安装它：
-sudo yum -y install qt3 qt3-devel
-
-Vigra(Vision with Genetic Algorithms) 是一个计算机视觉库。我为这个软件包同时装上了运行时间库和开发库，运行以下命令：
-sudo yum -y install vigra vigra-devel
-
-
-The most troublesome package of the three will be LittleCMS
-(www.littlecms.com), the latest version of which is 1.17. You can’t
-install the prepackaged 1.16 into system directories in parallel with
-newest version, so you need to download the source code for
-v1.16, compile it and install in a separate directory. When I run into
-issues like this, I install the specialised package under /usr/
-local/<packagename>. I run whichever tools require this
-package with a shell script to make sure that the package is found
-before others with similar names or updated versions are found in
-the normal system directories.
-
-
-这三种软件里面最麻烦的应该要属LittleCMS(www.littlecms.com)， 它的最新版本是1.17（译者注：截至至2013/2/11 最新版为2.4） 。在最新版本存在的情况下你没法安装预先包装好的1.16版，所以你需要下载1.16版的源代码，并在另外一个目录里编译和安装它。当我陷入这样的问题时，我在/usr/local/<packagename>下安装了专门的软件。我利用一个shell脚本文件运行了每一个需要这个软件的工具，以确认在一个正常的系统里这个软件在被需要时都能找到。
-
-
-Again, be sure you’ve downloaded the source for version 1.16.
-To compile LittleCMS and install it under its own directory under
-/usr/local, I run the following commands:
-./configure --prefix=/usr/local/lcms
-make
-sudo make install
-With the prerequisites installed I can now compile LPROF and
-install it under its own directory under /usr/local:
-export PATH=/usr/local/lcms/bin:$PATH
-export LD_LIBRARY_PATH=/usr/local/lcms/lib:$LD_
-LIBRARY_PATH
-python scons.py cxxflags=”-I/usr/local/lcms/include”
-PREFIX=/usr/local/lprof
-sudo python scons.py install
-
+这三种软件里面最麻烦的应该要属LittleCMS(www.littlecms.com)，它的最新版本是1.17（译者注：截止至2013/2/11 最新版为2.4） 。在最新版本存在的情况下你没法安装预先包装好的1.16版，所以你需要下载1.16版的源代码，并在另外一个目录里编译和安装它。当我陷入这样的问题时，我在/usr/local/<packagename>下安装了专门的软件。我利用一个shell脚本文件运行了每一个需要这个软件的工具，以确认在一个正常的系统里这个软件在被需要时都能找到。
 
 再确认一遍你是否已经下载了版本1.16的源代码。为了编译LittleCMS并在/usr/local里将它安装到它自己的目录下，我运行了以下命令：
+
 ./configure --prefix=/usr/local/lcms
 make
 sudo make install
+
 由于我之前做好了准备，我现在就能编译LPROF并在/usr/local里将它安装到它自己的目录下了，运行以下命令：
+
 export PATH=/usr/local/lcms/bin:$PATH
 export LD_LIBRARY_PATH=/usr/local/lcms/lib:$LD_LIBRARY_PATH
 python scons.py cxxflags=”-I/usr/local/lcms/include”PREFIX=/usr/local/lprof
@@ -424,170 +132,56 @@ sudo python scons.py install
 
 
 
-
-Management with LPROF
-
-
 管理LPROF
 
 
-To run LPROF, I use this simple script:
-#!/bin/bash
-export LD_LIBRARY_PATH=/usr/local/lcms/lib:$LD_
-LIBRARY_PATH
-export PATH=/usr/local/lprof/bin:$PATH
-lprof
-
-LPROF enables you to create ICC profiles for scanners,
-cameras and monitors. You need to use specialised hardware to
-get highly accurate profiles, but we can get a rough estimate for a
-monitor just using LPROF.
-
-
 我用了以下这个简单的脚本来运行LPROF：
+
 #!/bin/bash
 export LD_LIBRARY_PATH=/usr/local/lcms/lib:$LD_LIBRARY_PATH
 export PATH=/usr/local/lprof/bin:$PATH
 lprof
 
 
-LPROF能帮你为扫描仪、照相机以及显示器生成它们的ICC配置文件。如果你需要更高精度的配置文件你就得使用特殊的硬件，但通过LPROF我们已经能为一台显示器匡算了。
+LPROF能帮你为扫描仪、照相机以及显示器生成它们的ICC配置文件。如果你需要更高精度的配置文件你就得使用特殊的硬件，但通过LPROF我们已经能初略地设置好一台显示器了。
 
 
 （图旁带<的注释小字：
 
-The LPROF
-window (which
-titles itself as
-LittleCMS Profiler)
-has multiple tabs
-on the right. Start
-with the Monitor
-Profile tab.
-
-
-LPROF的窗口（标着LittleCMS Profiler的那个）在右边有许多的标签。你可以从Monitor Profile标签开始。
-）
-
-You can make a coarse approximation of a monitor profile just
-using your eyes. To begin, you should be in a dark room with the
-monitor’s contrast control set to its highest level. If you can’t be in
-a completely dark room, try placing a dark-coloured cloth over the
-monitor and your head while you’re doing this. You might look a
-little silly, but you’ll get better results. Don’t leave the cloth over
-the monitor (especially a CRT monitor) for very long because it
-may overheat.
+LPROF的窗口（标着LittleCMS Profiler的那个）在右边有许多的标签。你可以从Monitor Profile标签开始。）
 
 
 你可以简单目测一下显示器配置文件的效果，做一个粗略的估计。想要开始的话，你需要在一个尽可能黑暗的房间，并将显示器的对比度要调到最高。如果你没办法让房间完全黑暗，那么你可以找一块暗色的布将显示器和你的脑袋围起来。这样做也许看起来有点傻，但相信我你会得到一个理想的结果。注意不要让布围在显示器（尤其是CRT显示器）上太长时间，因为这样显示器会过热。
 
 
-
-
-
-
-
 （以下为红灰提示框里的文字：
-
-The printing ecosystem
-
-Find out if your printer is supported, get the latest news
-and learn more about printing under Linux by visiting the
-OpenPrinting section at the Linux Foundation’s website:
-www.linuxfoundation.org/en/OpenPrinting.
 
 一个关于打印的社区
 
-在Linux基金会网站上的OpenPrinting部分可以查看你的打印机是不是被支持的，获取关于Linux下打印的最新新闻和知识：www.linuxfoundation.org/en/OpenPrinting.
+在Linux基金会网站上的OpenPrinting部分可以查看你的打印机是不是被支持的，获取关于Linux下打印的最新新闻和知识：www.linuxfoundation.org/en/OpenPrinting。）
 
-）
 
-Coarse approximations
 
 粗略估计
 
 
-The process of creating a coarse approximation profile is
-explained on the Monitor page of the LPROF documentation
-(http://lprof.sourceforge.net/help/monitor.html), but this
-page is a little hard to follow, so I’ll walk you through the process.
-The LPROF window opens with a set of tabs on the right. In the
-Monitor Profile tab you’ll see that the first option under Profile
-Method is to create a coarse profile. Click the Enter Monitor Values
-button to open the Monitor Values dialog. Click the Set Gamma
-And Black Point button under the Gamma entry. The window that
-opens has a small window labelled ‘Gamma = 2.2’ and a larger
-window to the right that’s labelled ‘Gamma And Black Level’ You’ll
-.
-see a slider at the the bottom, along with some other buttons.
+生成一个粗精确度配置文件的过程在LPROF的某文档中有详尽说明(http://lprof.sourceforge.net/help/monitor.html)，但这个文档上的步骤有点麻烦，所以让我来教你吧。当你一打开LPROF的窗口，右边就有一系列的标签。在Monitor Profile这个标签你会看到在Profile Method文本框中的第一个选项就是生成一个粗略的配置文件。点击Enter Monitor Values按钮来打开Monitor Values的对话框。在Gamma文本框下点击Set Gamma And Black Point按钮,打开的窗口中有一个小方框，标签着‘Gamma=2.2’，右边还有一个大方框标签着‘Gamma And Black Level’，你还会在底部看到一个滑动条和其他一些按钮。
 
+调整滑动条让‘Gamma=2.2’小方框中出现水平线条并且使围绕在它周围的小盒子颜色接近灰色。当你这么做的时候那些线条不会消失，有一个技巧就是你盯着那个小盒子让你眼前的灰色梯度尽可能平滑。这个调整滑动条的过程就是设置你显示器的Gamma（伽马）等级。软件会读取显示器配置文件，让显示器在Gamma等级为2.2的条件下显示。
 
-生成一个粗精确度配置文件的过程在LPROF的某文档中有详尽说明(http://lprof.sourceforge.net/help/monitor.html)，但这个文档上的步骤有点麻烦，所以让我来教你吧。当你一打开LPROF的窗口，右边就有一系列的标签。在Monitor Profile这个标签你会看到在Profile Method文本框中的第一个选项就是生成一个粗略的配置文件。点击Enter Monitor Values按钮来打开Monitor Values的对话框。在Gamma文本框下点击Set Gamma And Black Point按钮,打开的窗口中有一个小方框，标签着‘Gamma = 2.2’，右边还有一个大方框标签着 ‘Gamma And Black Level’，你还会在底部看到一个滑动条和其他一些按钮。
-
-
-Adjust the slider so that the Gamma = 2.2 window shows the
-horizontal lines and the box around them as close to a solid grey
-as you can make them. The lines probably won’t go away when
-you do this; the trick is to stare at the box so your vision goes
-slightly out of focus and make sure that the grey gradient you see
-is as smooth as possible. This adjustment sets the gamma level
-for your monitor. Your monitor profile tells software to adjust
-images so they display as if your monitor were at 2.2.
-
-
-调整滑动条让‘Gamma = 2.2’小方框中出现水平线条并且使围绕在它周围的小盒子颜色接近灰色。当你这么做的时候那些线条不会消失，有一个技巧就是你盯着那个小盒子让你眼前的灰色梯度尽可能平滑。这个调整滑动条的过程就是设置你显示器的Gamma（伽马）等级。软件会读取显示器配置文件，以显示器在Gamma等级为2.2的条件下显示。
-
-
-After setting the gamma level, you need to adjust the
-Brightness control of your monitor, which may also be labelled
-‘Black Point’ (as it is on my Westinghouse LCD monitor). Adjust it
-so that the bars in the Black Level window on the right are barely
-visible across from 2.2 on the scale just to the left and disappear
-completely from view by 1.9. After making the Brightness or Black
-Point adjustment on your monitor, you may need to adjust the
-Gamma slider again. Repeat this process a few times until you’re
-satisfied with the result.
-
-
-在设置完伽马等级后，你需要调节你显示器的亮度，这也可以通过‘Black Point’标签来调节。调整下面的滑动条让右边的Black Level框里的内容在Gamma=1.9时是完全消失而在Gamma=2.2时完全能看得见。在设置完你显示器亮度或黑点后，你可能需要再调整一次Gamma滑动条。重复几次这个步骤知道你对结果比较满意为止。
-
-
-You may need to click the Link Channels button to adjust the
-Red, Green and Blue channels separately. With each channel, try
-to adjust the gamma first, then adjust the Brightness on the
-monitor. Close the window by clicking on the OK button and then
-close the Rough Monitor Values window.
-
+在设置完伽马等级后，你需要调节你显示器的亮度，这也可以通过‘Black Point’标签来调节。调整下面的滑动条让右边的Black Level框里的内容在Gamma=1.9时是完全消失而在Gamma=2.2时完全能看得见。在设置完你显示器亮度或黑点后，你可能需要再调整一次Gamma滑动条。重复几次这个步骤直到你对结果比较满意为止。
 
 你可能还需要点击Link Channels按钮以分别调节红绿蓝(Red,Green,Bllue)三个通道。在调节每个通道时，先调节Gamma值，然后再调整显示器亮度。点击OK按钮关闭当前窗口，接着再关闭标着Rough Monitor Values的窗口。
-
-
-Create a new profile
 
 
 创建一个新的配置文件
 
 
-Back in the LPROF main window, you’ll see the Profile
-Identification button in the top-left. Click on this to fill in the
-monitor make and model information, which is often found on a
-label on the back of the monitor.
+回到LPROF的主窗口，你会在左上角找到Profile Identification按钮。点开这个按钮，填写显示器的一些生产、型号等信息，这些信息通常在你显示器背面的标签上。
 
 
-回到LPROF的主窗口，你会在左上角找到Profile Identification按钮。点开这个按钮，填写显示器的一些制造信息，这些信息通常在你显示器背面的标签上。
+在LPROF主窗口的右下方，就在Create Profile按钮的上面有一个Output Profile file文本框，输入ICC输出文件的路径和名称，然后点击Create Profile。你可以点击Profile Checker按钮来检查生成的配置文件。至于这个Profile Checker的具体使用，你可以查阅LPROF的文档，就在Profile Checker的相关页。
 
-At the bottom-right of the LPROF window, just above the
-Create Profile button is the Output Profile field. Type in the path
-and name of the ICC output file, then click on Create Profile. You
-can check the profile using the Profile Checker button. Information
-on how to use this is found on the Profile Checker page of the
-LPROF documentation.
-
-
-在LPROF主窗口的右下方，就在Create Profile按钮的上面有一个Output Profile file文本框，输入ICC输出文件的路径和名称，然后点击Create Profile。你可以点击Profile Checker按钮来检查生成的配置文件。至于这个Profile Checker的具体使用，你可以查阅LPROF的文档，在Profile Checker的相关页。
-
-
-Never miss another issue。 Subscribe to the #1 source for Linux on page 102.
 
 永远不要错过此系列的任何一期。在102页有订阅 #1 source for Linux （译者注：Linux Format，英国的一份专门介绍Linux相关内容的杂志）的信息。
 
@@ -597,9 +191,7 @@ Never miss another issue。 Subscribe to the #1 source for Linux on page 102.
 
 96     Linux Format Christmas 2008
 LXF113.tut_gimp 96
-27/10/08 7:31:47 pm
-
-）
+27/10/08 7:31:47 pm）
 
 
 
@@ -607,220 +199,54 @@ LXF113.tut_gimp 96
 
 (以下为图片旁带>的注释小字：
 
-Use the Gamma/Black Point window to visually configure
-your monitor profile without specialised hardware.
+用Gamma/Black Point窗口，不用专门的硬件也可以直观地设置你显示器的配置文件。）
 
+使用配置文件非常简单，但是相应地，将结果解释出来并调节一张照片就比较花精力。Gimp2.4在首选项中的色彩管理页有对ICC配置文件的设置。在这个页面中你就可以为你的打印机选择配置文件以及为你的显示器选择我们刚刚用LPROF生成的配置文件。
 
-用Gamma/Black Point窗口，不用专门的硬件也可以直观地设置你显示器的配置文件
-）
-
-
-Using profiles is very straightforward, but interpreting the
-results and adjusting an image accordingly takes some
-experimentation. Gimp 2.4 introduced support for ICC profiles in
-the Colour Management page of the Preferences dialog. This is
-where you select the profiles for your printer and the monitor
-profile that we just created with LPROF.
-
-
-使用配置文件非常简单，但是相应地，将结果解释出来并调节一张照片就比较花精力。Gimp 2.4在首选项中的色彩管理页有对ICC配置文件的设置。在这个页面中你就可以为你的打印机选择配置文件以及为你的显示器选择我们刚刚用LPROF生成的配置文件。
-
-
-
-
-
-The Mode of Operation controls how you will view your images
-in the Canvas window. Setting this to Colour Managed Display
-will cause Gimp to display images using your monitor profile
-(which we’ll configure in a moment), while setting it to Print
-Simulation will cause Gimp to display the image using the printer
-profile. This is what you want to use when you want to preview
-your image to check for out-of-gamut colours. These are colours
-that can’t be reproduced by your printer given the printer profile
-you’ll be using. The purpose of the RGB and CMYK settings isn’t
-clear from Gimp documentation, but for now you can leave these
-set to None.
-
-
-操作模式（Mode of Operation）控制了你将在画布（Canvas）窗口浏览照片的方式。将它设置为颜色管理的显示（Colour Managed Display）会让Gimp利用你的显示器配置文件来显示照片，而将它设置为打印模拟（Print Simulation）会让Gimp利用打印机配置文件来显示照片。怎么选择就由当你遇到超出色域范围的颜色时想怎么预览你的照片来决定。所谓超出色域范围的颜色指的就是当你的打印机用上打印机配置文件时还不能重现的颜色。关于RGB和CMYK的设置，目前在Gimp的相关文档里至今还不明确，但是现在你可以将它们设置为无（None）。
-
-
-
-
-Interpreting profiles
+操作模式（Mode of Operation）控制了你将在画布（Canvas）窗口浏览照片的方式。将它设置为颜色管理的显示（Colour Managed Display）会让Gimp利用你的显示器配置文件来显示照片，而将它设置为打印模拟（Print Simulation）会让Gimp利用打印机配置文件来显示照片。怎么选择就由你遇到超出色域范围的颜色时想怎么预览你的照片来决定。所谓超出色域范围的颜色指的就是当你的打印机用上打印机配置文件时还不能重现的颜色。关于RGB和CMYK的设置，目前在Gimp的相关文档里至今还不明确，但是现在你可以将它们设置为无（None）。
 
 
 解释配置文件
 
 
-Use the Monitor Profile setting to select the profile you created
-using LPROF. The Print Simulation profile is used to select the
-profile for your printer. Notice that I have multiple profiles and the
-Gimp dialog for selecting the profile provides information about
-the profile. For my Epson printer, I have profiles set up for different
-papers, most of which were created using a White Point setting of
-5000K (which is shown here as D50).
 
-
-设置显示器配置文件（Monitor Profile）来选择你刚用LPROF创建的配置文件。打印模拟配置文件（Print Simulation profile）是用来给你的打印机选择配置文件而用的。我意识到我有很多种配置文件，并且Gimp里关于选择配置文件的对话框提供了很多关于配置文件的信息。我的爱普生打印机，对于不同类型的纸就有不同的配置文件，而它们之中大部分都是通过将白点度（White Point）设置成5000K(在此处显示的是D50)来生成的。
-
-
-
-Gimp has multiple methods available for interpreting profiles.
-These can be set with the Display Rendering Intent (for
-interpreting how images are shown on the Canvas) and Softproof
-Rendering Intent (for how printed images will be previewed on the
-Canvas) options in the Preferences dialog. The various options
-available are quite technical and the Perceptual option is probably
-the best for most home and small business use. Professional
-designers can read the Gimp help documentation for details on
-the other options.
+你可以选择刚用LPROF创建的配置文件来设置显示器配置文件（Monitor Profile）。打印模拟配置文件（Print Simulation profile）是用来给你的打印机选择配置文件而用的。我意识到我有很多种配置文件，并且Gimp里关于选择配置文件的对话框提供了很多关于配置文件的信息。我的爱普生打印机，对于不同类型的纸就有不同的配置文件，而它们之中大部分都是通过将白点度（White Point）设置成5000K(在此处显示的是D50)来生成的。
 
 
 Gimp有很多种可用的办法来解释配置文件。你可以设置首选项的色彩管理中的显示渲染缩进（Display Rendering Intent）（用于说明照片如何在画布上被显示出来）和软打样渲染缩进（Softproof Rendering Intent）（决定打印出来的照片在画布窗口预览起来是什么样的）来实现。这些各式各样的选项都是很技术性的，所以知觉选择(Perceptual option)对家用或小型商用来说应该是最好的选择。专业的设计师想研究其他的选项的话，可以阅读Gimp的帮助文档来寻找更详尽的内容。
 
-The File Open Behaviour option determines what Gimp will do
-with images it opens that have ICC profile data embedded in them.
-Cameras often embed profiles in the images they create. There’s
-little reason not to set this to Convert To RGB Workspace; leaving it
-as ‘Ask What To Do’ will cause a prompt to be displayed asking you
-what to do when you open images with embedded profiles.
+文件打开行为（File Open Behaviour）的选项决定了Gimp对它打开的那些内嵌有ICC配置文件数据的照片做些什么。照相机通常在拍照的时候就在照片中内嵌了那些配置文件。我们没什么理由不把它设置为“转化为RGB工作空间”（Convert To RGB Workspace）；设置为“询问怎么做”（Ask What To Do）后，当你打开一个内置配置文件的照片时弹出一个提示问你“要做什么”。
 
+首选项的设置里最重要的应该就是“标记超出全色彩范围（Mark Out Of Gamut）”。将这个选项勾选起来，并将操作模式（Mode of Operation）设为打印模拟（Print Simulation），Gimp的画布窗口就会将每一个无法正常打印的像素点用一种规定的颜色（默认是灰色）强调出来。这样做可以让你看到哪个像素点会被打印机转化为另一种颜色。实际上它是为了让你看到你现在在屏幕上操作的照片跟实际打印出来的照片会有哪些不一样。
 
-文件打开行为（File Open Behaviour）的选项决定了Gimp对它打开的那些内嵌有ICC配置文件数据的照片做些什么。照相机通常在拍照的时候就在照片中内嵌了那些配置文件。我们没什么理由不把它设置为转化为RGB工作空间（Convert To RGB Workspace）；设置为询问怎么做（Ask What To Do）会当你打开一个内置配置文件的照片时弹出一个提示问你该怎么做。
-
-
-
-
-
-The most important option in the Preferences is the Mark Out
-Of Gamut setting. With this option enabled, and the Mode of
-Operation set to Print Simulation, the Gimp Canvas window will
-highlight any pixels that won’t print properly with a specified
-colour (which defaults to grey). This enables you to see which
-pixels will have to be converted to another colour by the printer. It
-will, in effect, tell you how different your image is likely to be from
-what you see when you’re working on the image on screen.
-
-
-
-首选项的设置里最重要的应该就是“标记出超出全色彩范围的（Mark Out Of Gamut）”。将这个选项勾选起来，并将操作模式（Mode of Operation）设为打印模拟（Print Simulation），Gimp的画布窗口就会将每一个无法正常打印的像素点用一种规定的颜色（默认是灰色）强调出来。这样做可以让你看到哪个像素点会被打印机转化为另一种颜色。实际上它是为了让你看到你现在在屏幕上操作的照片跟实际打印出来的照片会有哪些不一样。
-
-
-
-
-With out-of-gamut colours marked, you may wonder how you
-can fix an image to print properly (without having the printer
-convert them to different colours). Unfortunately, there is no fix-all
-option. For my images, I adjusted the different Colour Channels in
-the Curves dialog by moving the end points of the graph away from
-the corners. When you do this with Preview enabled in the Curves
-dialog you can watch the grey, out-of-gamut colours change. In this
-case, the fix took only a few seconds, but you may find that the
-Curves dialog is not sufficient for your needs. In that case, you’ll
-need to experiment with other tools in the Colour menu.
-
-
-将“标记出超出全色彩范围的”（Mark Out Of Gamut ）勾选起来后，你一定会想知道该怎么修复一张照片以让它被正常地打印出来（不让打印机擅自将不正常像素点擅自修改成其他颜色的话）。不幸的是，Gimp里没有现成的一键修复的选项。于是，我打开“颜色”菜单栏里的“曲线”（Curves）对话框，拖拽调整不同的颜色通道（Colour Channels）里的曲线。如果你勾选上“预览”（Preview），你就可以看到照片里不正常像素点的颜色在变化。这样做的话，也许只要几秒就能修复了，但说不定你会觉得光是调整“曲线”（Curves）不能满足你的需求。如果是这样的话，你还可以尝试“颜色”（Colour）菜单栏里的其他工具。
-
-
-Printing
+将“标记超出全色彩范围”（Mark Out Of Gamut）勾选起来后，你一定会想知道该怎么修复一张照片，让它被正常地打印出来（不让打印机擅自将不正常像素点擅自修改成其他颜色）。不幸的是，Gimp里没有现成的一键修复的选项。于是，我打开“颜色”菜单栏里的“曲线”（Curves）对话框，拖拽调整不同的颜色通道（Colour Channels）里的曲线。如果你勾选上“预览”（Preview），你就可以看到照片里不正常像素点的颜色在变化。这样做的话，也许只要几秒就能修复了，但说不定你会觉得光是调整“曲线”（Curves）不能满足你的需求。如果是这样的话，你还可以尝试“颜色”（Colour）菜单栏里的其他工具。
 
 
 打印
 
 
-With your image colour corrected you’re ready to print. Remember
-we used CUPS and Gutenprint to set up our printer. Gimp has its
-own print dialog built into it. Gutenprint also provides a separate
-print plugin for use with Gimp. With both enabled, you can choose
-which is more appropriate for your needs.
-
-
 如果你的照片色彩都准确的话，你就可以准备打印了。记住用CUPS和Gutenprint来设置你的打印机。Gimp有它自带的打印对话框。Gutenprint也提供了一个可以和Gimp配合使用的打印插件。你可以从两者中选一个对你来说最合适的。
-
-
-Gimp’s built-in Print window offers a print preview, but it
-doesn’t make clear whether the preview is colour-adjusted based
-on ICC profiles. Still, for most home printing, you’ll probably be
-happy with the preview it provides.
-
 
 Gimp自带的“打印”（Print）窗口也提供了打印预览，但它不能清楚地告诉我们预览图样是不是在基于ICC配置文件的条件下被调整过颜色。不过，对大多数家用打印来说，这样的预览你应该已经满意了。
 
-
-
-
-
-Gutenprint’s Print window offers much finer control over the
-print process itself. The print preview is purposely very low quality
-to make it easier to drag it around the page for alignment. This
-preview does not make use of your printer’s ICC profiles. What’s
-most important about the Gutenprint dialog is that you can
-configure any printer you might have connected to your computer
-for use with Gimp, even if that computer isn’t configured through
-CUPS. This is useful, for example, if you have a printer used
-specifically for Gimp prints, but not shared with others in your
-household or business.
-
-
 Gutenprint的打印预览窗口对于打印的过程提供了更多详尽的控制选项。这里的打印预览故意以很低的质量显示出来，为了让你更容易地用鼠标拖动纸张来校准，而且这个预览没有用到你的打印机ICC配置文件。在Guntenprint对话框中最重要的是你可以配合使用Gimp设置任何一个连接到你电脑的打印机，即使那个打印机没有在CUPS上设置过。这当然是很有用的，举个例子，如果你有一台专门用于Gimp打印的打印机，但你不想让它跟你其他的家用或商用机器混用，那么这时候就很凑效了。
-
-
-Summary
 
 
 小结
 
 
-Printing support under Linux has become easily good enough for
-the home and small business user due to advances in Gutenprint,
-CUPS and the availability of drivers from commercial printer
-vendors. Colour management under
-Gimp is still a work in progress, but the 2.4
-release has brought us closer to colour
-Nirvana with the ability to work directly
-convert images from their original colour
-with ICC profiles. While there’s still work to
-be done with regard to correcting of out-
-of-gamut issues, we can at least know
-when an image won’t fit and can manually
-work at colour correction to fit the image
-into gamut for the printer. LXF
-
-
-
-
-有了Gutenprint和CUPS，以及其他由打印机产商提供的一些驱动，Linux下的打印支持对家庭以及小型商业用户已经足够简单了。虽然Gimp下的色彩管理还是有待改进的，但是已经发布的2.4版本带我们进入了一个色彩天堂，我们能够直接改造照片上由ICC文件规定的原始颜色。虽然对于带有超出色域范围颜色的照片，Gimp的功能还有待开发，但至少我们可以清楚什么时候这张照片不会被正常打印出来，并且我们还是可以人为地对颜色进行矫正以让它被打印机正常打印。
+有了Gutenprint和CUPS，以及其他由打印机产商提供的一些驱动，Linux下的打印支持对家庭以及小型商业用户已经足够简单了。虽然Gimp下的色彩管理还是有待改进的，但是已经发布的2.4版本带我们进入了一个色彩天堂，我们能够直接改造照片上由ICC文件规定的原始颜色。虽然对于带有超出色域范围颜色的照片，Gimp的相应功能还有待开发，但至少我们可以清楚什么时候这张照片不会被正常打印出来，并且我们还是可以人为地对颜色进行矫正以让它被打印机正常打印。
 
 
 
 (以下为红灰方框中的提示文字：
 
-To convert or not to convert
-
 到底要不要转换
 
 
-Unless you’re a graphic designer working
-with a client who has specific colour
-requirements, you probably won’t worry
-much about colour management and ICC
-profiles when using Gimp. If you don’t care
-about such things, it won’t matter if you
-convert images from their original colour space.
- If you do care, you should convert the image 
-before working on it. Be certain to save your work into a 
-different file so you can maintain the colour profile 
-information in the original file.
+除非你是一个为某个对色彩有特殊需求的客户服务的平面设计师，否则当你用Gimp的时候基本不需要对色彩管理和ICC文件操心太多。如果你都不需要操心这些，那就无所谓是否要转换照片原始的色彩空间。如果你在意，那就在加工照片之前先转换。注意，一定要把你的工程另存为一个文件，这样你就可以保留原始文件里的色彩信息。)
 
 
-除非你是一个对某个对色彩有特殊需求的客户服务平面设计师，否则当你用Gimp的时候基本不需要对色彩管理和ICC文件操心太多。如果你都不需要操心这些，那就无所谓是否要转换照片原始的色彩空间。如果你在意，那就在加工照片之前先转换。注意，一定要把你的工程另存为一个文件，这样你就可以保留原始文件里的色彩信息。
-
-)
-
-
-Next month We’ll use quick colour fixes to adjust tints and whiten a smile.
 
 下个月，我们将利用快速色彩修复工具来调整颜色及美白一个微笑。
 
@@ -830,7 +256,5 @@ Next month We’ll use quick colour fixes to adjust tints and whiten a smile.
 
 Christmas 2008 Linux Format     97
 LXF113.tut_gimp 97
-27/10/08 7:31:48 pm
-
-）
+27/10/08 7:31:48 pm）
 

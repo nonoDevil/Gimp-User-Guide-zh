@@ -1,12 +1,13 @@
 Tutorial Gimp Open source image-editing
-Gimp
-software you can get your teeth into
-Gimp: Speedy
-c
-Smile big and show your colours as Michael J Hammel
-guides you through quick colour fixes for your photos.
-Last month I talked about the colour management tools
+Gimp software you can get your teeth into
+>>Gimp:开源图像处理软件，值得注目
 
+Gimp: Speedy
+Gimp：高效
+Smile big and show your colours as Michael J Hammelguides you through quick colour fixes for your photos.
+迈克尔·J·海默尔引导你为照片快速调整颜色。咧嘴微笑并展示你的色彩吧！
+
+Last month I talked about the colour management tools
 supported in Gimp. Colour management is all about
 matching colours from input devices like cameras and
 scanners to output devices like monitors and printers. Colour
@@ -17,6 +18,9 @@ of yellow. If Red Hat were to be bought by Novell, all those Fedoras
 would need to be changed to green, right? Gimp makes these
 kinds of colour edits a quick and painless process. But while
 they’re easy to perform, they take practice to get just right.
+
+上周我讲到Gimp支持的颜色管理工具。颜色管理就是将输入设备例如照相机、扫描仪中的颜色匹配到输出设备(例如显示器和打印机)。颜色调整是一个非常难的部分。本月我谈到的颜色调整对于使用Gimp编辑图像来说非常特殊：蓝色代替红色，绿色代替黄色。如果红帽子公司由Novell公司购买，那么软呢帽需要变为绿色，对吧？［译者注：红帽子公司是一家开源解决方案供应商，标志中含有一顶红色帽子。Novell是一家网络系统公司。此处是作者开的玩笑。］Gimp可以使这些图像编辑快捷、无痛苦。不过，虽然它们做起来不难，但还是需要练习。
+
 Each colour correction is made up of three important steps.
 The first is to make a proper selection. This may be as simple as a
 rectangular outline or as complex as the union of multiple
@@ -25,20 +29,30 @@ it – this will cause your colour adjustments to blend seamlessly
 into their surroundings. Feathering is not optional when editing
 photographs. Without feathering, you simply won’t be satisfied
 with the results.
+
+颜色更正有以下三个重要步骤：第一需要进行合适的选取。这有可能简单如矩形选取，也可能复杂如多处选取的并集。选区完成后，下一步要进行羽化。羽化能保证你的颜色调整和周围无缝融合。在编辑照片时，羽化是必须的，因为如果不进行羽化，你肯定不会得到满意的效果。
+
 The last step is the most important: choosing the right colour
 tool. There are no cut and dried rules for which tool will produce
 the best results. In some cases desaturating the selection will be
 required, while in other cases you’re better off just applying a
 colour change directly to the coloured selection.
+最后一步是最重要的。你要选择正确的颜色工具。如何选择最佳工具并无定则。有时候需要对选区进行去色，有些时候直接对有色选区应用颜色更改更好。
+
 Part 1 Costume change
+第一部分 服装修改
 Imagine you sell T-shirts to college students. You need to find
 which colours the students prefer. Should you buy different
 coloured shirts and show them around? Maybe, but before you
 start pulling from your not-yet-earned profits how about doing
 some market research for a lot less money using Gimp?
+假设你售卖面向大学生的T恤，你需要知道学生们喜欢哪些颜色。一定要买各种颜色的T恤并展示吗？也许吧。但是在你开始耗费尚未到手的利润时，试试用Gimp做些省钱的市场调查如何？
+
 Start with a photo of the type of shirts you plan to sell. This
 stock photo might just be for the ladies’ version of the shirt but it
 will do as an example. We start, as always, with a good selection.
+就从一张你打算售卖的衣服的照片开始吧。这张现成的照片可能只是衣服的女性版本，不过就拿它当例子好了。我们依旧从建立选区开始。
+
 Because this shirt has a high colour contrast with the rest of
 the photo it is a good candidate for use with the Foreground
 Selection tool. However, the thin straps and shadowed areas on
@@ -49,31 +63,20 @@ After choosing the tool from the toolbox, the first step is to drag a
 rough outline around the item to be selected. This is just like
 outlining it with the Free Select (aka Lasso) tool. Once this has
 been done, the unselected area is tinted blue.
+这件衣服和照片其余部分有强烈的颜色对比，因此使用前景选择工具非常适合。但是，左侧的窄带和浅色区域需要微调。我会使用快速蒙板来清理选区。前景选择工具使用多步骤过程建立选区。从工具箱中选择好工具后，先在要选的对象周围拉出一个大致的轮廓。这就像使用自由选择工具（套索）进行轮廓勾划。这步完成后，未被选择的部分变为蓝色。
+
+（Last month We got technical with colour management for printing.）
+（页底1：上个月我们讲了打印的色彩处理技巧。）
+
 To fine-tune the initial rough selection a paint stroke is dragged
 through the untinted region and over just the shirt. The purpose of
 this paint stroke is to tell the Foreground Selection tool about the
 colours to keep in the selection. Multiple paint strokes improve on
-If you photograph your own models, put them in front of a
-solid-coloured background that doesn’t match their clothing.
-Last month We got technical with colour management for printing.
-94 Linux Format January 2009
-LXF114.tut_gimp 94
-24/11/08 10:17:21 am
-Gimp Tutorial
-colour fixes
-In tint mode the
-selection looks
-good, but finalizing
-the selection
-shows the left
-side needs some
-cleanup.
-The colour of the tint used by Foreground Select can be
-changed in the Tool Options dialog. You should make these
-changes before you make your initial freehand selection.
 the selection. You can adjust the size of the brush (which is shown
 in the canvas as a circular outline) used for these paint strokes
 using the Tool Options dialog.
+要微调初始的粗糙选区，需要拖动一个画笔，穿过未显示蓝色的区域，停留在衣服的上方。这个画笔的作用是告知前景选择工具哪些颜色是保留在选区中的。多种画笔有助于选择。你可以在工具选项对话框中调整笔刷的大小（在画布上显示为圆形）。
+
 The first stroke should use the default brush size. Start in the
 upper-left strap and draw around the neckline, up into the other
 strap, down the right-hand side of the shirt across the bottom, up
@@ -81,6 +84,8 @@ the left-hand side (just touching the shadow area, then across the
 middle of the shirt). Because of the uniform colour tones in the
 shirt this process creates a very accurate selection except for the
 left-hand area of the shirt. Hit the Enter key to finalise the selection.
+第一个画笔应使用默认大小的笔刷。由左上角的肩带开始，沿着领口勾画，到另一边肩带，沿着右边的衣服画到底部，从左侧向上画（挨着阴影区域，直至衣服的中间）。由于衣服的色调很一致，所以除了左边区域外，本过程可以生成很精确的选区。敲下回车键来确认选区。
+
 Switch to Quick Mask mode, zoom in and use a small brush on
 the problem areas. Remember that painting with black removes
 from the selection, while painting with white adds to it. You can
@@ -89,37 +94,36 @@ are partially selected, much the same way that the edges of a
 selection are partially selected when you feather the selection.
 However, you seldom use anything other than black or white when
 working with Quick Mask.
+切换到快速蒙板模式，用一个小笔刷处理麻烦的区域。记住，涂黑色是取消选择，涂白色是加入选择。你也可以用其他颜色涂抹，但产生的是部分选中的效果。就像你在羽化选区时，选区的边缘部分所具备的部分被选中效果。一般在快速蒙板中很少使用黑、白以外的颜色。
+
 After fixing the selection in Quick Mask mode, return to the
 selection by clicking on the Quick Mask button again. Finally,
 feather the selection by five pixels. You’re now ready to apply some
 colour changes.
+完成快速蒙板模式下的选区调整后，点击快速蒙板按钮回到选区。对选区进行五个像素的羽化。现在你可以改变颜色了。
+
 To recolour the shirt, first remove all colour content using
 Colours > Desaturate. Choose the Lightness option (though any of
 the three available options would suffice). To put the colour of your
 choice back in, choose the Colourise dialog (Colours > Colourise)
 and adjust the Hue level first. Fine-tuning of the colour occurs with
 the Saturation and Lightness options.
-You may need to select trickier areas by hand.
-If you missed last issue Call 0870 837 4773 or +44 1858 438795.
-January 2009 Linux Format     95
-LXF114.tut_gimp 95
-24/11/08 10:17:22 am
-Tutorial Gimp
+要改换衣服的颜色，先要使用颜色>去色。选择亮度（其实这三个选项都可以用）。要填入你想要的颜色，进入单色化对话框（颜色>单色化），先调整色阶，并用饱和度和亮度选项调整颜色。
+
+（If you missed last issue Call 0870 837 4773 or +44 1858 438795.）
+（页底2：如果你没有收到上一期，请致电0870 847 4773或+44 1858 438795）
+
 Part 2 Blue-eyed girl
-Try going through this process but without feathering
-the selection – you’ll see how artificial the effects are.
-Why are we changing her eye colour? Because we can!
-Experiment with
-the replacement
-eye colour until
-you find the one
-that works best.
+第二部分 碧眼姑娘
+
 This next example is similar to the first, in that I’ll remove colour
 from a pair of lovely brown eyes before tinting them blue. The
 stock photo is small, so I’m zooming in on the eyes. Zooming in
 causes some pixellation, resulting in a slightly blocky appearance
 in these screenshots, but it doesn’t make working on the image
 any more difficult.
+接下来这个例子和第一个相似。我会把一双可爱的棕色眼睛去色，并重新染成蓝色。因为源文件比较小，所以我会放大眼部。放大会引起像素化，导致屏幕显示中有轻微的块状，但对我们的工作没有影响。
+
 Start with the Free Select tool and draw an outline around the
 left eye. I enable the Add mode in the Tool options, then draw a
 second outline around the right eye. This is then converted to a
@@ -132,6 +136,8 @@ first step is to desature the selection using the Desaturate dialog
 (Colours > Desaturate). I chose to desaturate using the Lightness
 setting, though for this image at least, there is no visual difference
 between the settings.
+使用自由选择工具在左眼周围画一个轮廓。在工具选项中开启了合并到选区模式，然后在右眼周围再画一个轮廓。接下来进入快速蒙板模式清理轮廓，并返回选区，一切都像例一一样。对选区羽化五个像素。因为我们要把棕色眼睛变为蓝色，所以我们不只需要降低饱和度。事实上，我们需要去掉饱和度（去掉所有颜色）并替换为蓝色。第一步即对选区使用去色（颜色>去色）。我使用的是亮度选项，不过对于这个图片来说，视觉上这些选项没有差别。
+
 After desaturating, open the Foreground colour dialog by
 clicking on the Foreground colour box in the Toolbox and select an
 appropriate blue for the foreground colour. I set the HTML
@@ -141,38 +147,42 @@ and the Affected Area to Fill Whole Selection, then click inside the
 canvas. The blue colour will be blended with the desaturated eyes.
 The feathering will let this colouring fade toward the edges so you
 don’t get any abrupt colour loss.
+去色完成后，打开前景色对话框（点击工具箱中的前景色，并选择一种合适的蓝色）。我将HTML数值设置为153664。要给眼睛着色，需要用到工具箱中的油漆桶着色工具。在工具选项中，将模式设置为掩蔽，将影响区域设置为填充整个选区，然后点击选区内部。这样，蓝色就会填入去色的眼睛。羽化会令颜色在边缘渐渐变淡，而非突然变化。
+
 The choice of a Dodge blend mode for the Bucket Fill is
 completely through experimentation. This process is extremely
 simple, so repeated experiments with different shades of blue and
 different blend modes is fast and simple. Remember: for projects
 like this, Ctrl+Z (or Edit > Undo) is your friend.
-The blend mode and colour used is very important. Review some photos from stock
-websites for the colour of eyes you need and sample the colour from those images.
-Never miss another issue Subscribe to the #1 source for Linux on page 52.
-96     Linux Format January 2009
-LXF114.tut_gimp 96
-24/11/08 10:17:22 am
-Gimp Tutorial
+油漆桶填充工具中选择掩蔽模式完全是经由尝试确定。这个过程很简单，所以你可以不断尝试不同的蓝色、不同的混合模式。记住：这种工作中，Ctrl+Z（或编辑>撤销）很好用。
+
+
+（页底3：不要错过另一期。在第52页订阅#1 source for Linux）
+
+
 Part 3 Paint job
-Initial selections aren’t complete – they leave many small
-gaps. But these well-fed selections are ready for a little growth.
+第三部分 粉刷工作
+
 Keeping with the commercial theme, let’s now imagine you’re a
 painter and you need to offer colour options to a home owner.
 Throwing swathes of paint on the home probably won’t be an
 option they’ll accept, so you choose to do it the Gimp way: select,
 feather, colour.
+继续商业主题。想象你是一个粉刷匠，要给一个房主展示可选颜色效果。在房子上刷几条可不是能被接受的方法。你需要用Gimp来达成目标：选择，羽化，上色。
+
 Because of the snow sticking to the side of the house and
 the bushes in front of it, the most suitable selection tool is the
 Fuzzy Select tool. For this image the Tool Options Threshold is set
 to 35 and the Add mode enabled. There are multiple blue walls to
 include, each of which is bounded by a solid white border, so click
 on each wall one at a time to add it to the selection.
+因为房子上有雪，房前有灌木丛，所以模糊选择工具最适用。对于本图片来说，工具选项的阈值设置为35,模式设置为合并到当前选区。有好几片蓝色的墙要选，每一片都有白色边界，所以依次点击墙体，将它们加入选区。
+
 Each wall selection is incomplete. There are small areas of
 unselected wall we need to include in the final selection. This is
 done by growing the selection a small amount. Open the Grow
 Selection dialog and set the amount to one pixel, which is
-sufficient for an image of this size. The selection still requires a few
-light touches with the Quick Mask to unselect some of the bushes
+sufficient for an image of this size. The selection still requires a few light touches with the Quick Mask to unselect some of the bushes
 in front of the house and add a few shadowed areas on the walls
 that have not yet been included. The final selection is created
 using the Airbrush tool instead of the Paintbrush when fine-tuning
@@ -184,6 +194,8 @@ required around them. Finally, the selection is feathered by five
 pixels. Growing the selection gets most of the walls but it also
 picks up some of the bushes, so for accuracy, Quick Mask must
 be used for final adjustments.
+每面墙的选择都是不完全的。我们还需要在选区中加入尚未选入的墙。我们通过稍微加大选区来完成。打开增加选区对话框，设置大小为一像素（对于这幅图来说足够了）。接下来仍需用快速蒙板去掉房前的一些灌木，增加几片有阴影的墙面。这其中使用喷枪工具而非画笔工具。这是为了让灌木的边缘以及细小的树枝光滑地与变色区域融合。记住房子的反光会轻微改变这写东西的颜色，所以选区需要柔和的边缘。这写完成后，将选区羽化五个像素。增大选区选中了大部分墙体，却加入了灌木，所以精确起见，快速蒙板在最终调整中是很必要的。
+
 To colour the selection we can use any of the previous
 methods, but I found that using the Curves dialog provided the
 best results. To turn the house a dark red, move the Blue and
@@ -191,8 +203,67 @@ Green curves down on the left-hand side while moving the Red
 curve up on the left and down on the right. It may be hard to see in
 this image, but snow was falling when the photo was taken and the
 falling snow remained white but tinted red where it passed in front
-of the house while the picture was snapped. LXF
-Growing the
+of the house while the picture was snapped. 
+要给选区着色，我们可以使用之前的任何一种模式。但是我发现，使用曲线对话框（Curves）可以达到最好的效果。要把房子变成暗红色，将蓝色和绿色线条左边降低，将红色线条左边升高、右边降低。在这幅图中可能不容易看出来，但是在拍照时雪是正在下着的。它们本来是白色的，但是在变色时，经过房前落下的雪被染成了红色。
+
+
+（Next month Paths, layers and blurs combine to make a wine bottle. Glug!）
+（页底4：下个月，路径、图层、模糊混合三管齐下，制作酒瓶。咕嘟！）
+
+
+
+
+（If you photograph your own models, put them in front of a
+solid-coloured background that doesn’t match their clothing.
+）
+（插话：如果你拍摄自己的模特，那就让他们站在和衣服颜色不同的纯色背景前。）
+
+
+（The colour of the tint used by Foreground Select can be
+changed in the Tool Options dialog. You should make these
+changes before you make your initial freehand selection.
+）
+（插话：前景选择使用的色调可由工具选项对话框更改。你需要在最初进行徒手选择之前修改选项。）
+（In tint mode the
+selection looks
+good, but finalizing
+the selection
+shows the left
+side needs some
+cleanup.
+）
+（插话：在色调（tint）模式中选区看起来不错，但是确定时我们发现左侧还需要进行清理。）
+
+（You may need to select trickier areas by hand.
+）
+（插话：你可能需要手动选取深色区域。）
+
+（Why are we changing her eye colour? Because we can!
+）
+（插话：为什么我们要改变她眼睛的颜色？因为我们能做到！）
+（Try going through this process but without feathering
+the selection – you’ll see how artificial the effects are.
+）
+（插话：试着不羽化地进行这个过程，你就会发现效果很不自然。）
+（Experiment with
+the replacement
+eye colour until
+you find the one
+that works best.
+）
+（插话：尝试替换眼睛颜色，直到你满意为止。）
+（The blend mode and colour used is very important. Review some photos from stock
+websites for the colour of eyes you need and sample the colour from those images.
+）
+（插话：此处所使用的混合模式及颜色非常重要。到库存网站察看一些照片，找找你想要的眼睛颜色，并取出颜色作为样本。）
+
+（Initial selections aren’t complete – they leave many small
+gaps. But these well-fed selections are ready for a little growth.
+）
+（插话：最初的选择并不到位——遗留了很多小豁口。但可以留待些微的放大。）
+
+
+（Growing the
 selection gets
 most of the walls
 but it also picks
@@ -200,17 +271,10 @@ up some of the
 bushes – use
 Quick Mask for
 final adjustments.
-Tutorial images
-This month’s stock imagery can be found on
-BigStockPhoto.com:
-1 Costume Change
-Beauty_Young_Sweaty_Woman_In_B_3535508
-2 Blue Eyed Girl Spa_Girl___1892998
-3 Paint Job House_292318
-The snow remains white as it falls, tinted only slightly as it
-passes in front of the house.
-Next month Paths, layers and blurs combine to make a wine bottle. Glug!
-January 2009 Linux Format     97
-LXF114.tut_gimp 97
-24/11/08 10:17:23 am
+）
+（插话：增加选区可以选入大部分墙体，但也选入了一些灌木——使用快速蒙板做最终的调整）
 
+（The snow remains white as it falls, tinted only slightly as it
+passes in front of the house.
+）
+（插话：雪仍旧是白的，只有下落时经过房子前方的有点被染色）
